@@ -1,0 +1,743 @@
+/* =============================================================================
+   RTC Full Funnel Throughput (Operator Level)
+   Steps: SRP -> SL -> Cust Info -> Create Order -> Pay -> Confirm TIN
+   Day grain: IST date of SRP search (UTC + 330 min)
+   Routes: 446 src_id-dest_id pairs (WBTC corridor list)
+   Operators: WBTC / WBSTC / NBSTC / SBSTC vs Rest
+   Stitch: session + src/dest + operator bucket; route_id from SL onward
+   Date range: edit params CTE
+   ============================================================================= */
+
+WITH params AS (
+    SELECT
+        TIMESTAMP '2026-05-20 00:00:00' AS t_start,
+        TIMESTAMP '2026-06-11 00:00:00' AS t_end
+),
+
+route_pairs AS (
+    SELECT src_id, dest_id
+    FROM (VALUES
+        (74820, 74706),
+        (74706, 74820),
+        (74820, 82467),
+        (82467, 74820),
+        (69802, 74820),
+        (74820, 69802),
+        (74706, 201668),
+        (201668, 74706),
+        (74672, 74820),
+        (74820, 74672),
+        (93580, 74820),
+        (74820, 93580),
+        (201669, 74820),
+        (201668, 197222),
+        (197222, 74820),
+        (201661, 74706),
+        (194483, 74820),
+        (74820, 194483),
+        (201668, 201815),
+        (197222, 201668),
+        (74820, 194838),
+        (74820, 74678),
+        (201668, 201775),
+        (201668, 201832),
+        (74706, 201661),
+        (74820, 201669),
+        (194838, 74820),
+        (201668, 310334),
+        (310334, 201668),
+        (201668, 69802),
+        (74820, 197222),
+        (201668, 201777),
+        (74706, 201665),
+        (201665, 74706),
+        (310334, 201665),
+        (201665, 197222),
+        (93580, 201665),
+        (69802, 94699),
+        (201665, 310334),
+        (74820, 94699),
+        (197222, 201665),
+        (93304, 74820),
+        (201668, 310335),
+        (201668, 201666),
+        (201668, 201795),
+        (201750, 74706),
+        (74672, 74678),
+        (74820, 194842),
+        (201668, 193533),
+        (94699, 69802),
+        (74820, 93304),
+        (93580, 201668),
+        (69802, 201665),
+        (201665, 93580),
+        (74820, 310334),
+        (201668, 74678),
+        (201797, 74820),
+        (194842, 74820),
+        (201668, 202533),
+        (94699, 74820),
+        (201668, 74672),
+        (75144, 74820),
+        (193533, 74820),
+        (197222, 201661),
+        (201668, 93580),
+        (69802, 74678),
+        (201661, 197222),
+        (74820, 201797),
+        (69802, 201668),
+        (74678, 69802),
+        (201668, 310269),
+        (201661, 201815),
+        (310334, 74820),
+        (74678, 74672),
+        (74820, 75144),
+        (201661, 310334),
+        (74672, 94699),
+        (201665, 69802),
+        (74820, 74694),
+        (201666, 201668),
+        (202533, 201668),
+        (201661, 69802),
+        (69802, 201661),
+        (193533, 201668),
+        (201661, 74678),
+        (201665, 74678),
+        (201668, 201836),
+        (201668, 201849),
+        (74672, 201665),
+        (74672, 201668),
+        (74706, 201750),
+        (201665, 193533),
+        (74678, 201665),
+        (201667, 201668),
+        (201661, 193533),
+        (310334, 201661),
+        (201668, 201667),
+        (201665, 74672),
+        (94699, 74672),
+        (201668, 201801),
+        (201661, 201832),
+        (193533, 201665),
+        (201661, 201775),
+        (201668, 75144),
+        (201661, 201795),
+        (201801, 74820),
+        (201661, 201777),
+        (201661, 74672),
+        (74820, 201801),
+        (201661, 201666),
+        (201665, 93304),
+        (74672, 201661),
+        (202533, 201661),
+        (201661, 202533),
+        (201801, 201668),
+        (93304, 201665),
+        (74820, 201666),
+        (201666, 201665),
+        (201661, 310335),
+        (193533, 201661),
+        (74694, 74820),
+        (201666, 201661),
+        (201661, 201801),
+        (201661, 194838),
+        (201668, 93304),
+        (202533, 74820),
+        (202533, 201665),
+        (201661, 201667),
+        (74820, 202533),
+        (201665, 201666),
+        (94699, 93304),
+        (194838, 201661),
+        (201667, 201661),
+        (201667, 201665),
+        (93304, 201668),
+        (201668, 194838),
+        (201665, 202533),
+        (201665, 75144),
+        (93304, 94699),
+        (201661, 310269),
+        (201666, 74820),
+        (201801, 201661),
+        (93304, 201661),
+        (201661, 93304),
+        (194838, 201668),
+        (74820, 201667),
+        (201661, 201836),
+        (201665, 201667),
+        (74820, 201832),
+        (74820, 201775),
+        (74706, 218021),
+        (201801, 201665),
+        (201665, 201801),
+        (74694, 215824),
+        (215824, 74694),
+        (201135, 74694),
+        (202908, 74694),
+        (74694, 202908),
+        (74820, 74691),
+        (74691, 74820),
+        (74820, 74687),
+        (74820, 202908),
+        (74687, 74820),
+        (74694, 74709),
+        (94942, 74694),
+        (202908, 74820),
+        (202908, 94942),
+        (94942, 202908),
+        (74820, 74673),
+        (74694, 74700),
+        (74678, 74694),
+        (74694, 74678),
+        (74694, 201135),
+        (74687, 202908),
+        (201102, 94942),
+        (202908, 74687),
+        (201102, 74694),
+        (74673, 74820),
+        (74694, 201102),
+        (74820, 201135),
+        (74687, 74694),
+        (74691, 74694),
+        (202220, 74820),
+        (202908, 201135),
+        (74820, 202220),
+        (74820, 202979),
+        (74820, 198238),
+        (74820, 201102),
+        (74694, 74691),
+        (201102, 74820),
+        (74820, 75146),
+        (74691, 75144),
+        (201102, 74687),
+        (94942, 201135),
+        (74694, 74673),
+        (94942, 201102),
+        (74820, 202976),
+        (202979, 74820),
+        (74694, 201668),
+        (74694, 75144),
+        (74694, 202972),
+        (74820, 202907),
+        (202908, 74691),
+        (202908, 75146),
+        (201107, 74820),
+        (74673, 74691),
+        (74691, 202972),
+        (74820, 201107),
+        (74678, 74820),
+        (74691, 201668),
+        (201102, 201837),
+        (74691, 74673),
+        (74820, 202906),
+        (74820, 76578),
+        (74820, 74679),
+        (94942, 202907),
+        (74673, 74687),
+        (94942, 202906),
+        (201102, 201135),
+        (202908, 201837),
+        (201095, 74694),
+        (74694, 74683),
+        (202908, 202972),
+        (74678, 74687),
+        (201102, 74691),
+        (74678, 74691),
+        (201102, 75146),
+        (202908, 75144),
+        (74687, 74673),
+        (74820, 193533),
+        (94698, 74820),
+        (74820, 94698),
+        (74706, 69802),
+        (69802, 74706),
+        (201666, 74706),
+        (74678, 74706),
+        (69802, 94942),
+        (74694, 74687),
+        (74820, 201777),
+        (74820, 201815),
+        (69802, 201801),
+        (201801, 69802),
+        (69802, 201669),
+        (74706, 74672),
+        (94942, 194483),
+        (94942, 69802),
+        (69802, 74694),
+        (74706, 201666),
+        (74706, 74678),
+        (201752, 74820),
+        (74672, 74706),
+        (74694, 69802),
+        (201833, 74820),
+        (74820, 310269),
+        (74820, 201863),
+        (201752, 74678),
+        (74820, 201762),
+        (74820, 201843),
+        (201801, 201815),
+        (69802, 201861),
+        (74820, 201751),
+        (94942, 201669),
+        (74820, 201772),
+        (74820, 201836),
+        (197222, 201815),
+        (94698, 74706),
+        (74820, 265081),
+        (74820, 201787),
+        (74820, 201795),
+        (74820, 74708),
+        (94698, 74694),
+        (69802, 76451),
+        (201847, 69802),
+        (93151, 74820),
+        (69802, 194483),
+        (74820, 201849),
+        (74706, 94698),
+        (69802, 94698),
+        (205807, 69802),
+        (74708, 74820),
+        (74820, 316062),
+        (69802, 205807),
+        (69802, 74687),
+        (69802, 197423),
+        (201787, 74820),
+        (69802, 201100),
+        (201801, 201760),
+        (201668, 316081),
+        (69802, 253755),
+        (316036, 74820),
+        (94699, 94698),
+        (74694, 94698),
+        (69802, 202533),
+        (94698, 69802),
+        (69802, 311279),
+        (201666, 74708),
+        (74820, 201752),
+        (74820, 201748),
+        (69802, 197222),
+        (194482, 74820),
+        (74820, 201829),
+        (74820, 201833),
+        (74820, 316087),
+        (74820, 194482),
+        (201668, 201762),
+        (201668, 201748),
+        (74820, 201783),
+        (74820, 205807),
+        (201668, 315573),
+        (74694, 194483),
+        (201136, 74820),
+        (201668, 201772),
+        (69802, 201775),
+        (74694, 94942),
+        (74820, 201144),
+        (308070, 74820),
+        (205807, 201669),
+        (194483, 69802),
+        (69802, 194482),
+        (74820, 316030),
+        (74706, 201830),
+        (69802, 201752),
+        (74672, 201100),
+        (316036, 74678),
+        (69802, 201751),
+        (74820, 309372),
+        (74820, 316036),
+        (308070, 74678),
+        (69802, 201764),
+        (69802, 305920),
+        (201847, 74820),
+        (74820, 93151),
+        (201801, 201851),
+        (201668, 74820),
+        (74706, 316182),
+        (74820, 201136),
+        (194483, 201801),
+        (312336, 74820),
+        (193533, 201755),
+        (197222, 201760),
+        (74820, 201808),
+        (94699, 94942),
+        (201847, 74672),
+        (74706, 201859),
+        (69802, 316082),
+        (74820, 201328),
+        (74820, 308114),
+        (94942, 94698),
+        (74820, 316082),
+        (201801, 309298),
+        (201801, 94698),
+        (69802, 201849),
+        (201801, 201755),
+        (94698, 94699),
+        (197222, 265457),
+        (74820, 201766),
+        (201808, 74820),
+        (201661, 74820),
+        (69802, 74673),
+        (205807, 194483),
+        (194483, 201861),
+        (201801, 201840),
+        (193533, 69802),
+        (74673, 69802),
+        (74706, 218035),
+        (197222, 201840),
+        (201801, 194483),
+        (201801, 201126),
+        (316182, 74706),
+        (74706, 75144),
+        (316182, 201772),
+        (201661, 316087),
+        (74820, 74820),
+        (74678, 201748),
+        (194482, 74672),
+        (201668, 201144),
+        (74706, 194483),
+        (201668, 316087),
+        (74694, 201846),
+        (194483, 74678),
+        (94942, 94699),
+        (74708, 74678),
+        (201661, 201748),
+        (69802, 260444),
+        (201759, 69802),
+        (201666, 201795),
+        (69802, 311280),
+        (201328, 74820),
+        (194482, 69802),
+        (201759, 94698),
+        (76451, 69802),
+        (74820, 308070),
+        (194483, 74706),
+        (94698, 194483),
+        (74672, 202533),
+        (74672, 201847),
+        (74672, 194482),
+        (94698, 201100),
+        (69802, 193533),
+        (197222, 201755),
+        (74820, 311280),
+        (316182, 201795),
+        (201661, 201144),
+        (94699, 74687),
+        (201668, 201843),
+        (201138, 74672),
+        (94698, 197222),
+        (197222, 201851),
+        (94699, 194483),
+        (94698, 94942),
+        (201801, 201765),
+        (69802, 201833),
+        (74820, 316056),
+        (201668, 309372),
+        (74678, 201762),
+        (194483, 305920),
+        (69802, 316090),
+        (74678, 201787),
+        (74820, 201747),
+        (74820, 201856),
+        (74672, 305920),
+        (201666, 201849),
+        (74820, 201138),
+        (201661, 201849),
+        (316182, 74820),
+        (201661, 309372),
+        (194483, 94699),
+        (205807, 94699),
+        (201801, 201063),
+        (193533, 201784),
+        (74672, 201138),
+        (201661, 201843),
+        (316067, 74820),
+        (201668, 201829),
+        (74820, 316090),
+        (316182, 201815),
+        (94699, 205807),
+        (74678, 201775),
+        (316067, 74678),
+        (201661, 201772),
+        (74820, 316064),
+        (74820, 312336),
+        (74820, 316066),
+        (93151, 201668),
+        (193533, 74672),
+        (74672, 197222)
+    ) AS t(src_id, dest_id)
+),
+
+operator_buckets AS (
+    SELECT *
+    FROM (VALUES
+        ('WBTC',  16426, 1),
+        ('WBSTC', 15443, 2),
+        ('NBSTC', 24978, 3),
+        ('SBSTC', 32272, 4),
+        ('Rest',  NULL,  5)
+    ) AS t(operator_name, operator_id, sort_order)
+),
+
+/* Step 1 — SRP inventory on target routes (day = IST search date) */
+srp_inventory AS (
+    SELECT
+        CAST(DATE_ADD('minute', 330, rd.__time) AS DATE) AS funnel_date,
+        rd.mri_session_id,
+        TRY_CAST(rd.src_id AS BIGINT) AS src_id,
+        TRY_CAST(rd.dest_id AS BIGINT) AS dest_id,
+        TRY_CAST(COALESCE(rd.operator_id, rd.op_id) AS BIGINT) AS operator_id
+    FROM user_interaction.search_route_details rd
+    CROSS JOIN params p
+    INNER JOIN route_pairs rp
+        ON TRY_CAST(rd.src_id AS BIGINT) = rp.src_id
+       AND TRY_CAST(rd.dest_id AS BIGINT) = rp.dest_id
+    WHERE rd.__time >= p.t_start
+      AND rd.__time <  p.t_end
+      AND rd.country = 'IND'
+      AND rd.event_type = 'Search-Routes'
+      AND rd.status < 400
+      AND rd.mri_session_id IS NOT NULL
+      AND (rd.akamai_bot IS NULL OR rd.akamai_bot = '')
+),
+
+srp_spine AS (
+    SELECT DISTINCT
+        si.funnel_date,
+        si.mri_session_id,
+        si.src_id,
+        si.dest_id,
+        ob.operator_name,
+        ob.sort_order
+    FROM srp_inventory si
+    INNER JOIN operator_buckets ob
+        ON (
+            ob.operator_id IS NOT NULL
+            AND si.operator_id = ob.operator_id
+        )
+        OR (
+            ob.operator_id IS NULL
+            AND (si.operator_id NOT IN (16426, 15443, 24978, 32272) OR si.operator_id IS NULL)
+        )
+),
+
+/* Step 2 — Seat Layout (operator from op_id) */
+sl_events AS (
+    SELECT DISTINCT
+        sl.mri_session_id,
+        TRY_CAST(sl.src_id AS BIGINT) AS src_id,
+        TRY_CAST(sl.dest_id AS BIGINT) AS dest_id,
+        TRY_CAST(sl.route_id AS BIGINT) AS route_id,
+        TRY_CAST(sl.op_id AS BIGINT) AS operator_id
+    FROM user_interaction.seat_layout_details sl
+    CROSS JOIN params p
+    INNER JOIN route_pairs rp
+        ON TRY_CAST(sl.src_id AS BIGINT) = rp.src_id
+       AND TRY_CAST(sl.dest_id AS BIGINT) = rp.dest_id
+    WHERE sl.__time >= p.t_start
+      AND sl.__time <  p.t_end
+      AND sl.country = 'IND'
+      AND sl.mri_session_id IS NOT NULL
+),
+
+sl_by_operator AS (
+    SELECT DISTINCT
+        se.mri_session_id,
+        se.src_id,
+        se.dest_id,
+        se.route_id,
+        ob.operator_name
+    FROM sl_events se
+    INNER JOIN operator_buckets ob
+        ON (
+            ob.operator_id IS NOT NULL
+            AND se.operator_id = ob.operator_id
+        )
+        OR (
+            ob.operator_id IS NULL
+            AND (se.operator_id NOT IN (16426, 15443, 24978, 32272) OR se.operator_id IS NULL)
+        )
+),
+
+sl_matched AS (
+    SELECT DISTINCT
+        s.funnel_date,
+        s.mri_session_id,
+        s.src_id,
+        s.dest_id,
+        sl.route_id,
+        s.operator_name,
+        s.sort_order
+    FROM srp_spine s
+    INNER JOIN sl_by_operator sl
+        ON s.mri_session_id = sl.mri_session_id
+       AND s.src_id = sl.src_id
+       AND s.dest_id = sl.dest_id
+       AND s.operator_name = sl.operator_name
+),
+
+/* Step 3 — Cust Info */
+cust_info_events AS (
+    SELECT DISTINCT
+        ci.mri_session_id,
+        TRY_CAST(ci.route_id AS BIGINT) AS route_id
+    FROM user_interaction.cust_info_details ci
+    CROSS JOIN params p
+    WHERE ci.__time >= p.t_start
+      AND ci.__time <  p.t_end
+      AND ci.country = 'IND'
+      AND ci.mri_session_id IS NOT NULL
+),
+
+/* Step 4 — Create Order (Payload) */
+create_order_events AS (
+    SELECT DISTINCT
+        co.mri_session_id,
+        TRY_CAST(co.route_id AS BIGINT) AS route_id
+    FROM user_interaction.create_order_details co
+    CROSS JOIN params p
+    WHERE co.__time >= p.t_start
+      AND co.__time <  p.t_end
+      AND co.country = 'IND'
+      AND co.mri_session_id IS NOT NULL
+),
+
+/* Step 5 — Pay */
+pay_events AS (
+    SELECT DISTINCT
+        mp.mri_session_id
+    FROM user_interaction.make_payment_details mp
+    CROSS JOIN params p
+    WHERE mp.__time >= p.t_start
+      AND mp.__time <  p.t_end
+      AND mp.country = 'IND'
+      AND mp.mri_session_id IS NOT NULL
+),
+
+/* Step 6 — Confirm TIN (operator from bus_ticket_events) */
+confirm_tin AS (
+    SELECT DISTINCT
+        cf.mri_session_id,
+        cf.tin,
+        b.source_location_id AS src_id,
+        b.destination_location_id AS dest_id,
+        b.route_id,
+        CASE
+            WHEN b.operator_id = 16426 THEN 'WBTC'
+            WHEN b.operator_id = 15443 THEN 'WBSTC'
+            WHEN b.operator_id = 24978 THEN 'NBSTC'
+            WHEN b.operator_id = 32272 THEN 'SBSTC'
+            ELSE 'Rest'
+        END AS operator_name
+    FROM user_interaction.confirm_order_details cf
+    CROSS JOIN params p
+    INNER JOIN transaction.bus_ticket_events b
+        ON cf.mri_session_id = b.mri_session_id
+       AND cf.tin = b.tin
+    INNER JOIN route_pairs rp
+        ON b.source_location_id = rp.src_id
+       AND b.destination_location_id = rp.dest_id
+    WHERE cf.__time >= p.t_start
+      AND cf.__time <  p.t_end
+      AND cf.mri_session_id IS NOT NULL
+      AND cf.country = 'IND'
+      AND cf.error_code = 'CONFIRMED'
+      AND cf.status_str = 'SUCCESS'
+      AND cf.tin IS NOT NULL
+      AND TRIM(cf.tin) <> ''
+      AND LOWER(TRIM(cf.tin)) <> 'null'
+      AND b.date_of_issue >= p.t_start
+      AND b.date_of_issue <  p.t_end
+      AND b.event_class = 2
+      AND b.event_type = 101
+      AND b.country_code = 'IND'
+),
+
+funnel_joined AS (
+    SELECT
+        s.funnel_date,
+        s.mri_session_id,
+        s.operator_name,
+        s.sort_order,
+        sl.route_id,
+        ci.mri_session_id AS ci_session,
+        co.mri_session_id AS co_session,
+        mp.mri_session_id AS pay_session,
+        cf.mri_session_id AS tin_session,
+        cf.tin
+    FROM srp_spine s
+    LEFT JOIN sl_matched sl
+        ON s.funnel_date = sl.funnel_date
+       AND s.mri_session_id = sl.mri_session_id
+       AND s.src_id = sl.src_id
+       AND s.dest_id = sl.dest_id
+       AND s.operator_name = sl.operator_name
+    LEFT JOIN cust_info_events ci
+        ON sl.mri_session_id = ci.mri_session_id
+       AND sl.route_id = ci.route_id
+    LEFT JOIN create_order_events co
+        ON sl.mri_session_id = co.mri_session_id
+       AND sl.route_id = co.route_id
+    LEFT JOIN pay_events mp
+        ON sl.mri_session_id = mp.mri_session_id
+    LEFT JOIN confirm_tin cf
+        ON sl.mri_session_id = cf.mri_session_id
+       AND sl.src_id = cf.src_id
+       AND sl.dest_id = cf.dest_id
+       AND sl.route_id = cf.route_id
+       AND s.operator_name = cf.operator_name
+)
+
+SELECT
+    funnel_date,
+    operator_name,
+    CASE operator_name
+        WHEN 'WBTC'  THEN 16426
+        WHEN 'WBSTC' THEN 15443
+        WHEN 'NBSTC' THEN 24978
+        WHEN 'SBSTC' THEN 32272
+        ELSE NULL
+    END AS operator_id,
+    COUNT(DISTINCT mri_session_id) AS srp_sessions,
+    COUNT(DISTINCT CASE WHEN route_id IS NOT NULL THEN mri_session_id END) AS sl_sessions,
+    COUNT(DISTINCT ci_session) AS cust_info_sessions,
+    COUNT(DISTINCT co_session) AS create_order_sessions,
+    COUNT(DISTINCT pay_session) AS pay_sessions,
+    COUNT(DISTINCT tin_session) AS confirm_tin_sessions,
+    COUNT(DISTINCT tin) AS confirm_tins,
+    ROUND(
+        100.0 * COUNT(DISTINCT CASE WHEN route_id IS NOT NULL THEN mri_session_id END)
+        / NULLIF(COUNT(DISTINCT mri_session_id), 0),
+        2
+    ) AS srp_to_sl_cr_pct,
+    ROUND(
+        100.0 * COUNT(DISTINCT ci_session)
+        / NULLIF(COUNT(DISTINCT CASE WHEN route_id IS NOT NULL THEN mri_session_id END), 0),
+        2
+    ) AS sl_to_ci_cr_pct,
+    ROUND(
+        100.0 * COUNT(DISTINCT co_session)
+        / NULLIF(COUNT(DISTINCT ci_session), 0),
+        2
+    ) AS ci_to_co_cr_pct,
+    ROUND(
+        100.0 * COUNT(DISTINCT pay_session)
+        / NULLIF(COUNT(DISTINCT co_session), 0),
+        2
+    ) AS co_to_pay_cr_pct,
+    ROUND(
+        100.0 * COUNT(DISTINCT tin_session)
+        / NULLIF(COUNT(DISTINCT pay_session), 0),
+        2
+    ) AS pay_to_tin_cr_pct,
+    ROUND(
+        100.0 * COUNT(DISTINCT tin_session)
+        / NULLIF(COUNT(DISTINCT mri_session_id), 0),
+        2
+    ) AS srp_to_tin_cr_pct
+FROM funnel_joined
+GROUP BY
+    funnel_date,
+    operator_name,
+    sort_order
+ORDER BY
+    funnel_date,
+    sort_order;
