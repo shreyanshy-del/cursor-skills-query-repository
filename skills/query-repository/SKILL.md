@@ -1,7 +1,7 @@
 ---
 name: query-repository
 description: >-
-  Personal redBus SQL query bank (70 queries): pilgrim/RTC/LOB/ASP/comfort/POI
+  Personal redBus SQL query bank (71 queries): pilgrim/RTC/LOB/ASP/comfort/POI
   coverage, funnels, student deal, women funnel, repeat-visit. Use when the user
   asks for a stored SQL, Query Repository, QUERY N, or to re-run a known analysis
   SQL from the bank. Prefer references/*.sql verbatim; adjust only params dates.
@@ -11,7 +11,7 @@ description: >-
 
 Personal SQL query bank. Each query has a short explanation (<50 words), the SQL in `references/`, and sample output where live-pulled.
 
-**Totals:** 70 queries | Removed: 12 CR funnel dimension SQLs | Live DB pulls: 9 | Excel: `Query_Repository_Sample_Outputs_v2.xlsx`
+**Totals:** 71 queries | Removed: 12 CR funnel dimension SQLs | Live DB pulls: 9 | Excel: `Query_Repository_Sample_Outputs_v2.xlsx`
 
 Live pulls use smallest practical windows (often 1 day / 1 hour), `LIMIT 50`, country **IND**.
 
@@ -98,6 +98,7 @@ Live pulls use smallest practical windows (often 1 day / 1 hour), `LIMIT 50`, co
 | 68 | Comfort Score Ctr By Band | [comfort_score_ctr_by_band.sql](references/comfort_score_ctr_by_band.sql) |  |
 | 69 | Comfort Score Ctr Each Band Separate | [comfort_score_ctr_each_band_separate.sql](references/comfort_score_ctr_each_band_separate.sql) |  |
 | 70 | Poi Dp Route Txn Coverage Query | [poi_dp_route_txn_coverage_query.sql](references/poi_dp_route_txn_coverage_query.sql) |  |
+| 71 | Android SameDay LMB Funnel Last10 | [android_sameday_lmb_funnel_last10.sql](references/android_sameday_lmb_funnel_last10.sql) |  |
 
 ## Explanations (<50 words)
 
@@ -311,6 +312,9 @@ Stored SQL query for comfort score ctr each band separate. Adjust date params in
 ### QUERY 70: Poi Dp Route Txn Coverage Query
 City-level POI coverage using Maps Dropping Point ID POI-DP mapping data HARD-PASTED from: POI and DP Mapping.xlsx Rows with valid coordinates: 5955 | Destinations: 79.
 
+### QUERY 71: Android SameDay LMB Funnel Last10
+Android IND MOBILE_APP funnel: SameDay LMB (same-IST-day DOJ + hour 17–23) vs Other. Session-level joins only (no route_id / no experiment variant). Last 10 IST days. Steps: SRP → SL → MPAX → TCO → Confirm + TIN.
+
 ## Topic routing (quick)
 
 | Topic | Query #s |
@@ -319,7 +323,7 @@ City-level POI coverage using Maps Dropping Point ID POI-DP mapping data HARD-PA
 | RTC funnel / TIN / return | 5, 8, 9, 21–24, 26, 32, 41, 52 |
 | Android LOB / offer | 4, 12, 17, 27, 48, 51 |
 | ASP / asset class / VFM | 10, 11, 14, 19, 20, 30, 33, 35, 36 |
-| CR / GenZ / SD day funnel | 7, 15, 37, 38 |
+| CR / GenZ / SD day funnel | 7, 15, 37, 38, 71 |
 | Repeat visit | 31, 39, 45 |
 | Cancellation policy | 34, 43 |
 | POI / route coverage 1–3 km | 13, 16, 62–66, 70 |

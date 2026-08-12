@@ -1,6 +1,6 @@
 # Cursor Skills — Query Repository
 
-Personal redBus SQL query bank as a Cursor Agent Skill (**70 queries**).
+Personal redBus SQL query bank as a Cursor Agent Skill (**71 queries**).
 
 ## Layout
 
@@ -24,4 +24,4 @@ Copy or symlink into:
 gh skill publish --tag v1.0.0
 ```
 
-Totals: 70 queries | Live DB pulls: 9 | Default country: IND
+Totals: 71 queries | Live DB pulls: 9 | Default country: IND
