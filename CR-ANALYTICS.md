@@ -1,19 +1,29 @@
 # CR Analytics
 
 **Display name:** CR Analytics  
-**Cursor skill:** `cr-analyser` (CR Analyser)
+**Cursor skill (core):** `cr-analyser` (CR Analyser)
 
-India BUS conversion skill for the CR Analyser dashboard: **CR = TIN / SRP**, with ordered funnel throughput and a hard product identity.
+India BUS conversion and funnel analytics package: core CR contracts, dimension cuts, and redBus domain analytics skills.
 
 ## Layout
 
 ```
-skills/cr-analyser/
-  SKILL.md
-  references/cr_analyser_1d.sql
+skills/
+  cr-analyser/                 # Core CR = TIN/SRP + ordered funnel
+  cr-dim-*/                    # First dimension cuts
+  women-funnel-analytics/
+  return-tier-pilgrim/
+  lmb-newbus-analytics/
+  experiment-coverage-analytics/
+  toilet-cohort-analytics/
+  seat-bus-images/
+  metro-surface-analytics/
+  filter-usage-analytics/
+  syed-athena-queries/
+  query-repository/
 ```
 
-## Contracts (fixed)
+## Core contracts (fixed)
 
 | # | Step | Formula |
 |---|---|---|
@@ -32,23 +42,6 @@ Identity: **CR = (1)×(2)×(3)×(4)×(5)×(6)**. If that fails, the analysis is 
 - TIN: `transaction.bus_ticket_events`, `event_type = 101`, `event_class = 2`
 - Country: IND
 
-## Install
-
-```bash
-gh skill install shreyanshy-del/cr-analytics cr-analyser
-# or
-cp -R skills/cr-analyser ~/.cursor/skills/cr-analyser
-```
-
-## Publish
-
-```bash
-gh skill publish --tag v1.0.0
-```
-
-Change only the date window in `references/cr_analyser_1d.sql`.
-
-
 ## Dimension skills (first set)
 
 | Skill | Cut | Source |
@@ -66,4 +59,43 @@ Change only the date window in `references/cr_analyser_1d.sql`.
 | `cr-dim-age-gender` | Age / Gender | `svoc.svoc_booker` via `rb_user_id` |
 | `cr-dim-bus-type` | AC / Sleeper / Seater | `search_route_details.is_ac/is_sleeper/is_seater` |
 
-Install: `cp -R skills/cr-dim-* ~/.cursor/skills/` or `gh skill install shreyanshy-del/cursor-skills-query-repository <skill>`.
+## redBus analytics skills
+
+| Skill | Covers |
+|---|---|
+| `women-funnel-analytics` | Women SRP vs Regular vs Female/Male SVOC, QoQ funnel, single-women DOJ, 14-day return |
+| `return-tier-pilgrim` | Mehar city tiers, onward-booker return funnel, pilgrim high/low, UPSRTC |
+| `lmb-newbus-analytics` | DBD-0 LMB vs rest-of-day, New Bus (persuasion 68), unfiltered SRP rank shares |
+| `experiment-coverage-analytics` | Insurance Lite AB, iOS addons payment-page AB, Primo operators, Mobweb login/signup |
+| `toilet-cohort-analytics` | Toilet-on-SL vs amenity vs India, pre/post Aug 2026 (OMS) |
+| `seat-bus-images` | Seat-utility image CTR, NewBusImageLoaded coverage, route txn share |
+| `metro-surface-analytics` | Metro Home, Card, and Sticky on bus buddy after a metro ticket |
+| `filter-usage-analytics` | Filter canvas / Sort / Contextual / LMB / Inline usage |
+| `syed-athena-queries` | Syed Athena query bank |
+| `query-repository` | Shared SQL query bank |
+
+## Install
+
+```bash
+# Core
+cp -R skills/cr-analyser ~/.cursor/skills/cr-analyser
+cp -R skills/cr-dim-* ~/.cursor/skills/
+
+# Domain analytics
+for s in women-funnel-analytics return-tier-pilgrim lmb-newbus-analytics \
+         experiment-coverage-analytics toilet-cohort-analytics seat-bus-images \
+         metro-surface-analytics filter-usage-analytics syed-athena-queries \
+         query-repository; do
+  cp -R "skills/$s" ~/.cursor/skills/"$s"
+done
+
+# or: scripts/install-cursor-skills.sh
+```
+
+## Publish
+
+```bash
+gh skill publish --tag v1.0.0
+```
+
+Change only the date window in reference SQL the user asks for.

@@ -123,3 +123,8 @@ Attach these cuts onto `cr-analyser` sessions (`mri_session_id`). Recompute step
 | `cr-dim-bo-type` | BO Type | `lis.bo_mappings.is_rtc` / BTE `hft=2` / PRIVATE |
 | `cr-dim-age-gender` | Age / Gender | `svoc.svoc_booker` |
 | `cr-dim-bus-type` | AC / Sleeper / Seater | `search_route_details.is_ac/is_sleeper/is_seater` |
+
+
+## redBus analytics skills (same package)
+
+Related domain skills shipped alongside CR Analytics: `women-funnel-analytics`, `return-tier-pilgrim`, `lmb-newbus-analytics`, `experiment-coverage-analytics`, `toilet-cohort-analytics`, `seat-bus-images`, `metro-surface-analytics`, `filter-usage-analytics`, `syed-athena-queries`, `query-repository`.

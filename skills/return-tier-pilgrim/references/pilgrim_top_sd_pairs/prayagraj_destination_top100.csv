@@ -1,0 +1,101 @@
+city_role,anchor_city_name,src_id,dest_id,src_city,dst_city,search_count,rank
+Destination,Prayagraj(Uttar Pradesh),733,84832,Delhi,Prayagraj(Uttar Pradesh),51678,1
+Destination,Prayagraj(Uttar Pradesh),1439,84832,Lucknow,Prayagraj(Uttar Pradesh),19665,2
+Destination,Prayagraj(Uttar Pradesh),624,84832,Nagpur,Prayagraj(Uttar Pradesh),11530,3
+Destination,Prayagraj(Uttar Pradesh),70429,84832,Varanasi,Prayagraj(Uttar Pradesh),8251,4
+Destination,Prayagraj(Uttar Pradesh),807,84832,Jaipur (Rajasthan),Prayagraj(Uttar Pradesh),6656,5
+Destination,Prayagraj(Uttar Pradesh),1429,84832,Noida,Prayagraj(Uttar Pradesh),5791,6
+Destination,Prayagraj(Uttar Pradesh),1377,84832,Kanpur (Uttar Pradesh),Prayagraj(Uttar Pradesh),5131,7
+Destination,Prayagraj(Uttar Pradesh),1290,84832,Agra,Prayagraj(Uttar Pradesh),4914,8
+Destination,Prayagraj(Uttar Pradesh),73534,84832,Rewa,Prayagraj(Uttar Pradesh),4854,9
+Destination,Prayagraj(Uttar Pradesh),70014,84832,Raipur (Chhattisgarh),Prayagraj(Uttar Pradesh),4515,10
+Destination,Prayagraj(Uttar Pradesh),313,84832,Indore,Prayagraj(Uttar Pradesh),4504,11
+Destination,Prayagraj(Uttar Pradesh),747,84832,Mathura,Prayagraj(Uttar Pradesh),4059,12
+Destination,Prayagraj(Uttar Pradesh),76480,84832,Ayodhya,Prayagraj(Uttar Pradesh),3587,13
+Destination,Prayagraj(Uttar Pradesh),78027,84832,Gorakhpur (uttar pradesh),Prayagraj(Uttar Pradesh),3586,14
+Destination,Prayagraj(Uttar Pradesh),216383,84832,Greater noida (uttar pradesh),Prayagraj(Uttar Pradesh),3542,15
+Destination,Prayagraj(Uttar Pradesh),124,84832,Hyderabad,Prayagraj(Uttar Pradesh),3225,16
+Destination,Prayagraj(Uttar Pradesh),979,84832,Bhopal,Prayagraj(Uttar Pradesh),2835,17
+Destination,Prayagraj(Uttar Pradesh),462,84832,Mumbai,Prayagraj(Uttar Pradesh),2768,18
+Destination,Prayagraj(Uttar Pradesh),197105,84832,Bilaspur (Chhattisgarh),Prayagraj(Uttar Pradesh),2749,19
+Destination,Prayagraj(Uttar Pradesh),74153,84832,Ghaziabad,Prayagraj(Uttar Pradesh),2527,20
+Destination,Prayagraj(Uttar Pradesh),443,84832,Sagar (Madhya Pradesh),Prayagraj(Uttar Pradesh),2486,21
+Destination,Prayagraj(Uttar Pradesh),90355,84832,Azamgarh,Prayagraj(Uttar Pradesh),2306,22
+Destination,Prayagraj(Uttar Pradesh),70015,84832,Gurugram (Gurgaon),Prayagraj(Uttar Pradesh),2248,23
+Destination,Prayagraj(Uttar Pradesh),70024,84832,Jabalpur,Prayagraj(Uttar Pradesh),2226,24
+Destination,Prayagraj(Uttar Pradesh),1001,84832,Ujjain,Prayagraj(Uttar Pradesh),1816,25
+Destination,Prayagraj(Uttar Pradesh),76431,84832,Ranchi,Prayagraj(Uttar Pradesh),1769,26
+Destination,Prayagraj(Uttar Pradesh),833,84832,Chandigarh,Prayagraj(Uttar Pradesh),1635,27
+Destination,Prayagraj(Uttar Pradesh),130,84832,Pune,Prayagraj(Uttar Pradesh),1545,28
+Destination,Prayagraj(Uttar Pradesh),74820,84832,Kolkata,Prayagraj(Uttar Pradesh),1536,29
+Destination,Prayagraj(Uttar Pradesh),122,84832,Bengaluru,Prayagraj(Uttar Pradesh),1514,30
+Destination,Prayagraj(Uttar Pradesh),78023,84832,Etawah,Prayagraj(Uttar Pradesh),1501,31
+Destination,Prayagraj(Uttar Pradesh),90113,84832,Jaunpur,Prayagraj(Uttar Pradesh),1266,32
+Destination,Prayagraj(Uttar Pradesh),74699,84832,Patna (Bihar),Prayagraj(Uttar Pradesh),1243,33
+Destination,Prayagraj(Uttar Pradesh),91608,84832,Raebareli,Prayagraj(Uttar Pradesh),1199,34
+Destination,Prayagraj(Uttar Pradesh),1369,84832,Jhansi(Uttar Pradesh),Prayagraj(Uttar Pradesh),1170,35
+Destination,Prayagraj(Uttar Pradesh),736,84832,Ludhiana,Prayagraj(Uttar Pradesh),1163,36
+Destination,Prayagraj(Uttar Pradesh),76481,84832,Basti,Prayagraj(Uttar Pradesh),1120,37
+Destination,Prayagraj(Uttar Pradesh),551,84832,Ahmedabad,Prayagraj(Uttar Pradesh),1082,38
+Destination,Prayagraj(Uttar Pradesh),77718,84832,Mohali,Prayagraj(Uttar Pradesh),1051,39
+Destination,Prayagraj(Uttar Pradesh),76451,84832,Jamshedpur,Prayagraj(Uttar Pradesh),1009,40
+Destination,Prayagraj(Uttar Pradesh),476,84832,A.S.Peta,Prayagraj(Uttar Pradesh),958,41
+Destination,Prayagraj(Uttar Pradesh),777,84832,Dehradun,Prayagraj(Uttar Pradesh),917,42
+Destination,Prayagraj(Uttar Pradesh),95032,84832,Sultanpur (Uttar Pradesh),Prayagraj(Uttar Pradesh),881,43
+Destination,Prayagraj(Uttar Pradesh),1437,84832,Bareilly (Uttar Pradesh),Prayagraj(Uttar Pradesh),832,44
+Destination,Prayagraj(Uttar Pradesh),90189,84832,Mau,Prayagraj(Uttar Pradesh),799,45
+Destination,Prayagraj(Uttar Pradesh),79617,84832,Meerut,Prayagraj(Uttar Pradesh),790,46
+Destination,Prayagraj(Uttar Pradesh),197682,84832,Mirzapur (uttar pradesh),Prayagraj(Uttar Pradesh),782,47
+Destination,Prayagraj(Uttar Pradesh),95514,84832,Shahdol,Prayagraj(Uttar Pradesh),778,48
+Destination,Prayagraj(Uttar Pradesh),1169,84832,Jodhpur,Prayagraj(Uttar Pradesh),727,49
+Destination,Prayagraj(Uttar Pradesh),88443,84832,Satna,Prayagraj(Uttar Pradesh),719,50
+Destination,Prayagraj(Uttar Pradesh),1443,84832,Kota(Rajasthan),Prayagraj(Uttar Pradesh),717,51
+Destination,Prayagraj(Uttar Pradesh),217335,84832,Chitrakoot (Uttar Pradesh),Prayagraj(Uttar Pradesh),703,52
+Destination,Prayagraj(Uttar Pradesh),309,84832,Aurangabad (Maharashtra),Prayagraj(Uttar Pradesh),699,53
+Destination,Prayagraj(Uttar Pradesh),79613,84832,Aligarh (uttar pradesh),Prayagraj(Uttar Pradesh),699,54
+Destination,Prayagraj(Uttar Pradesh),95234,84832,Banda(Uttar Pradesh),Prayagraj(Uttar Pradesh),675,55
+Destination,Prayagraj(Uttar Pradesh),73723,84832,Chhatarpur (madhya pradesh),Prayagraj(Uttar Pradesh),669,56
+Destination,Prayagraj(Uttar Pradesh),74676,84832,Bhubaneswar,Prayagraj(Uttar Pradesh),662,57
+Destination,Prayagraj(Uttar Pradesh),473,84832,Surat,Prayagraj(Uttar Pradesh),650,58
+Destination,Prayagraj(Uttar Pradesh),94990,84832,Pratapgarh(Uttar Pradesh),Prayagraj(Uttar Pradesh),645,59
+Destination,Prayagraj(Uttar Pradesh),93947,84832,Ambikapur,Prayagraj(Uttar Pradesh),642,60
+Destination,Prayagraj(Uttar Pradesh),808,84832,Ajmer,Prayagraj(Uttar Pradesh),623,61
+Destination,Prayagraj(Uttar Pradesh),94838,84832,Bahraich,Prayagraj(Uttar Pradesh),620,62
+Destination,Prayagraj(Uttar Pradesh),84828,84832,Seoni (madhya pradesh),Prayagraj(Uttar Pradesh),599,63
+Destination,Prayagraj(Uttar Pradesh),802,84832,Haridwar,Prayagraj(Uttar Pradesh),598,64
+Destination,Prayagraj(Uttar Pradesh),73532,84832,Katni,Prayagraj(Uttar Pradesh),594,65
+Destination,Prayagraj(Uttar Pradesh),123,84832,Chennai,Prayagraj(Uttar Pradesh),566,66
+Destination,Prayagraj(Uttar Pradesh),73533,84832,Maihar,Prayagraj(Uttar Pradesh),563,67
+Destination,Prayagraj(Uttar Pradesh),219652,84832,Renukoot (uttar Pradesh),Prayagraj(Uttar Pradesh),544,68
+Destination,Prayagraj(Uttar Pradesh),76479,84832,Faizabad,Prayagraj(Uttar Pradesh),531,69
+Destination,Prayagraj(Uttar Pradesh),94840,84832,Gonda,Prayagraj(Uttar Pradesh),520,70
+Destination,Prayagraj(Uttar Pradesh),69774,84832,Bharatpur,Prayagraj(Uttar Pradesh),514,71
+Destination,Prayagraj(Uttar Pradesh),73529,84832,Durg,Prayagraj(Uttar Pradesh),513,72
+Destination,Prayagraj(Uttar Pradesh),205922,84832,Akbarpur (ambedkar Nagar),Prayagraj(Uttar Pradesh),512,73
+Destination,Prayagraj(Uttar Pradesh),1365,84832,Guna,Prayagraj(Uttar Pradesh),499,74
+Destination,Prayagraj(Uttar Pradesh),77167,84832,Gaya,Prayagraj(Uttar Pradesh),487,75
+Destination,Prayagraj(Uttar Pradesh),74136,84832,Dewas,Prayagraj(Uttar Pradesh),467,76
+Destination,Prayagraj(Uttar Pradesh),95483,84832,Sidhi (madhya pradesh),Prayagraj(Uttar Pradesh),464,77
+Destination,Prayagraj(Uttar Pradesh),90329,84832,Ballia (Uttar Pradesh),Prayagraj(Uttar Pradesh),459,78
+Destination,Prayagraj(Uttar Pradesh),1514,84832,Haldwani,Prayagraj(Uttar Pradesh),458,79
+Destination,Prayagraj(Uttar Pradesh),95026,84832,Ghazipur,Prayagraj(Uttar Pradesh),458,80
+Destination,Prayagraj(Uttar Pradesh),94632,84832,Hapur,Prayagraj(Uttar Pradesh),439,81
+Destination,Prayagraj(Uttar Pradesh),94981,84832,Shahganj (uttar pradesh),Prayagraj(Uttar Pradesh),436,82
+Destination,Prayagraj(Uttar Pradesh),94782,84832,Vrindavan,Prayagraj(Uttar Pradesh),418,83
+Destination,Prayagraj(Uttar Pradesh),470,84832,Udaipur,Prayagraj(Uttar Pradesh),403,84
+Destination,Prayagraj(Uttar Pradesh),74672,84832,Asansol (West Bengal),Prayagraj(Uttar Pradesh),401,85
+Destination,Prayagraj(Uttar Pradesh),71958,84832,Gwalior,Prayagraj(Uttar Pradesh),395,86
+Destination,Prayagraj(Uttar Pradesh),95015,84832,Deoria (Uttar Pradesh),Prayagraj(Uttar Pradesh),392,87
+Destination,Prayagraj(Uttar Pradesh),829,84832,Fatehpur (Uttar Pradesh),Prayagraj(Uttar Pradesh),382,88
+Destination,Prayagraj(Uttar Pradesh),1438,84832,Sitapur (Uttar Pradesh),Prayagraj(Uttar Pradesh),377,89
+Destination,Prayagraj(Uttar Pradesh),76576,84832,Hazaribagh,Prayagraj(Uttar Pradesh),361,90
+Destination,Prayagraj(Uttar Pradesh),1372,84832,Orai,Prayagraj(Uttar Pradesh),358,91
+Destination,Prayagraj(Uttar Pradesh),221347,84832,Jewar,Prayagraj(Uttar Pradesh),357,92
+Destination,Prayagraj(Uttar Pradesh),69802,84832,Durgapur (West Bengal),Prayagraj(Uttar Pradesh),349,93
+Destination,Prayagraj(Uttar Pradesh),94978,84832,Mahoba,Prayagraj(Uttar Pradesh),344,94
+Destination,Prayagraj(Uttar Pradesh),1499,84832,Kalyan,Prayagraj(Uttar Pradesh),342,95
+Destination,Prayagraj(Uttar Pradesh),77705,84832,Mehandipur balaji mandir,Prayagraj(Uttar Pradesh),334,96
+Destination,Prayagraj(Uttar Pradesh),256864,84832,Chitrakoot Dham (karwi),Prayagraj(Uttar Pradesh),317,97
+Destination,Prayagraj(Uttar Pradesh),216812,84832,Waidhan,Prayagraj(Uttar Pradesh),302,98
+Destination,Prayagraj(Uttar Pradesh),1003,84832,Vadodara,Prayagraj(Uttar Pradesh),302,99
+Destination,Prayagraj(Uttar Pradesh),444,84832,Nashik,Prayagraj(Uttar Pradesh),298,100

@@ -1,0 +1,101 @@
+city_role,anchor_city_name,src_id,dest_id,src_city,dst_city,search_count,rank
+Destination,Ayodhya,733,76480,Delhi,Ayodhya,47044,1
+Destination,Ayodhya,70429,76480,Varanasi,Ayodhya,13330,2
+Destination,Ayodhya,1439,76480,Lucknow,Ayodhya,8716,3
+Destination,Ayodhya,807,76480,Jaipur (Rajasthan),Ayodhya,6839,4
+Destination,Ayodhya,78027,76480,Gorakhpur (uttar pradesh),Ayodhya,5625,5
+Destination,Ayodhya,624,76480,Nagpur,Ayodhya,5112,6
+Destination,Ayodhya,747,76480,Mathura,Ayodhya,5034,7
+Destination,Ayodhya,1290,76480,Agra,Ayodhya,4590,8
+Destination,Ayodhya,84832,76480,Prayagraj(Uttar Pradesh),Ayodhya,4545,9
+Destination,Ayodhya,1377,76480,Kanpur (Uttar Pradesh),Ayodhya,3261,10
+Destination,Ayodhya,833,76480,Chandigarh,Ayodhya,3106,11
+Destination,Ayodhya,1429,76480,Noida,Ayodhya,3075,12
+Destination,Ayodhya,70015,76480,Gurugram (Gurgaon),Ayodhya,2843,13
+Destination,Ayodhya,216383,76480,Greater noida (uttar pradesh),Ayodhya,2209,14
+Destination,Ayodhya,313,76480,Indore,Ayodhya,2177,15
+Destination,Ayodhya,70014,76480,Raipur (Chhattisgarh),Ayodhya,1483,16
+Destination,Ayodhya,1443,76480,Kota(Rajasthan),Ayodhya,1332,17
+Destination,Ayodhya,122,76480,Bengaluru,Ayodhya,1331,18
+Destination,Ayodhya,1369,76480,Jhansi(Uttar Pradesh),Ayodhya,1329,19
+Destination,Ayodhya,777,76480,Dehradun,Ayodhya,1165,20
+Destination,Ayodhya,309,76480,Aurangabad (Maharashtra),Ayodhya,1104,21
+Destination,Ayodhya,1001,76480,Ujjain,Ayodhya,1085,22
+Destination,Ayodhya,802,76480,Haridwar,Ayodhya,1058,23
+Destination,Ayodhya,736,76480,Ludhiana,Ayodhya,1037,24
+Destination,Ayodhya,124,76480,Hyderabad,Ayodhya,1027,25
+Destination,Ayodhya,94782,76480,Vrindavan,Ayodhya,1004,26
+Destination,Ayodhya,71958,76480,Gwalior,Ayodhya,966,27
+Destination,Ayodhya,73723,76480,Chhatarpur (madhya pradesh),Ayodhya,867,28
+Destination,Ayodhya,74820,76480,Kolkata,Ayodhya,863,29
+Destination,Ayodhya,74699,76480,Patna (Bihar),Ayodhya,846,30
+Destination,Ayodhya,73534,76480,Rewa,Ayodhya,829,31
+Destination,Ayodhya,90355,76480,Azamgarh,Ayodhya,822,32
+Destination,Ayodhya,462,76480,Mumbai,Ayodhya,781,33
+Destination,Ayodhya,551,76480,Ahmedabad,Ayodhya,779,34
+Destination,Ayodhya,70024,76480,Jabalpur,Ayodhya,776,35
+Destination,Ayodhya,94840,76480,Gonda,Ayodhya,736,36
+Destination,Ayodhya,74153,76480,Ghaziabad,Ayodhya,704,37
+Destination,Ayodhya,1437,76480,Bareilly (Uttar Pradesh),Ayodhya,698,38
+Destination,Ayodhya,197504,76480,Khatushyamji,Ayodhya,696,39
+Destination,Ayodhya,76431,76480,Ranchi,Ayodhya,691,40
+Destination,Ayodhya,130,76480,Pune,Ayodhya,689,41
+Destination,Ayodhya,979,76480,Bhopal,Ayodhya,679,42
+Destination,Ayodhya,76451,76480,Jamshedpur,Ayodhya,677,43
+Destination,Ayodhya,95015,76480,Deoria (Uttar Pradesh),Ayodhya,676,44
+Destination,Ayodhya,77705,76480,Mehandipur balaji mandir,Ayodhya,669,45
+Destination,Ayodhya,91608,76480,Raebareli,Ayodhya,668,46
+Destination,Ayodhya,79617,76480,Meerut,Ayodhya,616,47
+Destination,Ayodhya,1514,76480,Haldwani,Ayodhya,608,48
+Destination,Ayodhya,197105,76480,Bilaspur (Chhattisgarh),Ayodhya,591,49
+Destination,Ayodhya,76481,76480,Basti,Ayodhya,589,50
+Destination,Ayodhya,95032,76480,Sultanpur (Uttar Pradesh),Ayodhya,584,51
+Destination,Ayodhya,77677,76480,Panipat,Ayodhya,578,52
+Destination,Ayodhya,90113,76480,Jaunpur,Ayodhya,512,53
+Destination,Ayodhya,69774,76480,Bharatpur,Ayodhya,509,54
+Destination,Ayodhya,94838,76480,Bahraich,Ayodhya,506,55
+Destination,Ayodhya,79613,76480,Aligarh (uttar pradesh),Ayodhya,504,56
+Destination,Ayodhya,808,76480,Ajmer,Ayodhya,489,57
+Destination,Ayodhya,74676,76480,Bhubaneswar,Ayodhya,479,58
+Destination,Ayodhya,90189,76480,Mau,Ayodhya,476,59
+Destination,Ayodhya,842,76480,Rishikesh,Ayodhya,453,60
+Destination,Ayodhya,79729,76480,Sikar,Ayodhya,437,61
+Destination,Ayodhya,1405,76480,Ambala (Haryana),Ayodhya,433,62
+Destination,Ayodhya,298723,76480,Bageshwar Dham,Ayodhya,423,63
+Destination,Ayodhya,473,76480,Surat,Ayodhya,410,64
+Destination,Ayodhya,1513,76480,Rudrapur,Ayodhya,409,65
+Destination,Ayodhya,1365,76480,Guna,Ayodhya,398,66
+Destination,Ayodhya,93233,76480,Barabanki,Ayodhya,385,67
+Destination,Ayodhya,217335,76480,Chitrakoot (Uttar Pradesh),Ayodhya,383,68
+Destination,Ayodhya,1438,76480,Sitapur (Uttar Pradesh),Ayodhya,378,69
+Destination,Ayodhya,77682,76480,Karnal,Ayodhya,370,70
+Destination,Ayodhya,94990,76480,Pratapgarh(Uttar Pradesh),Ayodhya,355,71
+Destination,Ayodhya,65850,76480,Ringas,Ayodhya,340,72
+Destination,Ayodhya,1435,76480,Moradabad,Ayodhya,330,73
+Destination,Ayodhya,221347,76480,Jewar,Ayodhya,328,74
+Destination,Ayodhya,1372,76480,Orai,Ayodhya,328,75
+Destination,Ayodhya,94978,76480,Mahoba,Ayodhya,323,76
+Destination,Ayodhya,200888,76480,Khalilabad,Ayodhya,320,77
+Destination,Ayodhya,197682,76480,Mirzapur (uttar pradesh),Ayodhya,317,78
+Destination,Ayodhya,80303,76480,Muzaffarpur (Bihar),Ayodhya,316,79
+Destination,Ayodhya,82100,76480,Faridabad,Ayodhya,308,80
+Destination,Ayodhya,94839,76480,Balrampur (uttar pradesh),Ayodhya,300,81
+Destination,Ayodhya,93947,76480,Ambikapur,Ayodhya,292,82
+Destination,Ayodhya,74154,76480,Muzaffarnagar,Ayodhya,292,83
+Destination,Ayodhya,95480,76480,Palwal,Ayodhya,290,84
+Destination,Ayodhya,95026,76480,Ghazipur,Ayodhya,285,85
+Destination,Ayodhya,1169,76480,Jodhpur,Ayodhya,281,86
+Destination,Ayodhya,90329,76480,Ballia (Uttar Pradesh),Ayodhya,279,87
+Destination,Ayodhya,95234,76480,Banda(Uttar Pradesh),Ayodhya,275,88
+Destination,Ayodhya,204409,76480,Zirakpur(punjab),Ayodhya,269,89
+Destination,Ayodhya,78023,76480,Etawah,Ayodhya,267,90
+Destination,Ayodhya,470,76480,Udaipur,Ayodhya,266,91
+Destination,Ayodhya,205922,76480,Akbarpur (ambedkar Nagar),Ayodhya,263,92
+Destination,Ayodhya,74690,76480,Puri,Ayodhya,259,93
+Destination,Ayodhya,94781,76480,Sonauli (uttar pradesh),Ayodhya,258,94
+Destination,Ayodhya,443,76480,Sagar (Madhya Pradesh),Ayodhya,255,95
+Destination,Ayodhya,77167,76480,Gaya,Ayodhya,253,96
+Destination,Ayodhya,94837,76480,Rupaidiha,Ayodhya,251,97
+Destination,Ayodhya,91770,76480,Unnao,Ayodhya,251,98
+Destination,Ayodhya,94845,76480,Maharajganj,Ayodhya,243,99
+Destination,Ayodhya,1538,76480,Roorkee (uttarakhand),Ayodhya,240,100
