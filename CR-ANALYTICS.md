@@ -109,3 +109,25 @@ Change only the date window in reference SQL the user asks for.
 | `cr-analytics-assistant` | India CR Analytics Assistant — RCA decision tree, causation vs correlation, shopper-spike hierarchy, feature log, CSV schemas, APIs |
 
 Also mirrored as package-root `SKILLS.md`.
+
+
+## CR Analyser app (dashboard)
+
+India CR Analytics Assistant — FastAPI + single-file frontend.
+
+```bash
+cd /home/ubuntu/cr-analytics
+./START_HERE.sh
+# open http://127.0.0.1:8080
+```
+
+| Path | Role |
+|---|---|
+| `backend/main.py` | APIs + RCA chat |
+| `backend/csv_data_engine.py` | KPIs, funnel, dimensions, mix-shift RCA |
+| `backend/mock_data.py` | Auto sample CSVs when none configured |
+| `frontend/index.html` | Dashboard UI |
+| `SKILLS.md` / `skills/cr-analytics-assistant` | Product skills & feature log |
+| `skills/cr-analyser` | Iceberg SQL CR contracts |
+
+Optional env: `CSV_DATA_PATH`, `SLICES_DATA_PATH`, `ANTHROPIC_API_KEY`.

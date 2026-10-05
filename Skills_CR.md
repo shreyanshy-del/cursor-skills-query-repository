@@ -86,3 +86,7 @@ Use with `cr-analyser`. Recompute step rates **inside each cut**; product identi
 - `/cursor/stores/self/docs/cr-dimensions-query-map.md` — dimension → table map
 - `/cursor/stores/self/docs/project-context.md` — project wiring
 - `/cursor/stores/self/docs/team-brief.md` — team socialization brief
+
+## Live dashboard
+
+Run `app/START_HERE.sh` (or `/home/ubuntu/cr-analytics/START_HERE.sh`) → http://127.0.0.1:8080

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CR Analyser — India</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --bg0: #0f1b24;
+  --bg1: #152632;
+  --bg2: #1c3342;
+  --panel: rgba(255,255,255,0.04);
+  --stroke: rgba(255,255,255,0.08);
+  --text: #eef4f7;
+  --muted: #8aa0ad;
+  --accent: #ff6a3d;
+  --accent2: #2ec4b6;
+  --good: #3dd68c;
+  --bad: #ff5d6c;
+  --warn: #f0b429;
+  --shadow: 0 18px 50px rgba(0,0,0,.35);
+  --radius: 16px;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Sora, system-ui, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(255,106,61,.18), transparent 60%),
+    radial-gradient(900px 500px at 100% 0%, rgba(46,196,182,.12), transparent 55%),
+    linear-gradient(180deg, var(--bg0), #0b141b 40%, #101c26);
+  min-height: 100vh;
+}
+header.app {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 18px 28px; border-bottom: 1px solid var(--stroke);
+  backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 20;
+  background: rgba(15,27,36,.8);
+}
+.brand { display: flex; align-items: baseline; gap: 12px; }
+.brand h1 { margin: 0; font-size: 1.35rem; letter-spacing: -.02em; }
+.brand h1 span { color: var(--accent); }
+.brand .geo { font-size: .75rem; color: var(--muted); font-family: "IBM Plex Mono", monospace; }
+.controls { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.controls input, .controls select, .controls button, .chip {
+  background: var(--bg2); color: var(--text); border: 1px solid var(--stroke);
+  border-radius: 999px; padding: 8px 12px; font: inherit; font-size: .85rem;
+}
+.controls button, .chip { cursor: pointer; }
+.controls button.primary { background: var(--accent); border-color: transparent; color: #1a0d08; font-weight: 600; }
+.layout { display: grid; grid-template-columns: 1fr 340px; gap: 18px; padding: 18px 28px 40px; }
+@media (max-width: 1100px) { .layout { grid-template-columns: 1fr; } }
+.panel {
+  background: var(--panel); border: 1px solid var(--stroke); border-radius: var(--radius);
+  box-shadow: var(--shadow); padding: 16px;
+}
+.panel h2 { margin: 0 0 12px; font-size: 1rem; }
+.panel h3 { margin: 0 0 8px; font-size: .9rem; color: var(--muted); font-weight: 500; }
+.kpis { display: grid; grid-template-columns: repeat(7, minmax(110px, 1fr)); gap: 10px; margin-bottom: 16px; }
+@media (max-width: 1200px) { .kpis { grid-template-columns: repeat(3, 1fr); } }
+.kpi {
+  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+  border: 1px solid var(--stroke); border-radius: 14px; padding: 12px;
+}
+.kpi .label { font-size: .72rem; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+.kpi .value { font-size: 1.35rem; font-weight: 700; margin-top: 4px; font-variant-numeric: tabular-nums; }
+.kpi .delta { font-size: .78rem; margin-top: 4px; font-family: "IBM Plex Mono", monospace; }
+.delta.up.good, .delta.down.bad { color: var(--good); }
+.delta.up.bad, .delta.down.good { color: var(--bad); }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; align-items: center; }
+.chip.active { background: rgba(255,106,61,.2); border-color: var(--accent); color: #ffd2c2; }
+.active-bar { display: none; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; padding: 8px 10px;
+  background: rgba(255,106,61,.08); border: 1px solid rgba(255,106,61,.25); border-radius: 12px; }
+.active-bar.show { display: flex; }
+.pill { background: var(--accent); color: #1a0d08; border-radius: 999px; padding: 4px 10px; font-size: .75rem; font-weight: 600; cursor: pointer; }
+.grid2 { display: grid; grid-template-columns: 1.2fr 1fr; gap: 16px; }
+@media (max-width: 900px) { .grid2 { grid-template-columns: 1fr; } }
+svg.chart { width: 100%; height: 220px; background: rgba(0,0,0,.15); border-radius: 12px; }
+table { width: 100%; border-collapse: collapse; font-size: .82rem; }
+th, td { padding: 8px 6px; border-bottom: 1px solid var(--stroke); text-align: right; }
+th:first-child, td:first-child { text-align: left; }
+tr.hot td { background: rgba(255,93,108,.08); }
+.badge { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: .7rem; font-weight: 600; }
+.badge.op { background: rgba(255,93,108,.2); color: #ffb0b8; }
+.badge.st { background: rgba(240,180,41,.2); color: #ffe2a0; }
+.insights { display: grid; gap: 8px; }
+.insight { padding: 10px 12px; border-radius: 12px; border: 1px solid var(--stroke); font-size: .82rem; }
+.insight.critical { border-color: rgba(255,93,108,.4); }
+.insight.warning { border-color: rgba(240,180,41,.4); }
+.insight.positive { border-color: rgba(61,214,140,.4); }
+.tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+.tab { padding: 6px 10px; border-radius: 999px; border: 1px solid var(--stroke); background: transparent; color: var(--muted); cursor: pointer; font: inherit; font-size: .78rem; }
+.tab.on { background: rgba(46,196,182,.15); color: var(--accent2); border-color: rgba(46,196,182,.4); }
+.chat { display: flex; flex-direction: column; height: calc(100vh - 120px); min-height: 520px; }
+.messages { flex: 1; overflow: auto; display: flex; flex-direction: column; gap: 10px; padding-right: 4px; }
+.msg { padding: 10px 12px; border-radius: 12px; font-size: .84rem; line-height: 1.45; white-space: pre-wrap; }
+.msg.user { background: rgba(255,106,61,.12); align-self: flex-end; max-width: 95%; }
+.msg.bot { background: rgba(255,255,255,.05); border-left: 3px solid var(--accent); }
+.tools { font-size: .7rem; color: var(--muted); margin-top: 6px; font-family: "IBM Plex Mono", monospace; }
+.composer { display: flex; gap: 8px; margin-top: 10px; }
+.composer input { flex: 1; border-radius: 12px; border: 1px solid var(--stroke); background: var(--bg2); color: var(--text); padding: 10px 12px; font: inherit; }
+.composer button { border-radius: 12px; border: 0; background: var(--accent); color: #1a0d08; font-weight: 600; padding: 0 14px; cursor: pointer; }
+.context details { margin-top: 10px; font-size: .8rem; color: var(--muted); }
+.context textarea { width: 100%; min-height: 70px; margin-top: 6px; border-radius: 10px; border: 1px solid var(--stroke); background: var(--bg2); color: var(--text); padding: 8px; font: inherit; }
+.bar { height: 8px; background: rgba(255,255,255,.08); border-radius: 99px; overflow: hidden; }
+.bar > i { display: block; height: 100%; background: linear-gradient(90deg, var(--accent2), var(--accent)); }
+.muted { color: var(--muted); font-size: .78rem; }
+.stack { display: grid; gap: 16px; }
+</style>
+</head>
+<body>
+<header class="app">
+  <div class="brand">
+    <h1>CR <span>Analyser</span></h1>
+    <div class="geo">GEO · INDIA (IN)</div>
+  </div>
+  <div class="controls">
+    <input type="date" id="start" />
+    <input type="date" id="end" />
+    <button class="primary" id="apply">Apply</button>
+    <button id="resetChat" title="Clear chat">Clear chat</button>
+  </div>
+</header>
+
+<main class="layout">
+  <section class="stack">
+    <div class="filters" id="filterBar"></div>
+    <div class="active-bar" id="activeBar"></div>
+
+    <div class="kpis" id="kpis"></div>
+
+    <div class="grid2">
+      <div class="panel">
+        <h2>Daily CR trend</h2>
+        <svg class="chart" id="crChart" viewBox="0 0 640 220" preserveAspectRatio="none"></svg>
+        <div class="insights" id="insights" style="margin-top:12px"></div>
+      </div>
+      <div class="panel">
+        <h2>Funnel throughput</h2>
+        <div id="identity" class="muted" style="margin-bottom:8px"></div>
+        <div style="overflow:auto">
+          <table id="funnelTable">
+            <thead><tr><th>Stage</th><th>Sessions</th><th>Step CR</th><th>Drop</th><th>Cum CR</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <h3 style="margin-top:14px">Same day vs last week</h3>
+        <svg class="chart" id="wowChart" viewBox="0 0 640 180" preserveAspectRatio="none"></svg>
+      </div>
+    </div>
+
+    <div class="grid2">
+      <div class="panel">
+        <h2>Period comparison</h2>
+        <div class="tabs" id="periodTabs">
+          <button class="tab on" data-mode="dod">DoD</button>
+          <button class="tab" data-mode="wow_same">WoW same day</button>
+          <button class="tab" data-mode="wow_7">WoW 7-day</button>
+          <button class="tab" data-mode="mom">MoM</button>
+        </div>
+        <div id="periodMeta" class="muted"></div>
+        <div id="periodGrid" class="kpis" style="margin-top:10px;grid-template-columns:repeat(auto-fit,minmax(120px,1fr))"></div>
+      </div>
+      <div class="panel">
+        <h2>Seats impact</h2>
+        <table id="seatsTable"><thead><tr><th>User type</th><th>Booked</th><th>Lost</th><th>Loss %</th></tr></thead><tbody></tbody></table>
+        <svg class="chart" id="seatsChart" viewBox="0 0 640 160" preserveAspectRatio="none" style="margin-top:10px;height:160px"></svg>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Dimension breakdown</h2>
+      <div class="tabs" id="dimTabs">
+        <button class="tab on" data-dim="user_type">User type</button>
+        <button class="tab" data-dim="platform">Platform</button>
+        <button class="tab" data-dim="language">Language</button>
+        <button class="tab" data-dim="region">Region</button>
+        <button class="tab" data-dim="dbd">DBD</button>
+      </div>
+      <table id="dimTable"><thead><tr><th>Segment</th><th>CR%</th><th>SRP</th><th>Bookings</th><th>Error%</th><th>Pay drop%</th><th></th></tr></thead><tbody></tbody></table>
+    </div>
+  </section>
+
+  <aside class="panel chat">
+    <h2>RCA assistant <span id="signalBadge"></span></h2>
+    <div class="messages" id="messages">
+      <div class="msg bot">Ask why CR moved. Try: “Why did CR drop yesterday?” or “Is this structural or operational?”</div>
+    </div>
+    <div class="composer">
+      <input id="chatInput" placeholder="Ask an RCA question…" />
+      <button id="send">Ask</button>
+    </div>
+    <div class="context">
+      <details>
+        <summary>Team context notes</summary>
+        <textarea id="teamContext" placeholder="Campaigns, outages, releases…"></textarea>
+      </details>
+    </div>
+  </aside>
+</main>
+
+<script>
+const state = {
+  start: null, end: null,
+  filters: { user_type: new Set(), platform: new Set(), language: new Set() },
+  sessionId: localStorage.getItem('cr_session') || null,
+  periodMode: 'dod',
+  dim: 'user_type',
+};
+
+const $ = (s) => document.querySelector(s);
+
+function qparams(extra = {}) {
+  const p = new URLSearchParams();
+  if (state.start) p.set('start_date', state.start);
+  if (state.end) p.set('end_date', state.end);
+  for (const [k, set] of Object.entries(state.filters)) {
+    if (set.size) p.set('filter_' + k, [...set].join(','));
+  }
+  Object.entries(extra).forEach(([k,v]) => v != null && p.set(k,v));
+  return p.toString();
+}
+
+async function api(path, extra) {
+  const r = await fetch(path + (path.includes('?') ? '&' : '?') + qparams(extra));
+  if (!r.ok) throw new Error(await r.text());
+  return r.json();
+}
+
+function fmt(n, unit='') {
+  if (n == null || Number.isNaN(n)) return '—';
+  if (unit === '%') return n.toFixed(2) + '%';
+  if (Math.abs(n) >= 1000) return Intl.NumberFormat('en-IN', {notation:'compact', maximumFractionDigits:1}).format(n);
+  return (Math.round(n*100)/100).toLocaleString('en-IN');
+}
+
+function deltaEl(d, higherBetter) {
+  if (d == null) return '<div class="delta muted">—</div>';
+  const up = d >= 0;
+  const good = higherBetter ? up : !up;
+  const cls = `${up ? 'up' : 'down'} ${good ? 'good' : 'bad'}`;
+  return `<div class="delta ${cls}">${up?'▲':'▼'} ${Math.abs(d).toFixed(1)}%</div>`;
+}
+
+function lineChart(svg, seriesList, anomalies=[]) {
+  const w=640, h = +svg.viewBox.baseVal.height || 220, pad=28;
+  const all = seriesList.flatMap(s => s.points);
+  if (!all.length) { svg.innerHTML = ''; return; }
+  const xs = all.map(p => +new Date(p.date));
+  const ys = all.map(p => p.cr);
+  const minX=Math.min(...xs), maxX=Math.max(...xs);
+  const minY=Math.min(...ys)*0.92, maxY=Math.max(...ys)*1.08 || 1;
+  const x = t => pad + (w-2*pad) * ((t-minX)/((maxX-minX)||1));
+  const y = v => h-pad - (h-2*pad) * ((v-minY)/((maxY-minY)||1));
+  let html = '';
+  anomalies.forEach(d => {
+    const xx = x(+new Date(d));
+    html += `<rect x="${xx-6}" y="${pad/2}" width="12" height="${h-pad}" fill="rgba(255,93,108,.15)" />`;
+  });
+  const colors = ['#ff6a3d', '#2ec4b6', '#8ab4ff', '#f0b429'];
+  seriesList.forEach((s, i) => {
+    const pts = s.points.map(p => `${x(+new Date(p.date))},${y(p.cr)}`).join(' ');
+    if (s.points.length > 1) {
+      const area = `${x(+new Date(s.points[0].date))},${h-pad} ${pts} ${x(+new Date(s.points.at(-1).date))},${h-pad}`;
+      if (i===0) html += `<polygon points="${area}" fill="url(#grad)" opacity=".35" />`;
+    }
+    html += `<polyline fill="none" stroke="${colors[i%colors.length]}" stroke-width="2.5" points="${pts}" stroke-dasharray="${i? '5 4':'0'}" />`;
+  });
+  html = `<defs><linearGradient id="grad" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ff6a3d" stop-opacity=".45"/><stop offset="1" stop-color="#ff6a3d" stop-opacity="0"/></linearGradient></defs>` + html;
+  svg.innerHTML = html;
+}
+
+function barStack(svg, daily) {
+  const w=640,h=160,pad=20;
+  if (!daily.length) { svg.innerHTML=''; return; }
+  const max = Math.max(...daily.map(d => d.booked + d.lost)) || 1;
+  const bw = (w-2*pad)/daily.length;
+  let html='';
+  daily.forEach((d,i) => {
+    const x = pad + i*bw;
+    const hb = (h-2*pad) * (d.booked/max);
+    const hl = (h-2*pad) * (d.lost/max);
+    html += `<rect x="${x+1}" y="${h-pad-hb}" width="${Math.max(bw-2,1)}" height="${hb}" fill="#7c5cff55" />`;
+    html += `<rect x="${x+1}" y="${h-pad-hb-hl}" width="${Math.max(bw-2,1)}" height="${hl}" fill="#ff5d6c" />`;
+  });
+  // override purple - use teal for booked
+  html = html.replaceAll('#7c5cff55', '#2ec4b688');
+  svg.innerHTML = html;
+}
+
+async function loadMeta() {
+  const m = await api('/api/meta');
+  $('#start').value = state.start || m.date_min;
+  $('#end').value = state.end || m.date_max;
+  state.start = $('#start').value;
+  state.end = $('#end').value;
+}
+
+async function loadFilters() {
+  const opts = await api('/api/filter-options');
+  const bar = $('#filterBar');
+  bar.innerHTML = '';
+  for (const [group, values] of Object.entries(opts)) {
+    if (!['user_type','platform','language'].includes(group)) continue;
+    const wrap = document.createElement('div');
+    wrap.style.display='flex'; wrap.style.gap='6px'; wrap.style.alignItems='center';
+    wrap.innerHTML = `<span class="muted">${group}</span>`;
+    values.forEach(v => {
+      const b = document.createElement('button');
+      b.className = 'chip' + (state.filters[group].has(v) ? ' active' : '');
+      b.textContent = v;
+      b.onclick = () => {
+        const set = state.filters[group];
+        set.has(v) ? set.delete(v) : set.add(v);
+        refresh();
+      };
+      wrap.appendChild(b);
+    });
+    bar.appendChild(wrap);
+  }
+  const clear = document.createElement('button');
+  clear.className='chip'; clear.textContent='Clear all';
+  clear.onclick = () => { Object.values(state.filters).forEach(s=>s.clear()); refresh(); };
+  bar.appendChild(clear);
+  renderActive();
+}
+
+function renderActive() {
+  const bar = $('#activeBar');
+  const pills = [];
+  for (const [g,set] of Object.entries(state.filters)) {
+    [...set].forEach(v => pills.push({g,v}));
+  }
+  if (!pills.length) { bar.classList.remove('show'); bar.innerHTML=''; return; }
+  bar.classList.add('show');
+  bar.innerHTML = pills.map(p => `<span class="pill" data-g="${p.g}" data-v="${p.v}">${p.g}: ${p.v} ×</span>`).join('') ;
+  bar.querySelectorAll('.pill').forEach(el => el.onclick = () => {
+    state.filters[el.dataset.g].delete(el.dataset.v); refresh();
+  });
+}
+
+async function loadKpis() {
+  const data = await api('/api/kpis');
+  $('#kpis').innerHTML = data.cards.map(c => `
+    <div class="kpi">
+      <div class="label">${c.label}</div>
+      <div class="value">${fmt(c.value, c.unit)}</div>
+      ${deltaEl(c.delta_pct, c.higher_better)}
+    </div>`).join('');
+}
+
+async function loadTrend() {
+  const data = await api('/api/cr-trend');
+  lineChart($('#crChart'), data.series, data.anomaly_dates || []);
+  const ins = await api('/api/insights');
+  $('#insights').innerHTML = (ins.insights||[]).slice(0,6).map(i => `
+    <div class="insight ${i.severity}"><strong>${i.title}</strong><div class="muted">${i.detail}</div></div>`).join('') || '<div class="muted">No auto-insights</div>';
+}
+
+async function loadFunnel() {
+  const data = await api('/api/funnel');
+  const ok = data.identity_check?.ok;
+  $('#identity').innerHTML = `Product identity: product of steps = <b>${data.identity_check.product_of_steps_pct.toFixed(3)}%</b> vs CR <b>${data.identity_check.actual_cr_pct.toFixed(3)}%</b> — ${ok ? 'OK' : 'CHECK'}`;
+  const tb = $('#funnelTable tbody');
+  tb.innerHTML = data.steps.map(s => `
+    <tr class="${s.step_drop>50?'hot':''}">
+      <td>${s.stage}<div class="muted">${s.description}</div></td>
+      <td>${fmt(s.sessions)}</td>
+      <td style="color:${s.step_cr>=80? 'var(--good)': s.step_cr>=50? 'var(--warn)':'var(--bad)'}">${fmt(s.step_cr,'%')}</td>
+      <td>${fmt(s.step_drop,'%')}</td>
+      <td>${fmt(s.cumulative_cr,'%')}</td>
+    </tr>`).join('');
+  const wow = await api('/api/wow-chart');
+  lineChart($('#wowChart'), [
+    {name:'current', points: wow.current},
+    {name:'prior', points: wow.prior_week},
+  ]);
+}
+
+async function loadPeriod() {
+  const data = await api('/api/period-comparison', {mode: state.periodMode});
+  $('#periodMeta').textContent = `${data.label}: ${data.current_range.join(' → ')} vs ${data.previous_range.join(' → ')}`;
+  $('#periodGrid').innerHTML = data.grid.map(c => `
+    <div class="kpi"><div class="label">${c.label}</div>
+    <div class="value">${fmt(c.current, c.unit)}</div>
+    <div class="muted">prev ${fmt(c.previous, c.unit)}</div>
+    ${deltaEl(c.delta_pct, c.higher_better)}</div>`).join('');
+}
+
+async function loadSeats() {
+  const data = await api('/api/seats');
+  $('#seatsTable tbody').innerHTML = data.by_user_type.map(r => `
+    <tr><td>${r.user_type}</td><td>${fmt(r.seats_booked)}</td><td>${fmt(r.seats_lost)}</td><td>${fmt(r.loss_rate,'%')}</td></tr>`).join('');
+  barStack($('#seatsChart'), data.daily);
+}
+
+async function loadDim() {
+  const data = await api('/api/dimension/' + state.dim);
+  const maxCr = Math.max(...data.rows.map(r => r.cr), 1);
+  $('#dimTable tbody').innerHTML = data.rows.map(r => `
+    <tr class="${r.error_rate>18||r.payment_drop>30?'hot':''}">
+      <td>${r.segment}</td><td>${fmt(r.cr,'%')}</td><td>${fmt(r.srp)}</td><td>${fmt(r.bookings)}</td>
+      <td>${fmt(r.error_rate,'%')}</td><td>${fmt(r.payment_drop,'%')}</td>
+      <td style="width:90px"><div class="bar"><i style="width:${100*r.cr/maxCr}%"></i></div></td>
+    </tr>`).join('');
+}
+
+async function loadRcaBadge() {
+  const rca = await api('/api/rca');
+  const st = rca.signal_type === 'causation' ? 'op' : 'st';
+  const label = rca.signal_type === 'causation' ? 'Operational' : 'Structural';
+  $('#signalBadge').innerHTML = `<span class="badge ${st}">${label}</span>`;
+}
+
+async function refresh() {
+  state.start = $('#start').value; state.end = $('#end').value;
+  renderActive();
+  await Promise.all([loadKpis(), loadTrend(), loadFunnel(), loadPeriod(), loadSeats(), loadDim(), loadRcaBadge()]);
+}
+
+$('#apply').onclick = refresh;
+$('#periodTabs').onclick = (e) => {
+  const b = e.target.closest('.tab'); if (!b) return;
+  [...$('#periodTabs').children].forEach(x => x.classList.toggle('on', x===b));
+  state.periodMode = b.dataset.mode; loadPeriod();
+};
+$('#dimTabs').onclick = (e) => {
+  const b = e.target.closest('.tab'); if (!b) return;
+  [...$('#dimTabs').children].forEach(x => x.classList.toggle('on', x===b));
+  state.dim = b.dataset.dim; loadDim();
+};
+
+function teamNotes() {
+  const t = $('#teamContext').value.trim();
+  localStorage.setItem('cr_team_context', t);
+  return t ? t.split('\n').map(s=>s.trim()).filter(Boolean) : [];
+}
+$('#teamContext').value = localStorage.getItem('cr_team_context') || '';
+
+async function sendChat() {
+  const message = $('#chatInput').value.trim();
+  if (!message) return;
+  $('#chatInput').value = '';
+  const box = $('#messages');
+  box.insertAdjacentHTML('beforeend', `<div class="msg user">${message}</div>`);
+  const body = {
+    message,
+    session_id: state.sessionId,
+    start_date: state.start,
+    end_date: state.end,
+    filter_user_type: [...state.filters.user_type].join(',') || null,
+    filter_platform: [...state.filters.platform].join(',') || null,
+    filter_language: [...state.filters.language].join(',') || null,
+    team_context: teamNotes(),
+  };
+  const r = await fetch('/api/chat', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(body)});
+  const data = await r.json();
+  state.sessionId = data.session_id;
+  localStorage.setItem('cr_session', state.sessionId);
+  box.insertAdjacentHTML('beforeend', `<div class="msg bot">${data.reply}<div class="tools">tools: ${(data.tools_used||[]).join(', ')}</div></div>`);
+  box.scrollTop = box.scrollHeight;
+}
+$('#send').onclick = sendChat;
+$('#chatInput').onkeydown = (e) => { if (e.key==='Enter') sendChat(); };
+$('#resetChat').onclick = async () => {
+  if (state.sessionId) await fetch('/api/chat/' + state.sessionId, {method:'DELETE'});
+  state.sessionId = null; localStorage.removeItem('cr_session');
+  $('#messages').innerHTML = `<div class="msg bot">Chat cleared. Ask a new RCA question.</div>`;
+};
+
+(async function init() {
+  await loadMeta();
+  await loadFilters();
+  await refresh();
+})();
+</script>
+</body>
+</html>
