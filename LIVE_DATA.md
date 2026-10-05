@@ -11,6 +11,15 @@
 | Skills / RCA log | `SKILLS.md` / `skills/cr-analytics-assistant` |
 | Catalog | `Skills_CR.md` |
 
+
+## Mac HTML — LIVE without a server
+
+1. Open `CR_Analyser.html` (double-click).
+2. Click **Load live CSV** and pick an Athena/Unity grain export.
+3. Badge switches SAMPLE → LIVE.
+
+Auto-pull still needs AWS credentials on this machine (`AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `ATHENA_OUTPUT`). Unity-india MCP is desktop-only.
+
 ## Live data blockers on this Cloud Agent
 
 This cloud VM **cannot** pull Unity / Iceberg live today:
