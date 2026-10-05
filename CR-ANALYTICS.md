@@ -131,3 +131,13 @@ cd /home/ubuntu/cr-analytics
 | `skills/cr-analyser` | Iceberg SQL CR contracts |
 
 Optional env: `CSV_DATA_PATH`, `SLICES_DATA_PATH`, `ANTHROPIC_API_KEY`.
+
+
+## Dashboard (this repo)
+
+```bash
+./START_HERE.sh
+# http://127.0.0.1:8080
+```
+
+Canonical GitHub for this package is **this repository** (`cursor-skills-query-repository`), not `CR-Analytics`.
