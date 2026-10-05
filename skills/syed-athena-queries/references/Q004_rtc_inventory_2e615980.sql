@@ -1,0 +1,8 @@
+-- Athena saved query (Product_B2C_Intl)
+-- ID: 2e615980-cc2a-49f5-b378-e3acc327bd85
+-- Name: RTC Inventory - Syed
+-- Source: Syed Athena Saved Queries export
+-- Prefer dataplatform MCP / Iceberg for runs; adjust only date params.
+-- Default country: IND when applicable.
+
+SELECT i.operator_id, bo.travels bo_name, i.source_id, i.destination_id, src.location_name source_location, dest.location_name destination_location, CASE WHEN is_ac = TRUE THEN 'AC' ELSE 'non-AC' END AS is_ac, CASE WHEN is_seater = TRUE AND is_sleeper = TRUE THEN 'Hybrid' WHEN is_seater = TRUE AND is_sleeper = FALSE THEN 'Seater' WHEN is_seater = FALSE AND is_sleeper = TRUE THEN 'Sleeper' ELSE 'NA' END AS seat_type, COUNT(DISTINCT service_id) service_count, COUNT(DISTINCT route_id) route_id_count FROM "inventory"."inventory" i LEFT JOIN "lis"."operators" bo ON i.operator_id = bo.operator_id LEFT JOIN "lis"."config_locations" src ON src.id = i.source_id LEFT JOIN "lis"."config_locations" dest ON dest.id = i.destination_id WHERE i.doj >= DATE '2026-06-25' AND i.doj < DATE '2026-07-02' AND i.bus_tag = 'ENABLED' AND i.country_code = 'IND' AND i.operator_id IN (10283, 16081, 6392, 15447, 8065, 15129, 7115, 10244, 10823, 15130, 11060, 15499, 11044, 3030, 15443, 16124, 16227, 2020, 16374, 16426, 16580, 16647, 16777, 17012, 16884, 4040, 17137, 17101, 17889, 18115, 18101, 18237, 18491, 19393, 19502, 22837, 22875, 22878, 24978, 25187, 25946, 27000, 26936, 27455, 28011, 29176, 29479, 29391, 29392, 32000, 32272, 32245, 34300, 34400, 33740, 35303, 35268, 33000, 36981) GROUP BY 1, 2, 3, 4, 5, 6, 7, 8 ORDER BY 2, 3, 9 DESC
