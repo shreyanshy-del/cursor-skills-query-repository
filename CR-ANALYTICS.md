@@ -101,3 +101,11 @@ gh skill publish --tag v1.0.0
 ```
 
 Change only the date window in reference SQL the user asks for.
+
+## Assistant product skill
+
+| Skill | Covers |
+|---|---|
+| `cr-analytics-assistant` | India CR Analytics Assistant — RCA decision tree, causation vs correlation, shopper-spike hierarchy, feature log, CSV schemas, APIs |
+
+Also mirrored as package-root `SKILLS.md`.

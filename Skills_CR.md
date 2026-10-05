@@ -13,6 +13,7 @@ Catalog of **CR Analytics** Cursor skills. Core conversion/funnel contracts live
 | Skill | Path | What it does |
 |---|---|---|
 | `cr-analyser` | `skills/cr-analyser/` | India BUS CR = TIN/SRP; ordered throughput SRP→SL→CI→TCO→PAY→PAY_NOW→CONFIRM; product identity ∏ steps = CR |
+| `cr-analytics-assistant` | `skills/cr-analytics-assistant/` | India CR Analytics Assistant — RCA frameworks, feature log, CSV/API product skills |
 
 **Fixed contracts**
 

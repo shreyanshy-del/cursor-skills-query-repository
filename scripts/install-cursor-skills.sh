@@ -55,6 +55,7 @@ resolve_skill() {
 
 SKILLS=(
   cr-analyser
+  cr-analytics-assistant
   cr-dim-usertype cr-dim-dbd cr-dim-lmb cr-dim-channel
   cr-dim-region-tier cr-dim-sd-type cr-dim-custom-sd cr-dim-ga-plugin
   cr-dim-operator cr-dim-bo-type cr-dim-age-gender cr-dim-bus-type
