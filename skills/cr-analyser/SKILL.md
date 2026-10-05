@@ -103,3 +103,23 @@ Lead with CR (`TIN/SRP`), then the six step rates in order, then raw counts
 
 Prefer dataplatformCreateQuery / dataplatformExecuteIcebergQuery. Do not swap
 confirm onto `confirm_order_details`. Do not add channel cuts by default.
+
+
+## Dimension skills (first set)
+
+Attach these cuts onto `cr-analyser` sessions (`mri_session_id`). Recompute steps inside each cut; product identity must hold.
+
+| Skill | Cut | Source |
+|---|---|---|
+| `cr-dim-usertype` | Usertype | `search_details.user_type` |
+| `cr-dim-dbd` | DBD | `search_details` DOI vs doj |
+| `cr-dim-lmb` | LMB / Non-LMB | `search_details` DBD0 IST hour 17–23 |
+| `cr-dim-channel` | Channel | `search_details.os` + `channel` |
+| `cr-dim-region-tier` | Region / State | `lis.config_locations.parent_location` |
+| `cr-dim-sd-type` | Short / Long | `lis.short_route_sds` else Long |
+| `cr-dim-custom-sd` | Custom SD | `search_route_details` + input SD list |
+| `cr-dim-ga-plugin` | GA Plugin | `ui_ux_events` (input group/name/value) |
+| `cr-dim-operator` | Operator_ID | `search_route_details.op_id` |
+| `cr-dim-bo-type` | BO Type | `lis.bo_mappings.is_rtc` / BTE `hft=2` / PRIVATE |
+| `cr-dim-age-gender` | Age / Gender | `svoc.svoc_booker` |
+| `cr-dim-bus-type` | AC / Sleeper / Seater | `search_route_details.is_ac/is_sleeper/is_seater` |

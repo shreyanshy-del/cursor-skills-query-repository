@@ -47,3 +47,23 @@ gh skill publish --tag v1.0.0
 ```
 
 Change only the date window in `references/cr_analyser_1d.sql`.
+
+
+## Dimension skills (first set)
+
+| Skill | Cut | Source |
+|---|---|---|
+| `cr-dim-usertype` | Usertype | `search_details.user_type` |
+| `cr-dim-dbd` | DBD | `search_details` DOI vs doj |
+| `cr-dim-lmb` | LMB / Non-LMB | `search_details` DBD0 IST hour 17–23 |
+| `cr-dim-channel` | Channel | `search_details.os` + `channel` |
+| `cr-dim-region-tier` | Region / State | `lis.config_locations.parent_location` on src/dest |
+| `cr-dim-sd-type` | Short / Long | `lis.short_route_sds` else Long |
+| `cr-dim-custom-sd` | Custom SD | `search_route_details` + input SD list |
+| `cr-dim-ga-plugin` | GA Plugin | `ui_ux_events` (user inputs group/name/value) |
+| `cr-dim-operator` | Operator_ID | `search_route_details.op_id` |
+| `cr-dim-bo-type` | BO Type | `lis.bo_mappings.is_rtc` / BTE `hft=2` / PRIVATE |
+| `cr-dim-age-gender` | Age / Gender | `svoc.svoc_booker` via `rb_user_id` |
+| `cr-dim-bus-type` | AC / Sleeper / Seater | `search_route_details.is_ac/is_sleeper/is_seater` |
+
+Install: `cp -R skills/cr-dim-* ~/.cursor/skills/` or `gh skill install shreyanshy-del/cursor-skills-query-repository <skill>`.
