@@ -141,3 +141,7 @@ Optional env: `CSV_DATA_PATH`, `SLICES_DATA_PATH`, `ANTHROPIC_API_KEY`.
 ```
 
 Canonical GitHub for this package is **this repository** (`cursor-skills-query-repository`), not `CR-Analytics`.
+
+## Mac (simplest)
+
+Double-click [`CR_Analyser.html`](CR_Analyser.html). See [`OPEN_ON_MAC.md`](OPEN_ON_MAC.md).

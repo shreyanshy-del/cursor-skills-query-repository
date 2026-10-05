@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CR Analyser — India</title>
+<style>
+:root{--bg:#0f1b24;--panel:rgba(255,255,255,.05);--line:rgba(255,255,255,.1);--text:#eef4f7;--muted:#8aa0ad;--o:#ff6a3d;--g:#3dd68c;--r:#ff5d6c;--w:#f0b429;--t:#2ec4b6}
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#0f1b24,#101c26);color:var(--text);min-height:100vh}
+header{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(15,27,36,.92);backdrop-filter:blur(8px);z-index:5}
+h1{margin:0;font-size:1.25rem}h1 span{color:var(--o)}.badge{font-size:.7rem;padding:3px 8px;border-radius:999px;border:1px solid var(--w);color:var(--w);margin-left:8px}
+main{padding:16px 20px 40px;max-width:1200px;margin:0 auto}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:14px 0}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px}
+.kpi .l{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}.kpi .v{font-size:1.35rem;font-weight:700;margin-top:4px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px;margin-top:14px}
+.panel h2{margin:0 0 10px;font-size:1rem}
+.grid{display:grid;grid-template-columns:1.2fr 1fr;gap:14px}@media(max-width:900px){.grid{grid-template-columns:1fr}}
+table{width:100%;border-collapse:collapse;font-size:.82rem}th,td{padding:8px 6px;border-bottom:1px solid var(--line);text-align:right}th:first-child,td:first-child{text-align:left}
+.ok{color:var(--g)}.mid{color:var(--w)}.bad{color:var(--r)}
+svg{width:100%;height:200px;background:rgba(0,0,0,.15);border-radius:10px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+select{background:#1c3342;color:var(--text);border:1px solid var(--line);border-radius:999px;padding:8px 12px}
+.note{color:var(--muted);font-size:.8rem;margin-top:8px}
+</style>
+</head>
+<body>
+<header>
+  <div><h1>CR <span>Analyser</span></h1><span class="badge">MAC · OPEN FILE · NO SERVER</span></div>
+  <div class="note">India (IN) · sample data embedded</div>
+</header>
+<main>
+  <div class="filters">
+    <select id="dim"><option value="overall">Overall</option><option value="user_type">By user type</option><option value="platform">By platform</option><option value="language">By language</option></select>
+    <select id="seg"></select>
+  </div>
+  <div class="kpis" id="kpis"></div>
+  <div class="grid">
+    <div class="panel"><h2>Daily CR %</h2><svg id="chart" viewBox="0 0 640 200" preserveAspectRatio="none"></svg></div>
+    <div class="panel"><h2>Funnel</h2><div id="identity" class="note"></div><table><thead><tr><th>Stage</th><th>Sessions</th><th>Step CR</th><th>Cum CR</th></tr></thead><tbody id="funnel"></tbody></table></div>
+  </div>
+  <div class="panel"><h2>Dimension table</h2><table><thead><tr><th>Segment</th><th>CR%</th><th>SRP</th><th>Bookings</th><th>Error%</th><th>Pay drop%</th></tr></thead><tbody id="dims"></tbody></table></div>
+  <p class="note">Open this file in Chrome/Safari (double-click). No Python or localhost needed. To refresh sample data later, replace the DATA block.</p>
+</main>
+<script>
+const DATA = {"days":[{"dt":"2026-02-01","search_sessions":37840,"oops":1304,"seatlayout_sessions":15589,"seatlayout_failures":467,"custinfo_sessions":8328,"create_order_sessions":5847,"tentative_error_sessions":202,"total_tentative_errors":226,"orderinfo_sessions":4717,"total_txns":1067,"total_seats":1810,"GMV":1211656.78},{"dt":"2026-02-02","search_sessions":41158,"oops":1402,"seatlayout_sessions":16828,"seatlayout_failures":466,"custinfo_sessions":9044,"create_order_sessions":6273,"tentative_error_sessions":221,"total_tentative_errors":249,"orderinfo_sessions":5062,"total_txns":1140,"total_seats":2015,"GMV":1317427.99},{"dt":"2026-02-03","search_sessions":40470,"oops":1380,"seatlayout_sessions":16369,"seatlayout_failures":432,"custinfo_sessions":8711,"create_order_sessions":6099,"tentative_error_sessions":202,"total_tentative_errors":220,"orderinfo_sessions":5006,"total_txns":1094,"total_seats":1980,"GMV":1374670.7},{"dt":"2026-02-04","search_sessions":40752,"oops":1378,"seatlayout_sessions":16619,"seatlayout_failures":437,"custinfo_sessions":8941,"create_order_sessions":6289,"tentative_error_sessions":209,"total_tentative_errors":235,"orderinfo_sessions":5136,"total_txns":1121,"total_seats":2001,"GMV":1376276.22},{"dt":"2026-02-05","search_sessions":41116,"oops":1359,"seatlayout_sessions":16782,"seatlayout_failures":460,"custinfo_sessions":8953,"create_order_sessions":6241,"tentative_error_sessions":214,"total_tentative_errors":237,"orderinfo_sessions":5108,"total_txns":1115,"total_seats":1983,"GMV":1369746.3},{"dt":"2026-02-06","search_sessions":43498,"oops":1483,"seatlayout_sessions":17830,"seatlayout_failures":517,"custinfo_sessions":9429,"create_order_sessions":6552,"tentative_error_sessions":225,"total_tentative_errors":245,"orderinfo_sessions":5356,"total_txns":1227,"total_seats":2187,"GMV":1575916.35},{"dt":"2026-02-07","search_sessions":42696,"oops":1513,"seatlayout_sessions":17670,"seatlayout_failures":486,"custinfo_sessions":9501,"create_order_sessions":6670,"tentative_error_sessions":234,"total_tentative_errors":255,"orderinfo_sessions":5475,"total_txns":1180,"total_seats":2074,"GMV":1487092.12},{"dt":"2026-02-08","search_sessions":37697,"oops":1316,"seatlayout_sessions":15274,"seatlayout_failures":421,"custinfo_sessions":8216,"create_order_sessions":5679,"tentative_error_sessions":179,"total_tentative_errors":201,"orderinfo_sessions":4583,"total_txns":1061,"total_seats":1895,"GMV":1328382.02},{"dt":"2026-02-09","search_sessions":42000,"oops":1461,"seatlayout_sessions":17349,"seatlayout_failures":493,"custinfo_sessions":9186,"create_order_sessions":6379,"tentative_error_sessions":215,"total_tentative_errors":239,"orderinfo_sessions":5226,"total_txns":1171,"total_seats":2035,"GMV":1326387.75},{"dt":"2026-02-10","search_sessions":40638,"oops":1379,"seatlayout_sessions":16534,"seatlayout_failures":460,"custinfo_sessions":8753,"create_order_sessions":6092,"tentative_error_sessions":215,"total_tentative_errors":239,"orderinfo_sessions":4940,"total_txns":1112,"total_seats":1960,"GMV":1382907.43},{"dt":"2026-02-11","search_sessions":40388,"oops":2504,"seatlayout_sessions":9154,"seatlayout_failures":242,"custinfo_sessions":4909,"create_order_sessions":3412,"tentative_error_sessions":213,"total_tentative_errors":241,"orderinfo_sessions":2660,"total_txns":1160,"total_seats":2051,"GMV":1514919.81},{"dt":"2026-02-12","search_sessions":40976,"oops":2547,"seatlayout_sessions":9348,"seatlayout_failures":248,"custinfo_sessions":4954,"create_order_sessions":3433,"tentative_error_sessions":207,"total_tentative_errors":232,"orderinfo_sessions":2721,"total_txns":1142,"total_seats":1971,"GMV":1388749.56},{"dt":"2026-02-13","search_sessions":42880,"oops":1473,"seatlayout_sessions":17510,"seatlayout_failures":507,"custinfo_sessions":9402,"create_order_sessions":6498,"tentative_error_sessions":229,"total_tentative_errors":255,"orderinfo_sessions":5323,"total_txns":1181,"total_seats":2058,"GMV":1476738.26},{"dt":"2026-02-14","search_sessions":43016,"oops":1425,"seatlayout_sessions":17653,"seatlayout_failures":485,"custinfo_sessions":9521,"create_order_sessions":6600,"tentative_error_sessions":257,"total_tentative_errors":280,"orderinfo_sessions":5441,"total_txns":1219,"total_seats":2238,"GMV":1569406.15},{"dt":"2026-02-15","search_sessions":37826,"oops":1312,"seatlayout_sessions":15425,"seatlayout_failures":448,"custinfo_sessions":8105,"create_order_sessions":5679,"tentative_error_sessions":192,"total_tentative_errors":212,"orderinfo_sessions":4634,"total_txns":1052,"total_seats":1869,"GMV":1432206.07},{"dt":"2026-02-16","search_sessions":41208,"oops":1410,"seatlayout_sessions":16727,"seatlayout_failures":487,"custinfo_sessions":8931,"create_order_sessions":6170,"tentative_error_sessions":228,"total_tentative_errors":253,"orderinfo_sessions":4995,"total_txns":1103,"total_seats":1977,"GMV":1389324.4},{"dt":"2026-02-17","search_sessions":40515,"oops":1399,"seatlayout_sessions":16657,"seatlayout_failures":472,"custinfo_sessions":8867,"create_order_sessions":6209,"tentative_error_sessions":223,"total_tentative_errors":245,"orderinfo_sessions":5008,"total_txns":1131,"total_seats":1960,"GMV":1372932.75},{"dt":"2026-02-18","search_sessions":40994,"oops":1424,"seatlayout_sessions":16652,"seatlayout_failures":455,"custinfo_sessions":8896,"create_order_sessions":6148,"tentative_error_sessions":214,"total_tentative_errors":233,"orderinfo_sessions":4990,"total_txns":1109,"total_seats":2008,"GMV":1419336.5},{"dt":"2026-02-19","search_sessions":41026,"oops":1380,"seatlayout_sessions":17000,"seatlayout_failures":465,"custinfo_sessions":9105,"create_order_sessions":6339,"tentative_error_sessions":220,"total_tentative_errors":247,"orderinfo_sessions":5120,"total_txns":1144,"total_seats":2032,"GMV":1445182.45},{"dt":"2026-02-20","search_sessions":43218,"oops":1463,"seatlayout_sessions":17748,"seatlayout_failures":493,"custinfo_sessions":9459,"create_order_sessions":6620,"tentative_error_sessions":232,"total_tentative_errors":261,"orderinfo_sessions":5380,"total_txns":1187,"total_seats":2109,"GMV":1476058.96},{"dt":"2026-02-21","search_sessions":42390,"oops":1446,"seatlayout_sessions":17328,"seatlayout_failures":478,"custinfo_sessions":9335,"create_order_sessions":6564,"tentative_error_sessions":240,"total_tentative_errors":273,"orderinfo_sessions":5335,"total_txns":1144,"total_seats":1971,"GMV":1425474.56},{"dt":"2026-02-22","search_sessions":38090,"oops":1340,"seatlayout_sessions":15343,"seatlayout_failures":413,"custinfo_sessions":8220,"create_order_sessions":5783,"tentative_error_sessions":194,"total_tentative_errors":216,"orderinfo_sessions":4707,"total_txns":1061,"total_seats":1914,"GMV":1320546.07},{"dt":"2026-02-23","search_sessions":40282,"oops":1352,"seatlayout_sessions":16562,"seatlayout_failures":464,"custinfo_sessions":8893,"create_order_sessions":6254,"tentative_error_sessions":213,"total_tentative_errors":233,"orderinfo_sessions":5083,"total_txns":1106,"total_seats":1955,"GMV":1350478.87},{"dt":"2026-02-24","search_sessions":42297,"oops":1431,"seatlayout_sessions":17183,"seatlayout_failures":473,"custinfo_sessions":9076,"create_order_sessions":6340,"tentative_error_sessions":214,"total_tentative_errors":237,"orderinfo_sessions":5232,"total_txns":1180,"total_seats":2136,"GMV":1461420.62},{"dt":"2026-02-25","search_sessions":40292,"oops":1415,"seatlayout_sessions":16615,"seatlayout_failures":468,"custinfo_sessions":8862,"create_order_sessions":6163,"tentative_error_sessions":214,"total_tentative_errors":234,"orderinfo_sessions":5035,"total_txns":1113,"total_seats":1909,"GMV":1294597.48},{"dt":"2026-02-26","search_sessions":40273,"oops":1346,"seatlayout_sessions":16528,"seatlayout_failures":475,"custinfo_sessions":8795,"create_order_sessions":6212,"tentative_error_sessions":206,"total_tentative_errors":229,"orderinfo_sessions":5034,"total_txns":1097,"total_seats":1927,"GMV":1370515.99},{"dt":"2026-02-27","search_sessions":44219,"oops":1526,"seatlayout_sessions":18045,"seatlayout_failures":530,"custinfo_sessions":9600,"create_order_sessions":6776,"tentative_error_sessions":239,"total_tentative_errors":262,"orderinfo_sessions":5499,"total_txns":1197,"total_seats":2062,"GMV":1511979.59},{"dt":"2026-02-28","search_sessions":42803,"oops":1450,"seatlayout_sessions":17464,"seatlayout_failures":503,"custinfo_sessions":9301,"create_order_sessions":6467,"tentative_error_sessions":220,"total_tentative_errors":251,"orderinfo_sessions":5341,"total_txns":1190,"total_seats":2167,"GMV":1596665.4},{"dt":"2026-03-01","search_sessions":38348,"oops":1261,"seatlayout_sessions":15683,"seatlayout_failures":438,"custinfo_sessions":8327,"create_order_sessions":5835,"tentative_error_sessions":188,"total_tentative_errors":212,"orderinfo_sessions":4825,"total_txns":1051,"total_seats":1865,"GMV":1312933.9},{"dt":"2026-03-02","search_sessions":40189,"oops":1373,"seatlayout_sessions":16547,"seatlayout_failures":465,"custinfo_sessions":8796,"create_order_sessions":6148,"tentative_error_sessions":217,"total_tentative_errors":249,"orderinfo_sessions":5040,"total_txns":1090,"total_seats":2008,"GMV":1440295.8800000001},{"dt":"2026-03-03","search_sessions":50842,"oops":1682,"seatlayout_sessions":20985,"seatlayout_failures":609,"custinfo_sessions":11190,"create_order_sessions":7762,"tentative_error_sessions":271,"total_tentative_errors":295,"orderinfo_sessions":6331,"total_txns":1441,"total_seats":2539,"GMV":1833491.29},{"dt":"2026-03-04","search_sessions":51610,"oops":1771,"seatlayout_sessions":21097,"seatlayout_failures":616,"custinfo_sessions":11267,"create_order_sessions":7853,"tentative_error_sessions":278,"total_tentative_errors":311,"orderinfo_sessions":6488,"total_txns":1422,"total_seats":2541,"GMV":1808609.46},{"dt":"2026-03-05","search_sessions":51789,"oops":1842,"seatlayout_sessions":21252,"seatlayout_failures":611,"custinfo_sessions":11433,"create_order_sessions":7916,"tentative_error_sessions":282,"total_tentative_errors":312,"orderinfo_sessions":6483,"total_txns":1432,"total_seats":2457,"GMV":1725329.79},{"dt":"2026-03-06","search_sessions":53966,"oops":1845,"seatlayout_sessions":22317,"seatlayout_failures":637,"custinfo_sessions":11811,"create_order_sessions":8129,"tentative_error_sessions":286,"total_tentative_errors":328,"orderinfo_sessions":6676,"total_txns":1492,"total_seats":2667,"GMV":1976731.06},{"dt":"2026-03-07","search_sessions":53740,"oops":1816,"seatlayout_sessions":21947,"seatlayout_failures":601,"custinfo_sessions":11723,"create_order_sessions":8175,"tentative_error_sessions":292,"total_tentative_errors":322,"orderinfo_sessions":6702,"total_txns":1475,"total_seats":2568,"GMV":1633295.29},{"dt":"2026-03-08","search_sessions":47141,"oops":1603,"seatlayout_sessions":19485,"seatlayout_failures":547,"custinfo_sessions":10486,"create_order_sessions":7368,"tentative_error_sessions":277,"total_tentative_errors":314,"orderinfo_sessions":6018,"total_txns":1314,"total_seats":2325,"GMV":1717545.76},{"dt":"2026-03-09","search_sessions":51806,"oops":1810,"seatlayout_sessions":21031,"seatlayout_failures":580,"custinfo_sessions":11266,"create_order_sessions":7840,"tentative_error_sessions":268,"total_tentative_errors":293,"orderinfo_sessions":6433,"total_txns":1430,"total_seats":2471,"GMV":1668236.15},{"dt":"2026-03-10","search_sessions":50423,"oops":1760,"seatlayout_sessions":20586,"seatlayout_failures":556,"custinfo_sessions":11048,"create_order_sessions":7775,"tentative_error_sessions":282,"total_tentative_errors":318,"orderinfo_sessions":6411,"total_txns":1434,"total_seats":2409,"GMV":1606344.68},{"dt":"2026-03-11","search_sessions":51048,"oops":1748,"seatlayout_sessions":21050,"seatlayout_failures":605,"custinfo_sessions":11342,"create_order_sessions":8023,"tentative_error_sessions":283,"total_tentative_errors":316,"orderinfo_sessions":6638,"total_txns":1391,"total_seats":2546,"GMV":1878411.32},{"dt":"2026-03-12","search_sessions":50559,"oops":1771,"seatlayout_sessions":20789,"seatlayout_failures":576,"custinfo_sessions":11054,"create_order_sessions":7666,"tentative_error_sessions":261,"total_tentative_errors":280,"orderinfo_sessions":6302,"total_txns":1392,"total_seats":2581,"GMV":1751795.95},{"dt":"2026-03-13","search_sessions":53825,"oops":1794,"seatlayout_sessions":21929,"seatlayout_failures":619,"custinfo_sessions":11679,"create_order_sessions":8153,"tentative_error_sessions":288,"total_tentative_errors":322,"orderinfo_sessions":6731,"total_txns":1461,"total_seats":2573,"GMV":1871427.05},{"dt":"2026-03-14","search_sessions":53812,"oops":1815,"seatlayout_sessions":22069,"seatlayout_failures":600,"custinfo_sessions":11749,"create_order_sessions":8281,"tentative_error_sessions":290,"total_tentative_errors":325,"orderinfo_sessions":6752,"total_txns":1486,"total_seats":2651,"GMV":1851403.27},{"dt":"2026-03-15","search_sessions":47013,"oops":1621,"seatlayout_sessions":19125,"seatlayout_failures":567,"custinfo_sessions":10193,"create_order_sessions":7203,"tentative_error_sessions":243,"total_tentative_errors":269,"orderinfo_sessions":5906,"total_txns":1302,"total_seats":2290,"GMV":1671698.38},{"dt":"2026-03-16","search_sessions":50799,"oops":1761,"seatlayout_sessions":20976,"seatlayout_failures":600,"custinfo_sessions":11266,"create_order_sessions":7953,"tentative_error_sessions":285,"total_tentative_errors":313,"orderinfo_sessions":6566,"total_txns":1408,"total_seats":2448,"GMV":1755189.95},{"dt":"2026-03-17","search_sessions":51285,"oops":1799,"seatlayout_sessions":20869,"seatlayout_failures":586,"custinfo_sessions":11167,"create_order_sessions":7856,"tentative_error_sessions":281,"total_tentative_errors":317,"orderinfo_sessions":6374,"total_txns":1410,"total_seats":2503,"GMV":1686462.17},{"dt":"2026-03-18","search_sessions":50658,"oops":1713,"seatlayout_sessions":20873,"seatlayout_failures":1925,"custinfo_sessions":11196,"create_order_sessions":7809,"tentative_error_sessions":280,"total_tentative_errors":317,"orderinfo_sessions":6373,"total_txns":1399,"total_seats":2554,"GMV":1777959.92}],"by_user_type":[{"user_type":"guest","search_sessions":812275,"total_txns":13303,"create_order_sessions":122368,"total_tentative_errors":5034,"orderinfo_sessions":99969,"seatlayout_sessions":327098,"seatlayout_failures":9844,"oops":28814,"total_seats":23422,"GMV":16522308.13},{"user_type":"new","search_sessions":542374,"total_txns":13973,"create_order_sessions":81031,"total_tentative_errors":2973,"orderinfo_sessions":66031,"seatlayout_sessions":218039,"seatlayout_failures":6396,"oops":19052,"total_seats":24638,"GMV":17352034.73},{"user_type":"returning","search_sessions":694762,"total_txns":29358,"create_order_sessions":104134,"total_tentative_errors":4146,"orderinfo_sessions":85196,"seatlayout_sessions":279259,"seatlayout_failures":8243,"oops":24537,"total_seats":52190,"GMV":36659815.56}],"by_platform":[{"platform":"android","search_sessions":529164,"total_txns":14969,"create_order_sessions":79546,"total_tentative_errors":3173,"orderinfo_sessions":65059,"seatlayout_sessions":212933,"seatlayout_failures":6355,"oops":18902,"total_seats":26391,"GMV":18460778.86},{"platform":"ios","search_sessions":592357,"total_txns":18890,"create_order_sessions":88758,"total_tentative_errors":3563,"orderinfo_sessions":72502,"seatlayout_sessions":237949,"seatlayout_failures":7071,"oops":20859,"total_seats":33516,"GMV":23463418.35},{"platform":"mobile_web","search_sessions":449020,"total_txns":10713,"create_order_sessions":67361,"total_tentative_errors":2633,"orderinfo_sessions":54949,"seatlayout_sessions":180840,"seatlayout_failures":5360,"oops":15774,"total_seats":19082,"GMV":13428410.08},{"platform":"web_direct","search_sessions":478870,"total_txns":12062,"create_order_sessions":71868,"total_tentative_errors":2784,"orderinfo_sessions":58686,"seatlayout_sessions":192674,"seatlayout_failures":5697,"oops":16868,"total_seats":21261,"GMV":15181551.13}],"by_language":[{"language":"en","search_sessions":862922,"total_txns":24191,"create_order_sessions":130526,"total_tentative_errors":5868,"orderinfo_sessions":107068,"seatlayout_sessions":348135,"seatlayout_failures":10686,"oops":30865,"total_seats":43470,"GMV":30639289.48},{"language":"hi","search_sessions":572188,"total_txns":16042,"create_order_sessions":86067,"total_tentative_errors":3673,"orderinfo_sessions":70454,"seatlayout_sessions":230157,"seatlayout_failures":7038,"oops":20455,"total_seats":28499,"GMV":19949926.17},{"language":"kn","search_sessions":143634,"total_txns":3795,"create_order_sessions":21239,"total_tentative_errors":595,"orderinfo_sessions":17191,"seatlayout_sessions":57469,"seatlayout_failures":1560,"oops":4888,"total_seats":6507,"GMV":4582130.4},{"language":"mr","search_sessions":102383,"total_txns":2629,"create_order_sessions":14993,"total_tentative_errors":326,"orderinfo_sessions":12031,"seatlayout_sessions":40913,"seatlayout_failures":1023,"oops":3442,"total_seats":4452,"GMV":3137995.51},{"language":"ta","search_sessions":203820,"total_txns":5564,"create_order_sessions":30328,"total_tentative_errors":972,"orderinfo_sessions":24713,"seatlayout_sessions":81898,"seatlayout_failures":2358,"oops":7056,"total_seats":9661,"GMV":6771831.07},{"language":"te","search_sessions":164464,"total_txns":4413,"create_order_sessions":24380,"total_tentative_errors":719,"orderinfo_sessions":19739,"seatlayout_sessions":65824,"seatlayout_failures":1818,"oops":5697,"total_seats":7661,"GMV":5452985.79}]};
+function metrics(rows){
+  const a = rows.reduce((o,r)=>{
+    for (const k of Object.keys(r)){ if(k==='dt'||k==='user_type'||k==='platform'||k==='language') continue; o[k]=(o[k]||0)+(+r[k]||0); }
+    return o;
+  },{});
+  const srp=a.search_sessions||0, txn=a.total_txns||0, pay=a.orderinfo_sessions||0, tco=a.create_order_sessions||0, sl=a.seatlayout_sessions||0;
+  return {
+    cr: srp?100*txn/srp:0, srp, bookings:txn,
+    error: tco?100*(a.total_tentative_errors||0)/tco:0,
+    payDrop: pay?100*(1-txn/pay):0,
+    seats: a.total_seats||0,
+    oops: srp?100*(a.oops||0)/srp:0,
+    slFail: sl?100*(a.seatlayout_failures||0)/sl:0,
+    a
+  };
+}
+function funnel(a){
+  const steps=[
+    ['SRP', a.search_sessions, null],
+    ['SL', a.seatlayout_sessions, a.search_sessions],
+    ['CI', a.custinfo_sessions, a.seatlayout_sessions],
+    ['TCO', a.create_order_sessions, a.custinfo_sessions],
+    ['PAY', a.orderinfo_sessions, a.create_order_sessions],
+    ['TXN', a.total_txns, a.orderinfo_sessions],
+  ];
+  const srp=a.search_sessions||0;
+  return steps.map(([name,val,parent])=>({
+    name, val:val||0,
+    step: parent?100*(val||0)/parent:100,
+    cum: srp?100*(val||0)/srp:0
+  }));
+}
+function fmt(n,u=''){ if(n==null||isNaN(n)) return '—'; if(u==='%') return n.toFixed(2)+'%'; if(Math.abs(n)>=1000) return Intl.NumberFormat('en-IN',{notation:'compact',maximumFractionDigits:1}).format(n); return Math.round(n).toLocaleString('en-IN'); }
+function tone(x){ return x>=80?'ok':x>=50?'mid':'bad'; }
+function lineChart(svg, points){
+  const w=640,h=200,pad=24; if(!points.length){svg.innerHTML='';return}
+  const xs=points.map((_,i)=>i), ys=points.map(p=>p.cr);
+  const minY=Math.min(...ys)*0.92, maxY=Math.max(...ys)*1.08||1;
+  const x=i=>pad+(w-2*pad)*i/Math.max(xs.length-1,1);
+  const y=v=>h-pad-(h-2*pad)*((v-minY)/(maxY-minY||1));
+  const pts=points.map((p,i)=>`${x(i)},${y(p.cr)}`).join(' ');
+  const area=`${x(0)},${h-pad} ${pts} ${x(points.length-1)},${h-pad}`;
+  svg.innerHTML=`<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ff6a3d" stop-opacity=".4"/><stop offset="1" stop-color="#ff6a3d" stop-opacity="0"/></linearGradient></defs>
+  <polygon points="${area}" fill="url(#g)"/><polyline fill="none" stroke="#ff6a3d" stroke-width="2.5" points="${pts}"/>`;
+}
+function rowsForSelection(){
+  const dim=document.getElementById('dim').value;
+  const seg=document.getElementById('seg').value;
+  if(dim==='overall') return DATA.days;
+  // For trend we only have day overall; dim table uses dim maps. Filter days? Keep overall days for chart; KPIs from dim segment totals.
+  return DATA.days;
+}
+function segmentMetrics(){
+  const dim=document.getElementById('dim').value;
+  const seg=document.getElementById('seg').value;
+  if(dim==='overall') return metrics(DATA.days);
+  const key=dim==='user_type'?'by_user_type':dim==='platform'?'by_platform':'by_language';
+  const col=dim;
+  const row=DATA[key].find(r=>String(r[col])===seg) || DATA[key][0];
+  return metrics([row]);
+}
+function fillSegOptions(){
+  const dim=document.getElementById('dim').value;
+  const sel=document.getElementById('seg');
+  sel.innerHTML='';
+  if(dim==='overall'){ sel.disabled=true; sel.innerHTML='<option>All</option>'; return; }
+  sel.disabled=false;
+  const key=dim==='user_type'?'by_user_type':dim==='platform'?'by_platform':'by_language';
+  DATA[key].forEach(r=>{
+    const o=document.createElement('option'); o.value=r[dim]; o.textContent=r[dim]; sel.appendChild(o);
+  });
+}
+function render(){
+  const m=segmentMetrics();
+  document.getElementById('kpis').innerHTML=`
+    <div class="kpi"><div class="l">Conv. Rate</div><div class="v">${fmt(m.cr,'%')}</div></div>
+    <div class="kpi"><div class="l">SRP Sessions</div><div class="v">${fmt(m.srp)}</div></div>
+    <div class="kpi"><div class="l">Bookings</div><div class="v">${fmt(m.bookings)}</div></div>
+    <div class="kpi"><div class="l">Error Rate</div><div class="v">${fmt(m.error,'%')}</div></div>
+    <div class="kpi"><div class="l">Payment Drop</div><div class="v">${fmt(m.payDrop,'%')}</div></div>
+    <div class="kpi"><div class="l">Seats Booked</div><div class="v">${fmt(m.seats)}</div></div>`;
+  const f=funnel(m.a);
+  let prod=1; f.slice(1).forEach(s=>prod*=s.step/100);
+  document.getElementById('identity').textContent=`Product of steps ${ (prod*100).toFixed(3)}% vs CR ${f.at(-1).cum.toFixed(3)}% — ${Math.abs(prod*100-f.at(-1).cum)<0.05?'OK':'CHECK'}`;
+  document.getElementById('funnel').innerHTML=f.map(s=>`<tr><td>${s.name}</td><td>${fmt(s.val)}</td><td class="${tone(s.step)}">${fmt(s.step,'%')}</td><td>${fmt(s.cum,'%')}</td></tr>`).join('');
+  // day trend always overall for simplicity
+  const dayM=DATA.days.map(d=>{
+    const mm=metrics([d]); return {date:d.dt, cr:mm.cr};
+  });
+  lineChart(document.getElementById('chart'), dayM);
+  // dim table
+  const dim=document.getElementById('dim').value;
+  const key=dim==='overall'?'by_user_type':dim==='user_type'?'by_user_type':dim==='platform'?'by_platform':'by_language';
+  const col=dim==='overall'?'user_type':dim;
+  document.getElementById('dims').innerHTML=DATA[key].map(r=>{
+    const mm=metrics([r]);
+    return `<tr><td>${r[col]}</td><td>${fmt(mm.cr,'%')}</td><td>${fmt(mm.srp)}</td><td>${fmt(mm.bookings)}</td><td>${fmt(mm.error,'%')}</td><td>${fmt(mm.payDrop,'%')}</td></tr>`;
+  }).join('');
+}
+document.getElementById('dim').onchange=()=>{fillSegOptions();render();};
+document.getElementById('seg').onchange=render;
+fillSegOptions(); render();
+</script>
+</body>
+</html>
