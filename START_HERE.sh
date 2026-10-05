@@ -28,4 +28,4 @@ print("data ready", e.meta()["date_min"], "→", e.meta()["date_max"], "rows", e
 PY
 
 echo "Starting CR Analyser at http://127.0.0.1:8080"
-exec python3 -m uvicorn main:app --host 127.0.0.1 --port 8080 --reload
+exec python3 -m uvicorn main:app --host 0.0.0.0 --port 8080 --reload
