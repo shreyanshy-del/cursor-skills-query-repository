@@ -1,0 +1,8 @@
+-- Athena saved query (Product_B2C_Intl)
+-- ID: b12c9048-5496-4f83-8864-8025cf076a12
+-- Name: SL Visit Frequency wise conversion - Syed
+-- Source: Syed Athena Saved Queries export
+-- Prefer dataplatform MCP / Iceberg for runs; adjust only date params.
+-- Default country: IND when applicable.
+
+---> query to fetch the sl-click based Conversion WITH seatlayout_session AS ( SELECT DATE(__time) AS event_date, mri_session_id, rb_user_id, src_id, dest_id, doj, COUNT(*) AS seatlayout_clicks, COUNT(DISTINCT route_id) AS distinct_routes_clicked FROM user_interaction.seat_layout_details WHERE country = 'IND' AND channel = 'MOBILE_APP' AND __time >= TIMESTAMP '2026-05-01 00:00:00' AND __time < TIMESTAMP '2026-05-08 00:00:00' AND mri_session_id IS NOT NULL AND route_id IS NOT NULL GROUP BY 1,2,3,4,5,6 ), txn_session AS ( SELECT DISTINCT mri_session_id, rb_user_id, src_id, dest_id, CAST(doj AS VARCHAR) doj, tin FROM confirm_order_details WHERE country = 'IND' AND __time >= TIMESTAMP '2026-05-01 00:00:00' AND __time < TIMESTAMP '2026-05-08 00:00:00' AND tin IS NOT NULL ) SELECT s.event_date, CASE WHEN s.seatlayout_clicks > 4 THEN 'More than 4 clicks' ELSE 'Less or equal to 4 clicks' END AS click_cohort, COUNT(DISTINCT s.mri_session_id) AS seatlayout_sessions, COUNT(DISTINCT t.mri_session_id) AS converted_sessions, 100.0 * COUNT(DISTINCT t.mri_session_id) / NULLIF(COUNT(DISTINCT s.mri_session_id), 0) AS conversion_rate_pct, AVG(s.seatlayout_clicks) AS avg_seatlayout_clicks, AVG(s.distinct_routes_clicked) AS avg_distinct_routes_clicked FROM seatlayout_session s LEFT JOIN txn_session t ON s.mri_session_id = t.mri_session_id AND s.rb_user_id = t.rb_user_id AND s.src_id = t.src_id AND s.dest_id = t.dest_id AND s.doj = t.doj GROUP BY 1,2 ORDER BY 1,2;

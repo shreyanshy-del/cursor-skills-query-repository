@@ -1,0 +1,601 @@
+city_role,anchor_city_name,src_id,dest_id,src_city,dst_city,search_count,rank
+Destination,Ayodhya,733,76480,Delhi,Ayodhya,47044,1
+Destination,Ayodhya,70429,76480,Varanasi,Ayodhya,13330,2
+Destination,Ayodhya,1439,76480,Lucknow,Ayodhya,8716,3
+Destination,Ayodhya,807,76480,Jaipur (Rajasthan),Ayodhya,6839,4
+Destination,Ayodhya,78027,76480,Gorakhpur (uttar pradesh),Ayodhya,5625,5
+Destination,Ayodhya,624,76480,Nagpur,Ayodhya,5112,6
+Destination,Ayodhya,747,76480,Mathura,Ayodhya,5034,7
+Destination,Ayodhya,1290,76480,Agra,Ayodhya,4590,8
+Destination,Ayodhya,84832,76480,Prayagraj(Uttar Pradesh),Ayodhya,4545,9
+Destination,Ayodhya,1377,76480,Kanpur (Uttar Pradesh),Ayodhya,3261,10
+Destination,Ayodhya,833,76480,Chandigarh,Ayodhya,3106,11
+Destination,Ayodhya,1429,76480,Noida,Ayodhya,3075,12
+Destination,Ayodhya,70015,76480,Gurugram (Gurgaon),Ayodhya,2843,13
+Destination,Ayodhya,216383,76480,Greater noida (uttar pradesh),Ayodhya,2209,14
+Destination,Ayodhya,313,76480,Indore,Ayodhya,2177,15
+Destination,Ayodhya,70014,76480,Raipur (Chhattisgarh),Ayodhya,1483,16
+Destination,Ayodhya,1443,76480,Kota(Rajasthan),Ayodhya,1332,17
+Destination,Ayodhya,122,76480,Bengaluru,Ayodhya,1331,18
+Destination,Ayodhya,1369,76480,Jhansi(Uttar Pradesh),Ayodhya,1329,19
+Destination,Ayodhya,777,76480,Dehradun,Ayodhya,1165,20
+Destination,Ayodhya,309,76480,Aurangabad (Maharashtra),Ayodhya,1104,21
+Destination,Ayodhya,1001,76480,Ujjain,Ayodhya,1085,22
+Destination,Ayodhya,802,76480,Haridwar,Ayodhya,1058,23
+Destination,Ayodhya,736,76480,Ludhiana,Ayodhya,1037,24
+Destination,Ayodhya,124,76480,Hyderabad,Ayodhya,1027,25
+Destination,Ayodhya,94782,76480,Vrindavan,Ayodhya,1004,26
+Destination,Ayodhya,71958,76480,Gwalior,Ayodhya,966,27
+Destination,Ayodhya,73723,76480,Chhatarpur (madhya pradesh),Ayodhya,867,28
+Destination,Ayodhya,74820,76480,Kolkata,Ayodhya,863,29
+Destination,Ayodhya,74699,76480,Patna (Bihar),Ayodhya,846,30
+Destination,Ayodhya,73534,76480,Rewa,Ayodhya,829,31
+Destination,Ayodhya,90355,76480,Azamgarh,Ayodhya,822,32
+Destination,Ayodhya,462,76480,Mumbai,Ayodhya,781,33
+Destination,Ayodhya,551,76480,Ahmedabad,Ayodhya,779,34
+Destination,Ayodhya,70024,76480,Jabalpur,Ayodhya,776,35
+Destination,Ayodhya,94840,76480,Gonda,Ayodhya,736,36
+Destination,Ayodhya,74153,76480,Ghaziabad,Ayodhya,704,37
+Destination,Ayodhya,1437,76480,Bareilly (Uttar Pradesh),Ayodhya,698,38
+Destination,Ayodhya,197504,76480,Khatushyamji,Ayodhya,696,39
+Destination,Ayodhya,76431,76480,Ranchi,Ayodhya,691,40
+Destination,Ayodhya,130,76480,Pune,Ayodhya,689,41
+Destination,Ayodhya,979,76480,Bhopal,Ayodhya,679,42
+Destination,Ayodhya,76451,76480,Jamshedpur,Ayodhya,677,43
+Destination,Ayodhya,95015,76480,Deoria (Uttar Pradesh),Ayodhya,676,44
+Destination,Ayodhya,77705,76480,Mehandipur balaji mandir,Ayodhya,669,45
+Destination,Ayodhya,91608,76480,Raebareli,Ayodhya,668,46
+Destination,Ayodhya,79617,76480,Meerut,Ayodhya,616,47
+Destination,Ayodhya,1514,76480,Haldwani,Ayodhya,608,48
+Destination,Ayodhya,197105,76480,Bilaspur (Chhattisgarh),Ayodhya,591,49
+Destination,Ayodhya,76481,76480,Basti,Ayodhya,589,50
+Destination,Ayodhya,95032,76480,Sultanpur (Uttar Pradesh),Ayodhya,584,51
+Destination,Ayodhya,77677,76480,Panipat,Ayodhya,578,52
+Destination,Ayodhya,90113,76480,Jaunpur,Ayodhya,512,53
+Destination,Ayodhya,69774,76480,Bharatpur,Ayodhya,509,54
+Destination,Ayodhya,94838,76480,Bahraich,Ayodhya,506,55
+Destination,Ayodhya,79613,76480,Aligarh (uttar pradesh),Ayodhya,504,56
+Destination,Ayodhya,808,76480,Ajmer,Ayodhya,489,57
+Destination,Ayodhya,74676,76480,Bhubaneswar,Ayodhya,479,58
+Destination,Ayodhya,90189,76480,Mau,Ayodhya,476,59
+Destination,Ayodhya,842,76480,Rishikesh,Ayodhya,453,60
+Destination,Ayodhya,79729,76480,Sikar,Ayodhya,437,61
+Destination,Ayodhya,1405,76480,Ambala (Haryana),Ayodhya,433,62
+Destination,Ayodhya,298723,76480,Bageshwar Dham,Ayodhya,423,63
+Destination,Ayodhya,473,76480,Surat,Ayodhya,410,64
+Destination,Ayodhya,1513,76480,Rudrapur,Ayodhya,409,65
+Destination,Ayodhya,1365,76480,Guna,Ayodhya,398,66
+Destination,Ayodhya,93233,76480,Barabanki,Ayodhya,385,67
+Destination,Ayodhya,217335,76480,Chitrakoot (Uttar Pradesh),Ayodhya,383,68
+Destination,Ayodhya,1438,76480,Sitapur (Uttar Pradesh),Ayodhya,378,69
+Destination,Ayodhya,77682,76480,Karnal,Ayodhya,370,70
+Destination,Ayodhya,94990,76480,Pratapgarh(Uttar Pradesh),Ayodhya,355,71
+Destination,Ayodhya,65850,76480,Ringas,Ayodhya,340,72
+Destination,Ayodhya,1435,76480,Moradabad,Ayodhya,330,73
+Destination,Ayodhya,221347,76480,Jewar,Ayodhya,328,74
+Destination,Ayodhya,1372,76480,Orai,Ayodhya,328,75
+Destination,Ayodhya,94978,76480,Mahoba,Ayodhya,323,76
+Destination,Ayodhya,200888,76480,Khalilabad,Ayodhya,320,77
+Destination,Ayodhya,197682,76480,Mirzapur (uttar pradesh),Ayodhya,317,78
+Destination,Ayodhya,80303,76480,Muzaffarpur (Bihar),Ayodhya,316,79
+Destination,Ayodhya,82100,76480,Faridabad,Ayodhya,308,80
+Destination,Ayodhya,94839,76480,Balrampur (uttar pradesh),Ayodhya,300,81
+Destination,Ayodhya,93947,76480,Ambikapur,Ayodhya,292,82
+Destination,Ayodhya,74154,76480,Muzaffarnagar,Ayodhya,292,83
+Destination,Ayodhya,95480,76480,Palwal,Ayodhya,290,84
+Destination,Ayodhya,95026,76480,Ghazipur,Ayodhya,285,85
+Destination,Ayodhya,1169,76480,Jodhpur,Ayodhya,281,86
+Destination,Ayodhya,90329,76480,Ballia (Uttar Pradesh),Ayodhya,279,87
+Destination,Ayodhya,95234,76480,Banda(Uttar Pradesh),Ayodhya,275,88
+Destination,Ayodhya,204409,76480,Zirakpur(punjab),Ayodhya,269,89
+Destination,Ayodhya,78023,76480,Etawah,Ayodhya,267,90
+Destination,Ayodhya,470,76480,Udaipur,Ayodhya,266,91
+Destination,Ayodhya,205922,76480,Akbarpur (ambedkar Nagar),Ayodhya,263,92
+Destination,Ayodhya,74690,76480,Puri,Ayodhya,259,93
+Destination,Ayodhya,94781,76480,Sonauli (uttar pradesh),Ayodhya,258,94
+Destination,Ayodhya,443,76480,Sagar (Madhya Pradesh),Ayodhya,255,95
+Destination,Ayodhya,77167,76480,Gaya,Ayodhya,253,96
+Destination,Ayodhya,94837,76480,Rupaidiha,Ayodhya,251,97
+Destination,Ayodhya,91770,76480,Unnao,Ayodhya,251,98
+Destination,Ayodhya,94845,76480,Maharajganj,Ayodhya,243,99
+Destination,Ayodhya,1538,76480,Roorkee (uttarakhand),Ayodhya,240,100
+Source,Ayodhya,76480,733,Ayodhya,Delhi,39957,1
+Source,Ayodhya,76480,70429,Ayodhya,Varanasi,12728,2
+Source,Ayodhya,76480,807,Ayodhya,Jaipur (Rajasthan),7326,3
+Source,Ayodhya,76480,1439,Ayodhya,Lucknow,5644,4
+Source,Ayodhya,76480,624,Ayodhya,Nagpur,4653,5
+Source,Ayodhya,76480,747,Ayodhya,Mathura,4472,6
+Source,Ayodhya,76480,1290,Ayodhya,Agra,4339,7
+Source,Ayodhya,76480,78027,Ayodhya,Gorakhpur (uttar pradesh),3788,8
+Source,Ayodhya,76480,84832,Ayodhya,Prayagraj(Uttar Pradesh),3587,9
+Source,Ayodhya,76480,833,Ayodhya,Chandigarh,2664,10
+Source,Ayodhya,76480,1429,Ayodhya,Noida,2256,11
+Source,Ayodhya,76480,216383,Ayodhya,Greater noida (uttar pradesh),1939,12
+Source,Ayodhya,76480,1377,Ayodhya,Kanpur (Uttar Pradesh),1862,13
+Source,Ayodhya,76480,122,Ayodhya,Bengaluru,1663,14
+Source,Ayodhya,76480,313,Ayodhya,Indore,1651,15
+Source,Ayodhya,76480,1001,Ayodhya,Ujjain,1585,16
+Source,Ayodhya,76480,70015,Ayodhya,Gurugram (Gurgaon),1556,17
+Source,Ayodhya,76480,74820,Ayodhya,Kolkata,1488,18
+Source,Ayodhya,76480,1369,Ayodhya,Jhansi(Uttar Pradesh),1267,19
+Source,Ayodhya,76480,1443,Ayodhya,Kota(Rajasthan),1264,20
+Source,Ayodhya,76480,777,Ayodhya,Dehradun,1144,21
+Source,Ayodhya,76480,70014,Ayodhya,Raipur (Chhattisgarh),1117,22
+Source,Ayodhya,76480,94782,Ayodhya,Vrindavan,1088,23
+Source,Ayodhya,76480,197504,Ayodhya,Khatushyamji,1064,24
+Source,Ayodhya,76480,802,Ayodhya,Haridwar,1053,25
+Source,Ayodhya,76480,1514,Ayodhya,Haldwani,906,26
+Source,Ayodhya,76480,462,Ayodhya,Mumbai,904,27
+Source,Ayodhya,76480,736,Ayodhya,Ludhiana,898,28
+Source,Ayodhya,76480,124,Ayodhya,Hyderabad,881,29
+Source,Ayodhya,76480,90355,Ayodhya,Azamgarh,851,30
+Source,Ayodhya,76480,1437,Ayodhya,Bareilly (Uttar Pradesh),808,31
+Source,Ayodhya,76480,77705,Ayodhya,Mehandipur balaji mandir,803,32
+Source,Ayodhya,76480,309,Ayodhya,Aurangabad (Maharashtra),766,33
+Source,Ayodhya,76480,551,Ayodhya,Ahmedabad,762,34
+Source,Ayodhya,76480,74699,Ayodhya,Patna (Bihar),749,35
+Source,Ayodhya,76480,74153,Ayodhya,Ghaziabad,738,36
+Source,Ayodhya,76480,76431,Ayodhya,Ranchi,701,37
+Source,Ayodhya,76480,76451,Ayodhya,Jamshedpur,682,38
+Source,Ayodhya,76480,76481,Ayodhya,Basti,677,39
+Source,Ayodhya,76480,71958,Ayodhya,Gwalior,662,40
+Source,Ayodhya,76480,94840,Ayodhya,Gonda,601,41
+Source,Ayodhya,76480,979,Ayodhya,Bhopal,598,42
+Source,Ayodhya,76480,808,Ayodhya,Ajmer,581,43
+Source,Ayodhya,76480,73723,Ayodhya,Chhatarpur (madhya pradesh),552,44
+Source,Ayodhya,76480,79617,Ayodhya,Meerut,548,45
+Source,Ayodhya,76480,1603,Ayodhya,Kathmandu,505,46
+Source,Ayodhya,76480,217335,Ayodhya,Chitrakoot (Uttar Pradesh),498,47
+Source,Ayodhya,76480,73534,Ayodhya,Rewa,487,48
+Source,Ayodhya,76480,70024,Ayodhya,Jabalpur,486,49
+Source,Ayodhya,76480,130,Ayodhya,Pune,468,50
+Source,Ayodhya,76480,94838,Ayodhya,Bahraich,466,51
+Source,Ayodhya,76480,473,Ayodhya,Surat,449,52
+Source,Ayodhya,76480,771,Ayodhya,Nainital,449,53
+Source,Ayodhya,76480,95032,Ayodhya,Sultanpur (Uttar Pradesh),446,54
+Source,Ayodhya,76480,69774,Ayodhya,Bharatpur,442,55
+Source,Ayodhya,76480,298723,Ayodhya,Bageshwar Dham,436,56
+Source,Ayodhya,76480,77677,Ayodhya,Panipat,427,57
+Source,Ayodhya,76480,842,Ayodhya,Rishikesh,423,58
+Source,Ayodhya,76480,65850,Ayodhya,Ringas,413,59
+Source,Ayodhya,76480,90113,Ayodhya,Jaunpur,393,60
+Source,Ayodhya,76480,91608,Ayodhya,Raebareli,392,61
+Source,Ayodhya,76480,77726,Ayodhya,Kathgodam,376,62
+Source,Ayodhya,76480,197105,Ayodhya,Bilaspur (Chhattisgarh),367,63
+Source,Ayodhya,76480,95015,Ayodhya,Deoria (Uttar Pradesh),361,64
+Source,Ayodhya,76480,90189,Ayodhya,Mau,350,65
+Source,Ayodhya,76480,79613,Ayodhya,Aligarh (uttar pradesh),347,66
+Source,Ayodhya,76480,79729,Ayodhya,Sikar,339,67
+Source,Ayodhya,76480,1405,Ayodhya,Ambala (Haryana),319,68
+Source,Ayodhya,76480,90329,Ayodhya,Ballia (Uttar Pradesh),318,69
+Source,Ayodhya,76480,1435,Ayodhya,Moradabad,317,70
+Source,Ayodhya,76480,94990,Ayodhya,Pratapgarh(Uttar Pradesh),313,71
+Source,Ayodhya,76480,94781,Ayodhya,Sonauli (uttar pradesh),301,72
+Source,Ayodhya,76480,80303,Ayodhya,Muzaffarpur (Bihar),301,73
+Source,Ayodhya,76480,470,Ayodhya,Udaipur,295,74
+Source,Ayodhya,76480,1513,Ayodhya,Rudrapur,287,75
+Source,Ayodhya,76480,94839,Ayodhya,Balrampur (uttar pradesh),278,76
+Source,Ayodhya,76480,94632,Ayodhya,Hapur,258,77
+Source,Ayodhya,76480,221347,Ayodhya,Jewar,258,78
+Source,Ayodhya,76480,93947,Ayodhya,Ambikapur,252,79
+Source,Ayodhya,76480,737,Ayodhya,Jalandhar,247,80
+Source,Ayodhya,76480,200888,Ayodhya,Khalilabad,242,81
+Source,Ayodhya,76480,1169,Ayodhya,Jodhpur,238,82
+Source,Ayodhya,76480,1438,Ayodhya,Sitapur (Uttar Pradesh),234,83
+Source,Ayodhya,76480,74154,Ayodhya,Muzaffarnagar,234,84
+Source,Ayodhya,76480,77682,Ayodhya,Karnal,226,85
+Source,Ayodhya,76480,73533,Ayodhya,Maihar,225,86
+Source,Ayodhya,76480,197682,Ayodhya,Mirzapur (uttar pradesh),224,87
+Source,Ayodhya,76480,1365,Ayodhya,Guna,218,88
+Source,Ayodhya,76480,93233,Ayodhya,Barabanki,211,89
+Source,Ayodhya,76480,78023,Ayodhya,Etawah,210,90
+Source,Ayodhya,76480,1372,Ayodhya,Orai,208,91
+Source,Ayodhya,76480,472,Ayodhya,Rajkot (Gujarat),206,92
+Source,Ayodhya,76480,74690,Ayodhya,Puri,205,93
+Source,Ayodhya,76480,95026,Ayodhya,Ghazipur,200,94
+Source,Ayodhya,76480,74120,Ayodhya,Baran,197,95
+Source,Ayodhya,76480,77521,Ayodhya,Raigarh (Chhattisgarh),192,96
+Source,Ayodhya,76480,74694,Ayodhya,Siliguri,189,97
+Source,Ayodhya,76480,1538,Ayodhya,Roorkee (uttarakhand),187,98
+Source,Ayodhya,76480,444,Ayodhya,Nashik,186,99
+Source,Ayodhya,76480,80297,Ayodhya,Darbhanga,178,100
+Destination,Prayagraj(Uttar Pradesh),733,84832,Delhi,Prayagraj(Uttar Pradesh),51678,1
+Destination,Prayagraj(Uttar Pradesh),1439,84832,Lucknow,Prayagraj(Uttar Pradesh),19665,2
+Destination,Prayagraj(Uttar Pradesh),624,84832,Nagpur,Prayagraj(Uttar Pradesh),11530,3
+Destination,Prayagraj(Uttar Pradesh),70429,84832,Varanasi,Prayagraj(Uttar Pradesh),8251,4
+Destination,Prayagraj(Uttar Pradesh),807,84832,Jaipur (Rajasthan),Prayagraj(Uttar Pradesh),6656,5
+Destination,Prayagraj(Uttar Pradesh),1429,84832,Noida,Prayagraj(Uttar Pradesh),5791,6
+Destination,Prayagraj(Uttar Pradesh),1377,84832,Kanpur (Uttar Pradesh),Prayagraj(Uttar Pradesh),5131,7
+Destination,Prayagraj(Uttar Pradesh),1290,84832,Agra,Prayagraj(Uttar Pradesh),4914,8
+Destination,Prayagraj(Uttar Pradesh),73534,84832,Rewa,Prayagraj(Uttar Pradesh),4854,9
+Destination,Prayagraj(Uttar Pradesh),70014,84832,Raipur (Chhattisgarh),Prayagraj(Uttar Pradesh),4515,10
+Destination,Prayagraj(Uttar Pradesh),313,84832,Indore,Prayagraj(Uttar Pradesh),4504,11
+Destination,Prayagraj(Uttar Pradesh),747,84832,Mathura,Prayagraj(Uttar Pradesh),4059,12
+Destination,Prayagraj(Uttar Pradesh),76480,84832,Ayodhya,Prayagraj(Uttar Pradesh),3587,13
+Destination,Prayagraj(Uttar Pradesh),78027,84832,Gorakhpur (uttar pradesh),Prayagraj(Uttar Pradesh),3586,14
+Destination,Prayagraj(Uttar Pradesh),216383,84832,Greater noida (uttar pradesh),Prayagraj(Uttar Pradesh),3542,15
+Destination,Prayagraj(Uttar Pradesh),124,84832,Hyderabad,Prayagraj(Uttar Pradesh),3225,16
+Destination,Prayagraj(Uttar Pradesh),979,84832,Bhopal,Prayagraj(Uttar Pradesh),2835,17
+Destination,Prayagraj(Uttar Pradesh),462,84832,Mumbai,Prayagraj(Uttar Pradesh),2768,18
+Destination,Prayagraj(Uttar Pradesh),197105,84832,Bilaspur (Chhattisgarh),Prayagraj(Uttar Pradesh),2749,19
+Destination,Prayagraj(Uttar Pradesh),74153,84832,Ghaziabad,Prayagraj(Uttar Pradesh),2527,20
+Destination,Prayagraj(Uttar Pradesh),443,84832,Sagar (Madhya Pradesh),Prayagraj(Uttar Pradesh),2486,21
+Destination,Prayagraj(Uttar Pradesh),90355,84832,Azamgarh,Prayagraj(Uttar Pradesh),2306,22
+Destination,Prayagraj(Uttar Pradesh),70015,84832,Gurugram (Gurgaon),Prayagraj(Uttar Pradesh),2248,23
+Destination,Prayagraj(Uttar Pradesh),70024,84832,Jabalpur,Prayagraj(Uttar Pradesh),2226,24
+Destination,Prayagraj(Uttar Pradesh),1001,84832,Ujjain,Prayagraj(Uttar Pradesh),1816,25
+Destination,Prayagraj(Uttar Pradesh),76431,84832,Ranchi,Prayagraj(Uttar Pradesh),1769,26
+Destination,Prayagraj(Uttar Pradesh),833,84832,Chandigarh,Prayagraj(Uttar Pradesh),1635,27
+Destination,Prayagraj(Uttar Pradesh),130,84832,Pune,Prayagraj(Uttar Pradesh),1545,28
+Destination,Prayagraj(Uttar Pradesh),74820,84832,Kolkata,Prayagraj(Uttar Pradesh),1536,29
+Destination,Prayagraj(Uttar Pradesh),122,84832,Bengaluru,Prayagraj(Uttar Pradesh),1514,30
+Destination,Prayagraj(Uttar Pradesh),78023,84832,Etawah,Prayagraj(Uttar Pradesh),1501,31
+Destination,Prayagraj(Uttar Pradesh),90113,84832,Jaunpur,Prayagraj(Uttar Pradesh),1266,32
+Destination,Prayagraj(Uttar Pradesh),74699,84832,Patna (Bihar),Prayagraj(Uttar Pradesh),1243,33
+Destination,Prayagraj(Uttar Pradesh),91608,84832,Raebareli,Prayagraj(Uttar Pradesh),1199,34
+Destination,Prayagraj(Uttar Pradesh),1369,84832,Jhansi(Uttar Pradesh),Prayagraj(Uttar Pradesh),1170,35
+Destination,Prayagraj(Uttar Pradesh),736,84832,Ludhiana,Prayagraj(Uttar Pradesh),1163,36
+Destination,Prayagraj(Uttar Pradesh),76481,84832,Basti,Prayagraj(Uttar Pradesh),1120,37
+Destination,Prayagraj(Uttar Pradesh),551,84832,Ahmedabad,Prayagraj(Uttar Pradesh),1082,38
+Destination,Prayagraj(Uttar Pradesh),77718,84832,Mohali,Prayagraj(Uttar Pradesh),1051,39
+Destination,Prayagraj(Uttar Pradesh),76451,84832,Jamshedpur,Prayagraj(Uttar Pradesh),1009,40
+Destination,Prayagraj(Uttar Pradesh),476,84832,A.S.Peta,Prayagraj(Uttar Pradesh),958,41
+Destination,Prayagraj(Uttar Pradesh),777,84832,Dehradun,Prayagraj(Uttar Pradesh),917,42
+Destination,Prayagraj(Uttar Pradesh),95032,84832,Sultanpur (Uttar Pradesh),Prayagraj(Uttar Pradesh),881,43
+Destination,Prayagraj(Uttar Pradesh),1437,84832,Bareilly (Uttar Pradesh),Prayagraj(Uttar Pradesh),832,44
+Destination,Prayagraj(Uttar Pradesh),90189,84832,Mau,Prayagraj(Uttar Pradesh),799,45
+Destination,Prayagraj(Uttar Pradesh),79617,84832,Meerut,Prayagraj(Uttar Pradesh),790,46
+Destination,Prayagraj(Uttar Pradesh),197682,84832,Mirzapur (uttar pradesh),Prayagraj(Uttar Pradesh),782,47
+Destination,Prayagraj(Uttar Pradesh),95514,84832,Shahdol,Prayagraj(Uttar Pradesh),778,48
+Destination,Prayagraj(Uttar Pradesh),1169,84832,Jodhpur,Prayagraj(Uttar Pradesh),727,49
+Destination,Prayagraj(Uttar Pradesh),88443,84832,Satna,Prayagraj(Uttar Pradesh),719,50
+Destination,Prayagraj(Uttar Pradesh),1443,84832,Kota(Rajasthan),Prayagraj(Uttar Pradesh),717,51
+Destination,Prayagraj(Uttar Pradesh),217335,84832,Chitrakoot (Uttar Pradesh),Prayagraj(Uttar Pradesh),703,52
+Destination,Prayagraj(Uttar Pradesh),309,84832,Aurangabad (Maharashtra),Prayagraj(Uttar Pradesh),699,53
+Destination,Prayagraj(Uttar Pradesh),79613,84832,Aligarh (uttar pradesh),Prayagraj(Uttar Pradesh),699,54
+Destination,Prayagraj(Uttar Pradesh),95234,84832,Banda(Uttar Pradesh),Prayagraj(Uttar Pradesh),675,55
+Destination,Prayagraj(Uttar Pradesh),73723,84832,Chhatarpur (madhya pradesh),Prayagraj(Uttar Pradesh),669,56
+Destination,Prayagraj(Uttar Pradesh),74676,84832,Bhubaneswar,Prayagraj(Uttar Pradesh),662,57
+Destination,Prayagraj(Uttar Pradesh),473,84832,Surat,Prayagraj(Uttar Pradesh),650,58
+Destination,Prayagraj(Uttar Pradesh),94990,84832,Pratapgarh(Uttar Pradesh),Prayagraj(Uttar Pradesh),645,59
+Destination,Prayagraj(Uttar Pradesh),93947,84832,Ambikapur,Prayagraj(Uttar Pradesh),642,60
+Destination,Prayagraj(Uttar Pradesh),808,84832,Ajmer,Prayagraj(Uttar Pradesh),623,61
+Destination,Prayagraj(Uttar Pradesh),94838,84832,Bahraich,Prayagraj(Uttar Pradesh),620,62
+Destination,Prayagraj(Uttar Pradesh),84828,84832,Seoni (madhya pradesh),Prayagraj(Uttar Pradesh),599,63
+Destination,Prayagraj(Uttar Pradesh),802,84832,Haridwar,Prayagraj(Uttar Pradesh),598,64
+Destination,Prayagraj(Uttar Pradesh),73532,84832,Katni,Prayagraj(Uttar Pradesh),594,65
+Destination,Prayagraj(Uttar Pradesh),123,84832,Chennai,Prayagraj(Uttar Pradesh),566,66
+Destination,Prayagraj(Uttar Pradesh),73533,84832,Maihar,Prayagraj(Uttar Pradesh),563,67
+Destination,Prayagraj(Uttar Pradesh),219652,84832,Renukoot (uttar Pradesh),Prayagraj(Uttar Pradesh),544,68
+Destination,Prayagraj(Uttar Pradesh),76479,84832,Faizabad,Prayagraj(Uttar Pradesh),531,69
+Destination,Prayagraj(Uttar Pradesh),94840,84832,Gonda,Prayagraj(Uttar Pradesh),520,70
+Destination,Prayagraj(Uttar Pradesh),69774,84832,Bharatpur,Prayagraj(Uttar Pradesh),514,71
+Destination,Prayagraj(Uttar Pradesh),73529,84832,Durg,Prayagraj(Uttar Pradesh),513,72
+Destination,Prayagraj(Uttar Pradesh),205922,84832,Akbarpur (ambedkar Nagar),Prayagraj(Uttar Pradesh),512,73
+Destination,Prayagraj(Uttar Pradesh),1365,84832,Guna,Prayagraj(Uttar Pradesh),499,74
+Destination,Prayagraj(Uttar Pradesh),77167,84832,Gaya,Prayagraj(Uttar Pradesh),487,75
+Destination,Prayagraj(Uttar Pradesh),74136,84832,Dewas,Prayagraj(Uttar Pradesh),467,76
+Destination,Prayagraj(Uttar Pradesh),95483,84832,Sidhi (madhya pradesh),Prayagraj(Uttar Pradesh),464,77
+Destination,Prayagraj(Uttar Pradesh),90329,84832,Ballia (Uttar Pradesh),Prayagraj(Uttar Pradesh),459,78
+Destination,Prayagraj(Uttar Pradesh),1514,84832,Haldwani,Prayagraj(Uttar Pradesh),458,79
+Destination,Prayagraj(Uttar Pradesh),95026,84832,Ghazipur,Prayagraj(Uttar Pradesh),458,80
+Destination,Prayagraj(Uttar Pradesh),94632,84832,Hapur,Prayagraj(Uttar Pradesh),439,81
+Destination,Prayagraj(Uttar Pradesh),94981,84832,Shahganj (uttar pradesh),Prayagraj(Uttar Pradesh),436,82
+Destination,Prayagraj(Uttar Pradesh),94782,84832,Vrindavan,Prayagraj(Uttar Pradesh),418,83
+Destination,Prayagraj(Uttar Pradesh),470,84832,Udaipur,Prayagraj(Uttar Pradesh),403,84
+Destination,Prayagraj(Uttar Pradesh),74672,84832,Asansol (West Bengal),Prayagraj(Uttar Pradesh),401,85
+Destination,Prayagraj(Uttar Pradesh),71958,84832,Gwalior,Prayagraj(Uttar Pradesh),395,86
+Destination,Prayagraj(Uttar Pradesh),95015,84832,Deoria (Uttar Pradesh),Prayagraj(Uttar Pradesh),392,87
+Destination,Prayagraj(Uttar Pradesh),829,84832,Fatehpur (Uttar Pradesh),Prayagraj(Uttar Pradesh),382,88
+Destination,Prayagraj(Uttar Pradesh),1438,84832,Sitapur (Uttar Pradesh),Prayagraj(Uttar Pradesh),377,89
+Destination,Prayagraj(Uttar Pradesh),76576,84832,Hazaribagh,Prayagraj(Uttar Pradesh),361,90
+Destination,Prayagraj(Uttar Pradesh),1372,84832,Orai,Prayagraj(Uttar Pradesh),358,91
+Destination,Prayagraj(Uttar Pradesh),221347,84832,Jewar,Prayagraj(Uttar Pradesh),357,92
+Destination,Prayagraj(Uttar Pradesh),69802,84832,Durgapur (West Bengal),Prayagraj(Uttar Pradesh),349,93
+Destination,Prayagraj(Uttar Pradesh),94978,84832,Mahoba,Prayagraj(Uttar Pradesh),344,94
+Destination,Prayagraj(Uttar Pradesh),1499,84832,Kalyan,Prayagraj(Uttar Pradesh),342,95
+Destination,Prayagraj(Uttar Pradesh),77705,84832,Mehandipur balaji mandir,Prayagraj(Uttar Pradesh),334,96
+Destination,Prayagraj(Uttar Pradesh),256864,84832,Chitrakoot Dham (karwi),Prayagraj(Uttar Pradesh),317,97
+Destination,Prayagraj(Uttar Pradesh),216812,84832,Waidhan,Prayagraj(Uttar Pradesh),302,98
+Destination,Prayagraj(Uttar Pradesh),1003,84832,Vadodara,Prayagraj(Uttar Pradesh),302,99
+Destination,Prayagraj(Uttar Pradesh),444,84832,Nashik,Prayagraj(Uttar Pradesh),298,100
+Source,Prayagraj(Uttar Pradesh),84832,733,Prayagraj(Uttar Pradesh),Delhi,49477,1
+Source,Prayagraj(Uttar Pradesh),84832,1439,Prayagraj(Uttar Pradesh),Lucknow,14727,2
+Source,Prayagraj(Uttar Pradesh),84832,624,Prayagraj(Uttar Pradesh),Nagpur,11736,3
+Source,Prayagraj(Uttar Pradesh),84832,70429,Prayagraj(Uttar Pradesh),Varanasi,9287,4
+Source,Prayagraj(Uttar Pradesh),84832,807,Prayagraj(Uttar Pradesh),Jaipur (Rajasthan),6663,5
+Source,Prayagraj(Uttar Pradesh),84832,73534,Prayagraj(Uttar Pradesh),Rewa,5467,6
+Source,Prayagraj(Uttar Pradesh),84832,1429,Prayagraj(Uttar Pradesh),Noida,4810,7
+Source,Prayagraj(Uttar Pradesh),84832,1377,Prayagraj(Uttar Pradesh),Kanpur (Uttar Pradesh),4771,8
+Source,Prayagraj(Uttar Pradesh),84832,76480,Prayagraj(Uttar Pradesh),Ayodhya,4545,9
+Source,Prayagraj(Uttar Pradesh),84832,1290,Prayagraj(Uttar Pradesh),Agra,4504,10
+Source,Prayagraj(Uttar Pradesh),84832,78027,Prayagraj(Uttar Pradesh),Gorakhpur (uttar pradesh),4251,11
+Source,Prayagraj(Uttar Pradesh),84832,462,Prayagraj(Uttar Pradesh),Mumbai,4016,12
+Source,Prayagraj(Uttar Pradesh),84832,313,Prayagraj(Uttar Pradesh),Indore,3947,13
+Source,Prayagraj(Uttar Pradesh),84832,70014,Prayagraj(Uttar Pradesh),Raipur (Chhattisgarh),3748,14
+Source,Prayagraj(Uttar Pradesh),84832,747,Prayagraj(Uttar Pradesh),Mathura,3467,15
+Source,Prayagraj(Uttar Pradesh),84832,90355,Prayagraj(Uttar Pradesh),Azamgarh,3021,16
+Source,Prayagraj(Uttar Pradesh),84832,216383,Prayagraj(Uttar Pradesh),Greater noida (uttar pradesh),2835,17
+Source,Prayagraj(Uttar Pradesh),84832,124,Prayagraj(Uttar Pradesh),Hyderabad,2727,18
+Source,Prayagraj(Uttar Pradesh),84832,74153,Prayagraj(Uttar Pradesh),Ghaziabad,2597,19
+Source,Prayagraj(Uttar Pradesh),84832,979,Prayagraj(Uttar Pradesh),Bhopal,2476,20
+Source,Prayagraj(Uttar Pradesh),84832,70024,Prayagraj(Uttar Pradesh),Jabalpur,2387,21
+Source,Prayagraj(Uttar Pradesh),84832,1001,Prayagraj(Uttar Pradesh),Ujjain,2363,22
+Source,Prayagraj(Uttar Pradesh),84832,197105,Prayagraj(Uttar Pradesh),Bilaspur (Chhattisgarh),1944,23
+Source,Prayagraj(Uttar Pradesh),84832,90113,Prayagraj(Uttar Pradesh),Jaunpur,1878,24
+Source,Prayagraj(Uttar Pradesh),84832,443,Prayagraj(Uttar Pradesh),Sagar (Madhya Pradesh),1628,25
+Source,Prayagraj(Uttar Pradesh),84832,76431,Prayagraj(Uttar Pradesh),Ranchi,1616,26
+Source,Prayagraj(Uttar Pradesh),84832,130,Prayagraj(Uttar Pradesh),Pune,1590,27
+Source,Prayagraj(Uttar Pradesh),84832,833,Prayagraj(Uttar Pradesh),Chandigarh,1487,28
+Source,Prayagraj(Uttar Pradesh),84832,122,Prayagraj(Uttar Pradesh),Bengaluru,1443,29
+Source,Prayagraj(Uttar Pradesh),84832,78023,Prayagraj(Uttar Pradesh),Etawah,1415,30
+Source,Prayagraj(Uttar Pradesh),84832,74820,Prayagraj(Uttar Pradesh),Kolkata,1410,31
+Source,Prayagraj(Uttar Pradesh),84832,70015,Prayagraj(Uttar Pradesh),Gurugram (Gurgaon),1389,32
+Source,Prayagraj(Uttar Pradesh),84832,74699,Prayagraj(Uttar Pradesh),Patna (Bihar),1284,33
+Source,Prayagraj(Uttar Pradesh),84832,551,Prayagraj(Uttar Pradesh),Ahmedabad,1264,34
+Source,Prayagraj(Uttar Pradesh),84832,197682,Prayagraj(Uttar Pradesh),Mirzapur (uttar pradesh),1262,35
+Source,Prayagraj(Uttar Pradesh),84832,76481,Prayagraj(Uttar Pradesh),Basti,1184,36
+Source,Prayagraj(Uttar Pradesh),84832,736,Prayagraj(Uttar Pradesh),Ludhiana,1106,37
+Source,Prayagraj(Uttar Pradesh),84832,77718,Prayagraj(Uttar Pradesh),Mohali,1044,38
+Source,Prayagraj(Uttar Pradesh),84832,95032,Prayagraj(Uttar Pradesh),Sultanpur (Uttar Pradesh),1026,39
+Source,Prayagraj(Uttar Pradesh),84832,91608,Prayagraj(Uttar Pradesh),Raebareli,993,40
+Source,Prayagraj(Uttar Pradesh),84832,476,Prayagraj(Uttar Pradesh),A.S.Peta,960,41
+Source,Prayagraj(Uttar Pradesh),84832,217335,Prayagraj(Uttar Pradesh),Chitrakoot (Uttar Pradesh),954,42
+Source,Prayagraj(Uttar Pradesh),84832,777,Prayagraj(Uttar Pradesh),Dehradun,928,43
+Source,Prayagraj(Uttar Pradesh),84832,90189,Prayagraj(Uttar Pradesh),Mau,922,44
+Source,Prayagraj(Uttar Pradesh),84832,94990,Prayagraj(Uttar Pradesh),Pratapgarh(Uttar Pradesh),879,45
+Source,Prayagraj(Uttar Pradesh),84832,76451,Prayagraj(Uttar Pradesh),Jamshedpur,854,46
+Source,Prayagraj(Uttar Pradesh),84832,1437,Prayagraj(Uttar Pradesh),Bareilly (Uttar Pradesh),833,47
+Source,Prayagraj(Uttar Pradesh),84832,1369,Prayagraj(Uttar Pradesh),Jhansi(Uttar Pradesh),833,48
+Source,Prayagraj(Uttar Pradesh),84832,95234,Prayagraj(Uttar Pradesh),Banda(Uttar Pradesh),822,49
+Source,Prayagraj(Uttar Pradesh),84832,73533,Prayagraj(Uttar Pradesh),Maihar,753,50
+Source,Prayagraj(Uttar Pradesh),84832,205922,Prayagraj(Uttar Pradesh),Akbarpur (ambedkar Nagar),752,51
+Source,Prayagraj(Uttar Pradesh),84832,1443,Prayagraj(Uttar Pradesh),Kota(Rajasthan),751,52
+Source,Prayagraj(Uttar Pradesh),84832,473,Prayagraj(Uttar Pradesh),Surat,731,53
+Source,Prayagraj(Uttar Pradesh),84832,88443,Prayagraj(Uttar Pradesh),Satna,717,54
+Source,Prayagraj(Uttar Pradesh),84832,123,Prayagraj(Uttar Pradesh),Chennai,708,55
+Source,Prayagraj(Uttar Pradesh),84832,94782,Prayagraj(Uttar Pradesh),Vrindavan,708,56
+Source,Prayagraj(Uttar Pradesh),84832,79617,Prayagraj(Uttar Pradesh),Meerut,698,57
+Source,Prayagraj(Uttar Pradesh),84832,1169,Prayagraj(Uttar Pradesh),Jodhpur,695,58
+Source,Prayagraj(Uttar Pradesh),84832,94981,Prayagraj(Uttar Pradesh),Shahganj (uttar pradesh),688,59
+Source,Prayagraj(Uttar Pradesh),84832,95514,Prayagraj(Uttar Pradesh),Shahdol,677,60
+Source,Prayagraj(Uttar Pradesh),84832,808,Prayagraj(Uttar Pradesh),Ajmer,671,61
+Source,Prayagraj(Uttar Pradesh),84832,94838,Prayagraj(Uttar Pradesh),Bahraich,665,62
+Source,Prayagraj(Uttar Pradesh),84832,95483,Prayagraj(Uttar Pradesh),Sidhi (madhya pradesh),657,63
+Source,Prayagraj(Uttar Pradesh),84832,77167,Prayagraj(Uttar Pradesh),Gaya,657,64
+Source,Prayagraj(Uttar Pradesh),84832,74676,Prayagraj(Uttar Pradesh),Bhubaneswar,637,65
+Source,Prayagraj(Uttar Pradesh),84832,93947,Prayagraj(Uttar Pradesh),Ambikapur,635,66
+Source,Prayagraj(Uttar Pradesh),84832,802,Prayagraj(Uttar Pradesh),Haridwar,624,67
+Source,Prayagraj(Uttar Pradesh),84832,95026,Prayagraj(Uttar Pradesh),Ghazipur,615,68
+Source,Prayagraj(Uttar Pradesh),84832,219652,Prayagraj(Uttar Pradesh),Renukoot (uttar Pradesh),598,69
+Source,Prayagraj(Uttar Pradesh),84832,77705,Prayagraj(Uttar Pradesh),Mehandipur balaji mandir,541,70
+Source,Prayagraj(Uttar Pradesh),84832,94840,Prayagraj(Uttar Pradesh),Gonda,520,71
+Source,Prayagraj(Uttar Pradesh),84832,309,Prayagraj(Uttar Pradesh),Aurangabad (Maharashtra),512,72
+Source,Prayagraj(Uttar Pradesh),84832,69774,Prayagraj(Uttar Pradesh),Bharatpur,497,73
+Source,Prayagraj(Uttar Pradesh),84832,95015,Prayagraj(Uttar Pradesh),Deoria (Uttar Pradesh),495,74
+Source,Prayagraj(Uttar Pradesh),84832,76479,Prayagraj(Uttar Pradesh),Faizabad,489,75
+Source,Prayagraj(Uttar Pradesh),84832,771,Prayagraj(Uttar Pradesh),Nainital,487,76
+Source,Prayagraj(Uttar Pradesh),84832,1514,Prayagraj(Uttar Pradesh),Haldwani,478,77
+Source,Prayagraj(Uttar Pradesh),84832,829,Prayagraj(Uttar Pradesh),Fatehpur (Uttar Pradesh),465,78
+Source,Prayagraj(Uttar Pradesh),84832,95013,Prayagraj(Uttar Pradesh),Vindhyachal,461,79
+Source,Prayagraj(Uttar Pradesh),84832,74136,Prayagraj(Uttar Pradesh),Dewas,452,80
+Source,Prayagraj(Uttar Pradesh),84832,73532,Prayagraj(Uttar Pradesh),Katni,447,81
+Source,Prayagraj(Uttar Pradesh),84832,73529,Prayagraj(Uttar Pradesh),Durg,441,82
+Source,Prayagraj(Uttar Pradesh),84832,71958,Prayagraj(Uttar Pradesh),Gwalior,439,83
+Source,Prayagraj(Uttar Pradesh),84832,84828,Prayagraj(Uttar Pradesh),Seoni (madhya pradesh),435,84
+Source,Prayagraj(Uttar Pradesh),84832,90329,Prayagraj(Uttar Pradesh),Ballia (Uttar Pradesh),422,85
+Source,Prayagraj(Uttar Pradesh),84832,73723,Prayagraj(Uttar Pradesh),Chhatarpur (madhya pradesh),412,86
+Source,Prayagraj(Uttar Pradesh),84832,79613,Prayagraj(Uttar Pradesh),Aligarh (uttar pradesh),409,87
+Source,Prayagraj(Uttar Pradesh),84832,444,Prayagraj(Uttar Pradesh),Nashik,392,88
+Source,Prayagraj(Uttar Pradesh),84832,95029,Prayagraj(Uttar Pradesh),Amethi,391,89
+Source,Prayagraj(Uttar Pradesh),84832,470,Prayagraj(Uttar Pradesh),Udaipur,363,90
+Source,Prayagraj(Uttar Pradesh),84832,65850,Prayagraj(Uttar Pradesh),Ringas,349,91
+Source,Prayagraj(Uttar Pradesh),84832,1499,Prayagraj(Uttar Pradesh),Kalyan,345,92
+Source,Prayagraj(Uttar Pradesh),84832,74672,Prayagraj(Uttar Pradesh),Asansol (West Bengal),342,93
+Source,Prayagraj(Uttar Pradesh),84832,254069,Prayagraj(Uttar Pradesh),Robertsganj,329,94
+Source,Prayagraj(Uttar Pradesh),84832,94978,Prayagraj(Uttar Pradesh),Mahoba,328,95
+Source,Prayagraj(Uttar Pradesh),84832,80303,Prayagraj(Uttar Pradesh),Muzaffarpur (Bihar),320,96
+Source,Prayagraj(Uttar Pradesh),84832,1003,Prayagraj(Uttar Pradesh),Vadodara,316,97
+Source,Prayagraj(Uttar Pradesh),84832,205744,Prayagraj(Uttar Pradesh),Badlapur (uttar pradesh),314,98
+Source,Prayagraj(Uttar Pradesh),84832,76576,Prayagraj(Uttar Pradesh),Hazaribagh,313,99
+Source,Prayagraj(Uttar Pradesh),84832,74680,Prayagraj(Uttar Pradesh),Dhanbad (jharkhand),312,100
+Destination,Varanasi,733,70429,Delhi,Varanasi,132156,1
+Destination,Varanasi,1439,70429,Lucknow,Varanasi,38574,2
+Destination,Varanasi,74820,70429,Kolkata,Varanasi,25919,3
+Destination,Varanasi,124,70429,Hyderabad,Varanasi,22555,4
+Destination,Varanasi,807,70429,Jaipur (Rajasthan),Varanasi,19969,5
+Destination,Varanasi,624,70429,Nagpur,Varanasi,16309,6
+Destination,Varanasi,76451,70429,Jamshedpur,Varanasi,13513,7
+Destination,Varanasi,76431,70429,Ranchi,Varanasi,12967,8
+Destination,Varanasi,76480,70429,Ayodhya,Varanasi,12728,9
+Destination,Varanasi,1377,70429,Kanpur (Uttar Pradesh),Varanasi,12187,10
+Destination,Varanasi,313,70429,Indore,Varanasi,12107,11
+Destination,Varanasi,1429,70429,Noida,Varanasi,9596,12
+Destination,Varanasi,84832,70429,Prayagraj(Uttar Pradesh),Varanasi,9287,13
+Destination,Varanasi,1290,70429,Agra,Varanasi,9208,14
+Destination,Varanasi,93947,70429,Ambikapur,Varanasi,7321,15
+Destination,Varanasi,747,70429,Mathura,Varanasi,7190,16
+Destination,Varanasi,462,70429,Mumbai,Varanasi,7178,17
+Destination,Varanasi,979,70429,Bhopal,Varanasi,6994,18
+Destination,Varanasi,78027,70429,Gorakhpur (uttar pradesh),Varanasi,6783,19
+Destination,Varanasi,70014,70429,Raipur (Chhattisgarh),Varanasi,6736,20
+Destination,Varanasi,216383,70429,Greater noida (uttar pradesh),Varanasi,6715,21
+Destination,Varanasi,122,70429,Bengaluru,Varanasi,5638,22
+Destination,Varanasi,74699,70429,Patna (Bihar),Varanasi,5033,23
+Destination,Varanasi,1001,70429,Ujjain,Varanasi,4153,24
+Destination,Varanasi,833,70429,Chandigarh,Varanasi,4076,25
+Destination,Varanasi,73534,70429,Rewa,Varanasi,4011,26
+Destination,Varanasi,69802,70429,Durgapur (West Bengal),Varanasi,3863,27
+Destination,Varanasi,70015,70429,Gurugram (Gurgaon),Varanasi,3545,28
+Destination,Varanasi,70024,70429,Jabalpur,Varanasi,3433,29
+Destination,Varanasi,551,70429,Ahmedabad,Varanasi,3090,30
+Destination,Varanasi,130,70429,Pune,Varanasi,3054,31
+Destination,Varanasi,77521,70429,Raigarh (Chhattisgarh),Varanasi,2721,32
+Destination,Varanasi,74153,70429,Ghaziabad,Varanasi,2633,33
+Destination,Varanasi,216812,70429,Waidhan,Varanasi,2603,34
+Destination,Varanasi,197105,70429,Bilaspur (Chhattisgarh),Varanasi,2253,35
+Destination,Varanasi,74676,70429,Bhubaneswar,Varanasi,2227,36
+Destination,Varanasi,91608,70429,Raebareli,Varanasi,2126,37
+Destination,Varanasi,78023,70429,Etawah,Varanasi,2011,38
+Destination,Varanasi,76576,70429,Hazaribagh,Varanasi,1994,39
+Destination,Varanasi,77167,70429,Gaya,Varanasi,1923,40
+Destination,Varanasi,74672,70429,Asansol (West Bengal),Varanasi,1834,41
+Destination,Varanasi,777,70429,Dehradun,Varanasi,1766,42
+Destination,Varanasi,736,70429,Ludhiana,Varanasi,1741,43
+Destination,Varanasi,73529,70429,Durg,Varanasi,1706,44
+Destination,Varanasi,1169,70429,Jodhpur,Varanasi,1582,45
+Destination,Varanasi,90355,70429,Azamgarh,Varanasi,1554,46
+Destination,Varanasi,473,70429,Surat,Varanasi,1327,47
+Destination,Varanasi,737,70429,Jalandhar,Varanasi,1309,48
+Destination,Varanasi,1437,70429,Bareilly (Uttar Pradesh),Varanasi,1253,49
+Destination,Varanasi,85962,70429,Jharsuguda,Varanasi,1251,50
+Destination,Varanasi,74680,70429,Dhanbad (jharkhand),Varanasi,1243,51
+Destination,Varanasi,802,70429,Haridwar,Varanasi,1236,52
+Destination,Varanasi,94782,70429,Vrindavan,Varanasi,1207,53
+Destination,Varanasi,1443,70429,Kota(Rajasthan),Varanasi,1175,54
+Destination,Varanasi,92827,70429,Ramgarh (Jharkhand),Varanasi,1139,55
+Destination,Varanasi,74678,70429,Burdwan,Varanasi,1129,56
+Destination,Varanasi,90113,70429,Jaunpur,Varanasi,1119,57
+Destination,Varanasi,90189,70429,Mau,Varanasi,1101,58
+Destination,Varanasi,1514,70429,Haldwani,Varanasi,1075,59
+Destination,Varanasi,74694,70429,Siliguri,Varanasi,1069,60
+Destination,Varanasi,1369,70429,Jhansi(Uttar Pradesh),Varanasi,1043,61
+Destination,Varanasi,95032,70429,Sultanpur (Uttar Pradesh),Varanasi,1036,62
+Destination,Varanasi,95026,70429,Ghazipur,Varanasi,970,63
+Destination,Varanasi,808,70429,Ajmer,Varanasi,915,64
+Destination,Varanasi,93983,70429,Aurangabad (Bihar),Varanasi,902,65
+Destination,Varanasi,90329,70429,Ballia (Uttar Pradesh),Varanasi,898,66
+Destination,Varanasi,80302,70429,Motihari (Bihar),Varanasi,893,67
+Destination,Varanasi,842,70429,Rishikesh,Varanasi,882,68
+Destination,Varanasi,76481,70429,Basti,Varanasi,880,69
+Destination,Varanasi,197702,70429,Deoghar (Jharkhand),Varanasi,849,70
+Destination,Varanasi,470,70429,Udaipur,Varanasi,838,71
+Destination,Varanasi,443,70429,Sagar (Madhya Pradesh),Varanasi,837,72
+Destination,Varanasi,74136,70429,Dewas,Varanasi,816,73
+Destination,Varanasi,309,70429,Aurangabad (Maharashtra),Varanasi,787,74
+Destination,Varanasi,78041,70429,Sasaram (Bihar),Varanasi,779,75
+Destination,Varanasi,80303,70429,Muzaffarpur (Bihar),Varanasi,778,76
+Destination,Varanasi,197682,70429,Mirzapur (uttar pradesh),Varanasi,761,77
+Destination,Varanasi,95514,70429,Shahdol,Varanasi,755,78
+Destination,Varanasi,123,70429,Chennai,Varanasi,745,79
+Destination,Varanasi,95015,70429,Deoria (Uttar Pradesh),Varanasi,736,80
+Destination,Varanasi,94840,70429,Gonda,Varanasi,734,81
+Destination,Varanasi,1513,70429,Rudrapur,Varanasi,725,82
+Destination,Varanasi,81384,70429,Gopalganj (Bihar),Varanasi,719,83
+Destination,Varanasi,201126,70429,Howrah,Varanasi,719,84
+Destination,Varanasi,219652,70429,Renukoot (uttar Pradesh),Varanasi,709,85
+Destination,Varanasi,71958,70429,Gwalior,Varanasi,701,86
+Destination,Varanasi,93925,70429,Garhwa,Varanasi,697,87
+Destination,Varanasi,218596,70429,Tata,Varanasi,684,88
+Destination,Varanasi,73533,70429,Maihar,Varanasi,676,89
+Destination,Varanasi,69774,70429,Bharatpur,Varanasi,646,90
+Destination,Varanasi,88443,70429,Satna,Varanasi,645,91
+Destination,Varanasi,193660,70429,Daltonganj,Varanasi,630,92
+Destination,Varanasi,94838,70429,Bahraich,Varanasi,624,93
+Destination,Varanasi,76479,70429,Faizabad,Varanasi,610,94
+Destination,Varanasi,84828,70429,Seoni (madhya pradesh),Varanasi,592,95
+Destination,Varanasi,73532,70429,Katni,Varanasi,586,96
+Destination,Varanasi,219717,70429,Shaktinagar (uttar Pradesh),Varanasi,584,97
+Destination,Varanasi,199630,70429,Dehri,Varanasi,568,98
+Destination,Varanasi,221347,70429,Jewar,Varanasi,556,99
+Destination,Varanasi,95483,70429,Sidhi (madhya pradesh),Varanasi,552,100
+Source,Varanasi,70429,733,Varanasi,Delhi,115729,1
+Source,Varanasi,70429,1439,Varanasi,Lucknow,32400,2
+Source,Varanasi,70429,807,Varanasi,Jaipur (Rajasthan),20136,3
+Source,Varanasi,70429,124,Varanasi,Hyderabad,18923,4
+Source,Varanasi,70429,74820,Varanasi,Kolkata,16406,5
+Source,Varanasi,70429,624,Varanasi,Nagpur,15143,6
+Source,Varanasi,70429,76480,Varanasi,Ayodhya,13330,7
+Source,Varanasi,70429,76431,Varanasi,Ranchi,12512,8
+Source,Varanasi,70429,76451,Varanasi,Jamshedpur,10837,9
+Source,Varanasi,70429,313,Varanasi,Indore,10451,10
+Source,Varanasi,70429,1377,Varanasi,Kanpur (Uttar Pradesh),9774,11
+Source,Varanasi,70429,84832,Varanasi,Prayagraj(Uttar Pradesh),8251,12
+Source,Varanasi,70429,1290,Varanasi,Agra,8086,13
+Source,Varanasi,70429,1429,Varanasi,Noida,7835,14
+Source,Varanasi,70429,462,Varanasi,Mumbai,7746,15
+Source,Varanasi,70429,747,Varanasi,Mathura,7194,16
+Source,Varanasi,70429,93947,Varanasi,Ambikapur,6449,17
+Source,Varanasi,70429,1001,Varanasi,Ujjain,6433,18
+Source,Varanasi,70429,216383,Varanasi,Greater noida (uttar pradesh),6336,19
+Source,Varanasi,70429,78027,Varanasi,Gorakhpur (uttar pradesh),5965,20
+Source,Varanasi,70429,979,Varanasi,Bhopal,5737,21
+Source,Varanasi,70429,74699,Varanasi,Patna (Bihar),4727,22
+Source,Varanasi,70429,70014,Varanasi,Raipur (Chhattisgarh),4262,23
+Source,Varanasi,70429,833,Varanasi,Chandigarh,3556,24
+Source,Varanasi,70429,70024,Varanasi,Jabalpur,3553,25
+Source,Varanasi,70429,122,Varanasi,Bengaluru,3341,26
+Source,Varanasi,70429,73534,Varanasi,Rewa,2968,27
+Source,Varanasi,70429,74153,Varanasi,Ghaziabad,2880,28
+Source,Varanasi,70429,551,Varanasi,Ahmedabad,2619,29
+Source,Varanasi,70429,130,Varanasi,Pune,2349,30
+Source,Varanasi,70429,94782,Varanasi,Vrindavan,2180,31
+Source,Varanasi,70429,90355,Varanasi,Azamgarh,1932,32
+Source,Varanasi,70429,74676,Varanasi,Bhubaneswar,1894,33
+Source,Varanasi,70429,70015,Varanasi,Gurugram (Gurgaon),1889,34
+Source,Varanasi,70429,77521,Varanasi,Raigarh (Chhattisgarh),1881,35
+Source,Varanasi,70429,77167,Varanasi,Gaya,1857,36
+Source,Varanasi,70429,91608,Varanasi,Raebareli,1851,37
+Source,Varanasi,70429,777,Varanasi,Dehradun,1834,38
+Source,Varanasi,70429,78023,Varanasi,Etawah,1785,39
+Source,Varanasi,70429,69802,Varanasi,Durgapur (West Bengal),1779,40
+Source,Varanasi,70429,736,Varanasi,Ludhiana,1715,41
+Source,Varanasi,70429,216812,Varanasi,Waidhan,1663,42
+Source,Varanasi,70429,802,Varanasi,Haridwar,1580,43
+Source,Varanasi,70429,197105,Varanasi,Bilaspur (Chhattisgarh),1478,44
+Source,Varanasi,70429,73529,Varanasi,Durg,1444,45
+Source,Varanasi,70429,95026,Varanasi,Ghazipur,1342,46
+Source,Varanasi,70429,737,Varanasi,Jalandhar,1331,47
+Source,Varanasi,70429,1437,Varanasi,Bareilly (Uttar Pradesh),1281,48
+Source,Varanasi,70429,1603,Varanasi,Kathmandu,1241,49
+Source,Varanasi,70429,73533,Varanasi,Maihar,1238,50
+Source,Varanasi,70429,90189,Varanasi,Mau,1235,51
+Source,Varanasi,70429,90113,Varanasi,Jaunpur,1233,52
+Source,Varanasi,70429,473,Varanasi,Surat,1225,53
+Source,Varanasi,70429,90329,Varanasi,Ballia (Uttar Pradesh),1222,54
+Source,Varanasi,70429,76576,Varanasi,Hazaribagh,1175,55
+Source,Varanasi,70429,197682,Varanasi,Mirzapur (uttar pradesh),1157,56
+Source,Varanasi,70429,1169,Varanasi,Jodhpur,1141,57
+Source,Varanasi,70429,74672,Varanasi,Asansol (West Bengal),1125,58
+Source,Varanasi,70429,1443,Varanasi,Kota(Rajasthan),1065,59
+Source,Varanasi,70429,771,Varanasi,Nainital,1058,60
+Source,Varanasi,70429,219717,Varanasi,Shaktinagar (uttar Pradesh),953,61
+Source,Varanasi,70429,1514,Varanasi,Haldwani,953,62
+Source,Varanasi,70429,808,Varanasi,Ajmer,942,63
+Source,Varanasi,70429,219652,Varanasi,Renukoot (uttar Pradesh),941,64
+Source,Varanasi,70429,74694,Varanasi,Siliguri,939,65
+Source,Varanasi,70429,842,Varanasi,Rishikesh,938,66
+Source,Varanasi,70429,197702,Varanasi,Deoghar (Jharkhand),910,67
+Source,Varanasi,70429,74680,Varanasi,Dhanbad (jharkhand),904,68
+Source,Varanasi,70429,197504,Varanasi,Khatushyamji,888,69
+Source,Varanasi,70429,93983,Varanasi,Aurangabad (Bihar),857,70
+Source,Varanasi,70429,85962,Varanasi,Jharsuguda,825,71
+Source,Varanasi,70429,95015,Varanasi,Deoria (Uttar Pradesh),820,72
+Source,Varanasi,70429,74678,Varanasi,Burdwan,819,73
+Source,Varanasi,70429,443,Varanasi,Sagar (Madhya Pradesh),812,74
+Source,Varanasi,70429,78041,Varanasi,Sasaram (Bihar),811,75
+Source,Varanasi,70429,80302,Varanasi,Motihari (Bihar),804,76
+Source,Varanasi,70429,123,Varanasi,Chennai,804,77
+Source,Varanasi,70429,734,Varanasi,Jammu (j and k),777,78
+Source,Varanasi,70429,1369,Varanasi,Jhansi(Uttar Pradesh),776,79
+Source,Varanasi,70429,95032,Varanasi,Sultanpur (Uttar Pradesh),775,80
+Source,Varanasi,70429,92827,Varanasi,Ramgarh (Jharkhand),769,81
+Source,Varanasi,70429,80303,Varanasi,Muzaffarpur (Bihar),738,82
+Source,Varanasi,70429,93925,Varanasi,Garhwa,700,83
+Source,Varanasi,70429,74690,Varanasi,Puri,695,84
+Source,Varanasi,70429,470,Varanasi,Udaipur,688,85
+Source,Varanasi,70429,200914,Varanasi,Sonbhadra,677,86
+Source,Varanasi,70429,77726,Varanasi,Kathgodam,661,87
+Source,Varanasi,70429,218596,Varanasi,Tata,644,88
+Source,Varanasi,70429,69774,Varanasi,Bharatpur,619,89
+Source,Varanasi,70429,74136,Varanasi,Dewas,615,90
+Source,Varanasi,70429,217335,Varanasi,Chitrakoot (Uttar Pradesh),606,91
+Source,Varanasi,70429,79617,Varanasi,Meerut,587,92
+Source,Varanasi,70429,76479,Varanasi,Faizabad,580,93
+Source,Varanasi,70429,95013,Varanasi,Vindhyachal,574,94
+Source,Varanasi,70429,76481,Varanasi,Basti,557,95
+Source,Varanasi,70429,95007,Varanasi,Singrauli (uttar pradesh),544,96
+Source,Varanasi,70429,1513,Varanasi,Rudrapur,542,97
+Source,Varanasi,70429,472,Varanasi,Rajkot (Gujarat),536,98
+Source,Varanasi,70429,444,Varanasi,Nashik,535,99
+Source,Varanasi,70429,94781,Varanasi,Sonauli (uttar pradesh),524,100
