@@ -1,5 +1,7 @@
 # CR Analytics
 
+
+**Skill catalog:** [`Skills_CR.md`](Skills_CR.md)
 **Display name:** CR Analytics  
 **Cursor skill (core):** `cr-analyser` (CR Analyser)
 
