@@ -1,0 +1,9 @@
+city_name,city_role,sd_bucket,srp_sessions,sl_sessions,pax_sessions,tco_sessions,payment_sessions,confirm_sessions,tin_count,sl_pct,pax_pct,tco_pct,payment_pct,cr_pct
+Ayodhya,Destination,Rest,3047,1231,171,121,119,55,56,40.4,5.61,3.97,3.91,1.81
+Ayodhya,Destination,Top100,28374,20062,3480,2619,2565,1320,1358,70.71,12.26,9.23,9.04,4.65
+Ayodhya,Source,Rest,2283,919,130,88,86,49,52,40.25,5.69,3.85,3.77,2.15
+Ayodhya,Source,Top100,24056,17459,3190,2503,2449,1288,1351,72.58,13.26,10.4,10.18,5.35
+Varanasi,Destination,Rest,8535,2863,367,242,237,113,118,33.54,4.3,2.84,2.78,1.32
+Varanasi,Destination,Top100,82717,59198,10096,7615,7441,3887,4015,71.57,12.21,9.21,9.0,4.7
+Varanasi,Source,Rest,8035,3260,459,325,314,170,188,40.57,5.71,4.04,3.91,2.12
+Varanasi,Source,Top100,70735,52883,9259,7173,7071,3833,3960,74.76,13.09,10.14,10.0,5.42

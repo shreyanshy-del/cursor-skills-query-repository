@@ -1,0 +1,101 @@
+city_role,anchor_city_name,src_id,dest_id,src_city,dst_city,search_count,rank
+Destination,Varanasi,733,70429,Delhi,Varanasi,132156,1
+Destination,Varanasi,1439,70429,Lucknow,Varanasi,38574,2
+Destination,Varanasi,74820,70429,Kolkata,Varanasi,25919,3
+Destination,Varanasi,124,70429,Hyderabad,Varanasi,22555,4
+Destination,Varanasi,807,70429,Jaipur (Rajasthan),Varanasi,19969,5
+Destination,Varanasi,624,70429,Nagpur,Varanasi,16309,6
+Destination,Varanasi,76451,70429,Jamshedpur,Varanasi,13513,7
+Destination,Varanasi,76431,70429,Ranchi,Varanasi,12967,8
+Destination,Varanasi,76480,70429,Ayodhya,Varanasi,12728,9
+Destination,Varanasi,1377,70429,Kanpur (Uttar Pradesh),Varanasi,12187,10
+Destination,Varanasi,313,70429,Indore,Varanasi,12107,11
+Destination,Varanasi,1429,70429,Noida,Varanasi,9596,12
+Destination,Varanasi,84832,70429,Prayagraj(Uttar Pradesh),Varanasi,9287,13
+Destination,Varanasi,1290,70429,Agra,Varanasi,9208,14
+Destination,Varanasi,93947,70429,Ambikapur,Varanasi,7321,15
+Destination,Varanasi,747,70429,Mathura,Varanasi,7190,16
+Destination,Varanasi,462,70429,Mumbai,Varanasi,7178,17
+Destination,Varanasi,979,70429,Bhopal,Varanasi,6994,18
+Destination,Varanasi,78027,70429,Gorakhpur (uttar pradesh),Varanasi,6783,19
+Destination,Varanasi,70014,70429,Raipur (Chhattisgarh),Varanasi,6736,20
+Destination,Varanasi,216383,70429,Greater noida (uttar pradesh),Varanasi,6715,21
+Destination,Varanasi,122,70429,Bengaluru,Varanasi,5638,22
+Destination,Varanasi,74699,70429,Patna (Bihar),Varanasi,5033,23
+Destination,Varanasi,1001,70429,Ujjain,Varanasi,4153,24
+Destination,Varanasi,833,70429,Chandigarh,Varanasi,4076,25
+Destination,Varanasi,73534,70429,Rewa,Varanasi,4011,26
+Destination,Varanasi,69802,70429,Durgapur (West Bengal),Varanasi,3863,27
+Destination,Varanasi,70015,70429,Gurugram (Gurgaon),Varanasi,3545,28
+Destination,Varanasi,70024,70429,Jabalpur,Varanasi,3433,29
+Destination,Varanasi,551,70429,Ahmedabad,Varanasi,3090,30
+Destination,Varanasi,130,70429,Pune,Varanasi,3054,31
+Destination,Varanasi,77521,70429,Raigarh (Chhattisgarh),Varanasi,2721,32
+Destination,Varanasi,74153,70429,Ghaziabad,Varanasi,2633,33
+Destination,Varanasi,216812,70429,Waidhan,Varanasi,2603,34
+Destination,Varanasi,197105,70429,Bilaspur (Chhattisgarh),Varanasi,2253,35
+Destination,Varanasi,74676,70429,Bhubaneswar,Varanasi,2227,36
+Destination,Varanasi,91608,70429,Raebareli,Varanasi,2126,37
+Destination,Varanasi,78023,70429,Etawah,Varanasi,2011,38
+Destination,Varanasi,76576,70429,Hazaribagh,Varanasi,1994,39
+Destination,Varanasi,77167,70429,Gaya,Varanasi,1923,40
+Destination,Varanasi,74672,70429,Asansol (West Bengal),Varanasi,1834,41
+Destination,Varanasi,777,70429,Dehradun,Varanasi,1766,42
+Destination,Varanasi,736,70429,Ludhiana,Varanasi,1741,43
+Destination,Varanasi,73529,70429,Durg,Varanasi,1706,44
+Destination,Varanasi,1169,70429,Jodhpur,Varanasi,1582,45
+Destination,Varanasi,90355,70429,Azamgarh,Varanasi,1554,46
+Destination,Varanasi,473,70429,Surat,Varanasi,1327,47
+Destination,Varanasi,737,70429,Jalandhar,Varanasi,1309,48
+Destination,Varanasi,1437,70429,Bareilly (Uttar Pradesh),Varanasi,1253,49
+Destination,Varanasi,85962,70429,Jharsuguda,Varanasi,1251,50
+Destination,Varanasi,74680,70429,Dhanbad (jharkhand),Varanasi,1243,51
+Destination,Varanasi,802,70429,Haridwar,Varanasi,1236,52
+Destination,Varanasi,94782,70429,Vrindavan,Varanasi,1207,53
+Destination,Varanasi,1443,70429,Kota(Rajasthan),Varanasi,1175,54
+Destination,Varanasi,92827,70429,Ramgarh (Jharkhand),Varanasi,1139,55
+Destination,Varanasi,74678,70429,Burdwan,Varanasi,1129,56
+Destination,Varanasi,90113,70429,Jaunpur,Varanasi,1119,57
+Destination,Varanasi,90189,70429,Mau,Varanasi,1101,58
+Destination,Varanasi,1514,70429,Haldwani,Varanasi,1075,59
+Destination,Varanasi,74694,70429,Siliguri,Varanasi,1069,60
+Destination,Varanasi,1369,70429,Jhansi(Uttar Pradesh),Varanasi,1043,61
+Destination,Varanasi,95032,70429,Sultanpur (Uttar Pradesh),Varanasi,1036,62
+Destination,Varanasi,95026,70429,Ghazipur,Varanasi,970,63
+Destination,Varanasi,808,70429,Ajmer,Varanasi,915,64
+Destination,Varanasi,93983,70429,Aurangabad (Bihar),Varanasi,902,65
+Destination,Varanasi,90329,70429,Ballia (Uttar Pradesh),Varanasi,898,66
+Destination,Varanasi,80302,70429,Motihari (Bihar),Varanasi,893,67
+Destination,Varanasi,842,70429,Rishikesh,Varanasi,882,68
+Destination,Varanasi,76481,70429,Basti,Varanasi,880,69
+Destination,Varanasi,197702,70429,Deoghar (Jharkhand),Varanasi,849,70
+Destination,Varanasi,470,70429,Udaipur,Varanasi,838,71
+Destination,Varanasi,443,70429,Sagar (Madhya Pradesh),Varanasi,837,72
+Destination,Varanasi,74136,70429,Dewas,Varanasi,816,73
+Destination,Varanasi,309,70429,Aurangabad (Maharashtra),Varanasi,787,74
+Destination,Varanasi,78041,70429,Sasaram (Bihar),Varanasi,779,75
+Destination,Varanasi,80303,70429,Muzaffarpur (Bihar),Varanasi,778,76
+Destination,Varanasi,197682,70429,Mirzapur (uttar pradesh),Varanasi,761,77
+Destination,Varanasi,95514,70429,Shahdol,Varanasi,755,78
+Destination,Varanasi,123,70429,Chennai,Varanasi,745,79
+Destination,Varanasi,95015,70429,Deoria (Uttar Pradesh),Varanasi,736,80
+Destination,Varanasi,94840,70429,Gonda,Varanasi,734,81
+Destination,Varanasi,1513,70429,Rudrapur,Varanasi,725,82
+Destination,Varanasi,81384,70429,Gopalganj (Bihar),Varanasi,719,83
+Destination,Varanasi,201126,70429,Howrah,Varanasi,719,84
+Destination,Varanasi,219652,70429,Renukoot (uttar Pradesh),Varanasi,709,85
+Destination,Varanasi,71958,70429,Gwalior,Varanasi,701,86
+Destination,Varanasi,93925,70429,Garhwa,Varanasi,697,87
+Destination,Varanasi,218596,70429,Tata,Varanasi,684,88
+Destination,Varanasi,73533,70429,Maihar,Varanasi,676,89
+Destination,Varanasi,69774,70429,Bharatpur,Varanasi,646,90
+Destination,Varanasi,88443,70429,Satna,Varanasi,645,91
+Destination,Varanasi,193660,70429,Daltonganj,Varanasi,630,92
+Destination,Varanasi,94838,70429,Bahraich,Varanasi,624,93
+Destination,Varanasi,76479,70429,Faizabad,Varanasi,610,94
+Destination,Varanasi,84828,70429,Seoni (madhya pradesh),Varanasi,592,95
+Destination,Varanasi,73532,70429,Katni,Varanasi,586,96
+Destination,Varanasi,219717,70429,Shaktinagar (uttar Pradesh),Varanasi,584,97
+Destination,Varanasi,199630,70429,Dehri,Varanasi,568,98
+Destination,Varanasi,221347,70429,Jewar,Varanasi,556,99
+Destination,Varanasi,95483,70429,Sidhi (madhya pradesh),Varanasi,552,100

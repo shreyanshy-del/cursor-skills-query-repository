@@ -1,0 +1,101 @@
+city_role,anchor_city_name,src_id,dest_id,src_city,dst_city,search_count,rank
+Source,Ayodhya,76480,733,Ayodhya,Delhi,39957,1
+Source,Ayodhya,76480,70429,Ayodhya,Varanasi,12728,2
+Source,Ayodhya,76480,807,Ayodhya,Jaipur (Rajasthan),7326,3
+Source,Ayodhya,76480,1439,Ayodhya,Lucknow,5644,4
+Source,Ayodhya,76480,624,Ayodhya,Nagpur,4653,5
+Source,Ayodhya,76480,747,Ayodhya,Mathura,4472,6
+Source,Ayodhya,76480,1290,Ayodhya,Agra,4339,7
+Source,Ayodhya,76480,78027,Ayodhya,Gorakhpur (uttar pradesh),3788,8
+Source,Ayodhya,76480,84832,Ayodhya,Prayagraj(Uttar Pradesh),3587,9
+Source,Ayodhya,76480,833,Ayodhya,Chandigarh,2664,10
+Source,Ayodhya,76480,1429,Ayodhya,Noida,2256,11
+Source,Ayodhya,76480,216383,Ayodhya,Greater noida (uttar pradesh),1939,12
+Source,Ayodhya,76480,1377,Ayodhya,Kanpur (Uttar Pradesh),1862,13
+Source,Ayodhya,76480,122,Ayodhya,Bengaluru,1663,14
+Source,Ayodhya,76480,313,Ayodhya,Indore,1651,15
+Source,Ayodhya,76480,1001,Ayodhya,Ujjain,1585,16
+Source,Ayodhya,76480,70015,Ayodhya,Gurugram (Gurgaon),1556,17
+Source,Ayodhya,76480,74820,Ayodhya,Kolkata,1488,18
+Source,Ayodhya,76480,1369,Ayodhya,Jhansi(Uttar Pradesh),1267,19
+Source,Ayodhya,76480,1443,Ayodhya,Kota(Rajasthan),1264,20
+Source,Ayodhya,76480,777,Ayodhya,Dehradun,1144,21
+Source,Ayodhya,76480,70014,Ayodhya,Raipur (Chhattisgarh),1117,22
+Source,Ayodhya,76480,94782,Ayodhya,Vrindavan,1088,23
+Source,Ayodhya,76480,197504,Ayodhya,Khatushyamji,1064,24
+Source,Ayodhya,76480,802,Ayodhya,Haridwar,1053,25
+Source,Ayodhya,76480,1514,Ayodhya,Haldwani,906,26
+Source,Ayodhya,76480,462,Ayodhya,Mumbai,904,27
+Source,Ayodhya,76480,736,Ayodhya,Ludhiana,898,28
+Source,Ayodhya,76480,124,Ayodhya,Hyderabad,881,29
+Source,Ayodhya,76480,90355,Ayodhya,Azamgarh,851,30
+Source,Ayodhya,76480,1437,Ayodhya,Bareilly (Uttar Pradesh),808,31
+Source,Ayodhya,76480,77705,Ayodhya,Mehandipur balaji mandir,803,32
+Source,Ayodhya,76480,309,Ayodhya,Aurangabad (Maharashtra),766,33
+Source,Ayodhya,76480,551,Ayodhya,Ahmedabad,762,34
+Source,Ayodhya,76480,74699,Ayodhya,Patna (Bihar),749,35
+Source,Ayodhya,76480,74153,Ayodhya,Ghaziabad,738,36
+Source,Ayodhya,76480,76431,Ayodhya,Ranchi,701,37
+Source,Ayodhya,76480,76451,Ayodhya,Jamshedpur,682,38
+Source,Ayodhya,76480,76481,Ayodhya,Basti,677,39
+Source,Ayodhya,76480,71958,Ayodhya,Gwalior,662,40
+Source,Ayodhya,76480,94840,Ayodhya,Gonda,601,41
+Source,Ayodhya,76480,979,Ayodhya,Bhopal,598,42
+Source,Ayodhya,76480,808,Ayodhya,Ajmer,581,43
+Source,Ayodhya,76480,73723,Ayodhya,Chhatarpur (madhya pradesh),552,44
+Source,Ayodhya,76480,79617,Ayodhya,Meerut,548,45
+Source,Ayodhya,76480,1603,Ayodhya,Kathmandu,505,46
+Source,Ayodhya,76480,217335,Ayodhya,Chitrakoot (Uttar Pradesh),498,47
+Source,Ayodhya,76480,73534,Ayodhya,Rewa,487,48
+Source,Ayodhya,76480,70024,Ayodhya,Jabalpur,486,49
+Source,Ayodhya,76480,130,Ayodhya,Pune,468,50
+Source,Ayodhya,76480,94838,Ayodhya,Bahraich,466,51
+Source,Ayodhya,76480,473,Ayodhya,Surat,449,52
+Source,Ayodhya,76480,771,Ayodhya,Nainital,449,53
+Source,Ayodhya,76480,95032,Ayodhya,Sultanpur (Uttar Pradesh),446,54
+Source,Ayodhya,76480,69774,Ayodhya,Bharatpur,442,55
+Source,Ayodhya,76480,298723,Ayodhya,Bageshwar Dham,436,56
+Source,Ayodhya,76480,77677,Ayodhya,Panipat,427,57
+Source,Ayodhya,76480,842,Ayodhya,Rishikesh,423,58
+Source,Ayodhya,76480,65850,Ayodhya,Ringas,413,59
+Source,Ayodhya,76480,90113,Ayodhya,Jaunpur,393,60
+Source,Ayodhya,76480,91608,Ayodhya,Raebareli,392,61
+Source,Ayodhya,76480,77726,Ayodhya,Kathgodam,376,62
+Source,Ayodhya,76480,197105,Ayodhya,Bilaspur (Chhattisgarh),367,63
+Source,Ayodhya,76480,95015,Ayodhya,Deoria (Uttar Pradesh),361,64
+Source,Ayodhya,76480,90189,Ayodhya,Mau,350,65
+Source,Ayodhya,76480,79613,Ayodhya,Aligarh (uttar pradesh),347,66
+Source,Ayodhya,76480,79729,Ayodhya,Sikar,339,67
+Source,Ayodhya,76480,1405,Ayodhya,Ambala (Haryana),319,68
+Source,Ayodhya,76480,90329,Ayodhya,Ballia (Uttar Pradesh),318,69
+Source,Ayodhya,76480,1435,Ayodhya,Moradabad,317,70
+Source,Ayodhya,76480,94990,Ayodhya,Pratapgarh(Uttar Pradesh),313,71
+Source,Ayodhya,76480,94781,Ayodhya,Sonauli (uttar pradesh),301,72
+Source,Ayodhya,76480,80303,Ayodhya,Muzaffarpur (Bihar),301,73
+Source,Ayodhya,76480,470,Ayodhya,Udaipur,295,74
+Source,Ayodhya,76480,1513,Ayodhya,Rudrapur,287,75
+Source,Ayodhya,76480,94839,Ayodhya,Balrampur (uttar pradesh),278,76
+Source,Ayodhya,76480,94632,Ayodhya,Hapur,258,77
+Source,Ayodhya,76480,221347,Ayodhya,Jewar,258,78
+Source,Ayodhya,76480,93947,Ayodhya,Ambikapur,252,79
+Source,Ayodhya,76480,737,Ayodhya,Jalandhar,247,80
+Source,Ayodhya,76480,200888,Ayodhya,Khalilabad,242,81
+Source,Ayodhya,76480,1169,Ayodhya,Jodhpur,238,82
+Source,Ayodhya,76480,1438,Ayodhya,Sitapur (Uttar Pradesh),234,83
+Source,Ayodhya,76480,74154,Ayodhya,Muzaffarnagar,234,84
+Source,Ayodhya,76480,77682,Ayodhya,Karnal,226,85
+Source,Ayodhya,76480,73533,Ayodhya,Maihar,225,86
+Source,Ayodhya,76480,197682,Ayodhya,Mirzapur (uttar pradesh),224,87
+Source,Ayodhya,76480,1365,Ayodhya,Guna,218,88
+Source,Ayodhya,76480,93233,Ayodhya,Barabanki,211,89
+Source,Ayodhya,76480,78023,Ayodhya,Etawah,210,90
+Source,Ayodhya,76480,1372,Ayodhya,Orai,208,91
+Source,Ayodhya,76480,472,Ayodhya,Rajkot (Gujarat),206,92
+Source,Ayodhya,76480,74690,Ayodhya,Puri,205,93
+Source,Ayodhya,76480,95026,Ayodhya,Ghazipur,200,94
+Source,Ayodhya,76480,74120,Ayodhya,Baran,197,95
+Source,Ayodhya,76480,77521,Ayodhya,Raigarh (Chhattisgarh),192,96
+Source,Ayodhya,76480,74694,Ayodhya,Siliguri,189,97
+Source,Ayodhya,76480,1538,Ayodhya,Roorkee (uttarakhand),187,98
+Source,Ayodhya,76480,444,Ayodhya,Nashik,186,99
+Source,Ayodhya,76480,80297,Ayodhya,Darbhanga,178,100

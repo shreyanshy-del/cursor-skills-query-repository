@@ -1,0 +1,101 @@
+city_role,anchor_city_name,src_id,dest_id,src_city,dst_city,search_count,rank
+Source,Varanasi,70429,733,Varanasi,Delhi,115729,1
+Source,Varanasi,70429,1439,Varanasi,Lucknow,32400,2
+Source,Varanasi,70429,807,Varanasi,Jaipur (Rajasthan),20136,3
+Source,Varanasi,70429,124,Varanasi,Hyderabad,18923,4
+Source,Varanasi,70429,74820,Varanasi,Kolkata,16406,5
+Source,Varanasi,70429,624,Varanasi,Nagpur,15143,6
+Source,Varanasi,70429,76480,Varanasi,Ayodhya,13330,7
+Source,Varanasi,70429,76431,Varanasi,Ranchi,12512,8
+Source,Varanasi,70429,76451,Varanasi,Jamshedpur,10837,9
+Source,Varanasi,70429,313,Varanasi,Indore,10451,10
+Source,Varanasi,70429,1377,Varanasi,Kanpur (Uttar Pradesh),9774,11
+Source,Varanasi,70429,84832,Varanasi,Prayagraj(Uttar Pradesh),8251,12
+Source,Varanasi,70429,1290,Varanasi,Agra,8086,13
+Source,Varanasi,70429,1429,Varanasi,Noida,7835,14
+Source,Varanasi,70429,462,Varanasi,Mumbai,7746,15
+Source,Varanasi,70429,747,Varanasi,Mathura,7194,16
+Source,Varanasi,70429,93947,Varanasi,Ambikapur,6449,17
+Source,Varanasi,70429,1001,Varanasi,Ujjain,6433,18
+Source,Varanasi,70429,216383,Varanasi,Greater noida (uttar pradesh),6336,19
+Source,Varanasi,70429,78027,Varanasi,Gorakhpur (uttar pradesh),5965,20
+Source,Varanasi,70429,979,Varanasi,Bhopal,5737,21
+Source,Varanasi,70429,74699,Varanasi,Patna (Bihar),4727,22
+Source,Varanasi,70429,70014,Varanasi,Raipur (Chhattisgarh),4262,23
+Source,Varanasi,70429,833,Varanasi,Chandigarh,3556,24
+Source,Varanasi,70429,70024,Varanasi,Jabalpur,3553,25
+Source,Varanasi,70429,122,Varanasi,Bengaluru,3341,26
+Source,Varanasi,70429,73534,Varanasi,Rewa,2968,27
+Source,Varanasi,70429,74153,Varanasi,Ghaziabad,2880,28
+Source,Varanasi,70429,551,Varanasi,Ahmedabad,2619,29
+Source,Varanasi,70429,130,Varanasi,Pune,2349,30
+Source,Varanasi,70429,94782,Varanasi,Vrindavan,2180,31
+Source,Varanasi,70429,90355,Varanasi,Azamgarh,1932,32
+Source,Varanasi,70429,74676,Varanasi,Bhubaneswar,1894,33
+Source,Varanasi,70429,70015,Varanasi,Gurugram (Gurgaon),1889,34
+Source,Varanasi,70429,77521,Varanasi,Raigarh (Chhattisgarh),1881,35
+Source,Varanasi,70429,77167,Varanasi,Gaya,1857,36
+Source,Varanasi,70429,91608,Varanasi,Raebareli,1851,37
+Source,Varanasi,70429,777,Varanasi,Dehradun,1834,38
+Source,Varanasi,70429,78023,Varanasi,Etawah,1785,39
+Source,Varanasi,70429,69802,Varanasi,Durgapur (West Bengal),1779,40
+Source,Varanasi,70429,736,Varanasi,Ludhiana,1715,41
+Source,Varanasi,70429,216812,Varanasi,Waidhan,1663,42
+Source,Varanasi,70429,802,Varanasi,Haridwar,1580,43
+Source,Varanasi,70429,197105,Varanasi,Bilaspur (Chhattisgarh),1478,44
+Source,Varanasi,70429,73529,Varanasi,Durg,1444,45
+Source,Varanasi,70429,95026,Varanasi,Ghazipur,1342,46
+Source,Varanasi,70429,737,Varanasi,Jalandhar,1331,47
+Source,Varanasi,70429,1437,Varanasi,Bareilly (Uttar Pradesh),1281,48
+Source,Varanasi,70429,1603,Varanasi,Kathmandu,1241,49
+Source,Varanasi,70429,73533,Varanasi,Maihar,1238,50
+Source,Varanasi,70429,90189,Varanasi,Mau,1235,51
+Source,Varanasi,70429,90113,Varanasi,Jaunpur,1233,52
+Source,Varanasi,70429,473,Varanasi,Surat,1225,53
+Source,Varanasi,70429,90329,Varanasi,Ballia (Uttar Pradesh),1222,54
+Source,Varanasi,70429,76576,Varanasi,Hazaribagh,1175,55
+Source,Varanasi,70429,197682,Varanasi,Mirzapur (uttar pradesh),1157,56
+Source,Varanasi,70429,1169,Varanasi,Jodhpur,1141,57
+Source,Varanasi,70429,74672,Varanasi,Asansol (West Bengal),1125,58
+Source,Varanasi,70429,1443,Varanasi,Kota(Rajasthan),1065,59
+Source,Varanasi,70429,771,Varanasi,Nainital,1058,60
+Source,Varanasi,70429,219717,Varanasi,Shaktinagar (uttar Pradesh),953,61
+Source,Varanasi,70429,1514,Varanasi,Haldwani,953,62
+Source,Varanasi,70429,808,Varanasi,Ajmer,942,63
+Source,Varanasi,70429,219652,Varanasi,Renukoot (uttar Pradesh),941,64
+Source,Varanasi,70429,74694,Varanasi,Siliguri,939,65
+Source,Varanasi,70429,842,Varanasi,Rishikesh,938,66
+Source,Varanasi,70429,197702,Varanasi,Deoghar (Jharkhand),910,67
+Source,Varanasi,70429,74680,Varanasi,Dhanbad (jharkhand),904,68
+Source,Varanasi,70429,197504,Varanasi,Khatushyamji,888,69
+Source,Varanasi,70429,93983,Varanasi,Aurangabad (Bihar),857,70
+Source,Varanasi,70429,85962,Varanasi,Jharsuguda,825,71
+Source,Varanasi,70429,95015,Varanasi,Deoria (Uttar Pradesh),820,72
+Source,Varanasi,70429,74678,Varanasi,Burdwan,819,73
+Source,Varanasi,70429,443,Varanasi,Sagar (Madhya Pradesh),812,74
+Source,Varanasi,70429,78041,Varanasi,Sasaram (Bihar),811,75
+Source,Varanasi,70429,80302,Varanasi,Motihari (Bihar),804,76
+Source,Varanasi,70429,123,Varanasi,Chennai,804,77
+Source,Varanasi,70429,734,Varanasi,Jammu (j and k),777,78
+Source,Varanasi,70429,1369,Varanasi,Jhansi(Uttar Pradesh),776,79
+Source,Varanasi,70429,95032,Varanasi,Sultanpur (Uttar Pradesh),775,80
+Source,Varanasi,70429,92827,Varanasi,Ramgarh (Jharkhand),769,81
+Source,Varanasi,70429,80303,Varanasi,Muzaffarpur (Bihar),738,82
+Source,Varanasi,70429,93925,Varanasi,Garhwa,700,83
+Source,Varanasi,70429,74690,Varanasi,Puri,695,84
+Source,Varanasi,70429,470,Varanasi,Udaipur,688,85
+Source,Varanasi,70429,200914,Varanasi,Sonbhadra,677,86
+Source,Varanasi,70429,77726,Varanasi,Kathgodam,661,87
+Source,Varanasi,70429,218596,Varanasi,Tata,644,88
+Source,Varanasi,70429,69774,Varanasi,Bharatpur,619,89
+Source,Varanasi,70429,74136,Varanasi,Dewas,615,90
+Source,Varanasi,70429,217335,Varanasi,Chitrakoot (Uttar Pradesh),606,91
+Source,Varanasi,70429,79617,Varanasi,Meerut,587,92
+Source,Varanasi,70429,76479,Varanasi,Faizabad,580,93
+Source,Varanasi,70429,95013,Varanasi,Vindhyachal,574,94
+Source,Varanasi,70429,76481,Varanasi,Basti,557,95
+Source,Varanasi,70429,95007,Varanasi,Singrauli (uttar pradesh),544,96
+Source,Varanasi,70429,1513,Varanasi,Rudrapur,542,97
+Source,Varanasi,70429,472,Varanasi,Rajkot (Gujarat),536,98
+Source,Varanasi,70429,444,Varanasi,Nashik,535,99
+Source,Varanasi,70429,94781,Varanasi,Sonauli (uttar pradesh),524,100

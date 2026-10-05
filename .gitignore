@@ -1,0 +1,3 @@
+data/*.csv
+data/*.live.json
+backend/__pycache__/

@@ -1,0 +1,101 @@
+city_role,anchor_city_name,src_id,dest_id,src_city,dst_city,search_count,rank
+Source,Prayagraj(Uttar Pradesh),84832,733,Prayagraj(Uttar Pradesh),Delhi,49477,1
+Source,Prayagraj(Uttar Pradesh),84832,1439,Prayagraj(Uttar Pradesh),Lucknow,14727,2
+Source,Prayagraj(Uttar Pradesh),84832,624,Prayagraj(Uttar Pradesh),Nagpur,11736,3
+Source,Prayagraj(Uttar Pradesh),84832,70429,Prayagraj(Uttar Pradesh),Varanasi,9287,4
+Source,Prayagraj(Uttar Pradesh),84832,807,Prayagraj(Uttar Pradesh),Jaipur (Rajasthan),6663,5
+Source,Prayagraj(Uttar Pradesh),84832,73534,Prayagraj(Uttar Pradesh),Rewa,5467,6
+Source,Prayagraj(Uttar Pradesh),84832,1429,Prayagraj(Uttar Pradesh),Noida,4810,7
+Source,Prayagraj(Uttar Pradesh),84832,1377,Prayagraj(Uttar Pradesh),Kanpur (Uttar Pradesh),4771,8
+Source,Prayagraj(Uttar Pradesh),84832,76480,Prayagraj(Uttar Pradesh),Ayodhya,4545,9
+Source,Prayagraj(Uttar Pradesh),84832,1290,Prayagraj(Uttar Pradesh),Agra,4504,10
+Source,Prayagraj(Uttar Pradesh),84832,78027,Prayagraj(Uttar Pradesh),Gorakhpur (uttar pradesh),4251,11
+Source,Prayagraj(Uttar Pradesh),84832,462,Prayagraj(Uttar Pradesh),Mumbai,4016,12
+Source,Prayagraj(Uttar Pradesh),84832,313,Prayagraj(Uttar Pradesh),Indore,3947,13
+Source,Prayagraj(Uttar Pradesh),84832,70014,Prayagraj(Uttar Pradesh),Raipur (Chhattisgarh),3748,14
+Source,Prayagraj(Uttar Pradesh),84832,747,Prayagraj(Uttar Pradesh),Mathura,3467,15
+Source,Prayagraj(Uttar Pradesh),84832,90355,Prayagraj(Uttar Pradesh),Azamgarh,3021,16
+Source,Prayagraj(Uttar Pradesh),84832,216383,Prayagraj(Uttar Pradesh),Greater noida (uttar pradesh),2835,17
+Source,Prayagraj(Uttar Pradesh),84832,124,Prayagraj(Uttar Pradesh),Hyderabad,2727,18
+Source,Prayagraj(Uttar Pradesh),84832,74153,Prayagraj(Uttar Pradesh),Ghaziabad,2597,19
+Source,Prayagraj(Uttar Pradesh),84832,979,Prayagraj(Uttar Pradesh),Bhopal,2476,20
+Source,Prayagraj(Uttar Pradesh),84832,70024,Prayagraj(Uttar Pradesh),Jabalpur,2387,21
+Source,Prayagraj(Uttar Pradesh),84832,1001,Prayagraj(Uttar Pradesh),Ujjain,2363,22
+Source,Prayagraj(Uttar Pradesh),84832,197105,Prayagraj(Uttar Pradesh),Bilaspur (Chhattisgarh),1944,23
+Source,Prayagraj(Uttar Pradesh),84832,90113,Prayagraj(Uttar Pradesh),Jaunpur,1878,24
+Source,Prayagraj(Uttar Pradesh),84832,443,Prayagraj(Uttar Pradesh),Sagar (Madhya Pradesh),1628,25
+Source,Prayagraj(Uttar Pradesh),84832,76431,Prayagraj(Uttar Pradesh),Ranchi,1616,26
+Source,Prayagraj(Uttar Pradesh),84832,130,Prayagraj(Uttar Pradesh),Pune,1590,27
+Source,Prayagraj(Uttar Pradesh),84832,833,Prayagraj(Uttar Pradesh),Chandigarh,1487,28
+Source,Prayagraj(Uttar Pradesh),84832,122,Prayagraj(Uttar Pradesh),Bengaluru,1443,29
+Source,Prayagraj(Uttar Pradesh),84832,78023,Prayagraj(Uttar Pradesh),Etawah,1415,30
+Source,Prayagraj(Uttar Pradesh),84832,74820,Prayagraj(Uttar Pradesh),Kolkata,1410,31
+Source,Prayagraj(Uttar Pradesh),84832,70015,Prayagraj(Uttar Pradesh),Gurugram (Gurgaon),1389,32
+Source,Prayagraj(Uttar Pradesh),84832,74699,Prayagraj(Uttar Pradesh),Patna (Bihar),1284,33
+Source,Prayagraj(Uttar Pradesh),84832,551,Prayagraj(Uttar Pradesh),Ahmedabad,1264,34
+Source,Prayagraj(Uttar Pradesh),84832,197682,Prayagraj(Uttar Pradesh),Mirzapur (uttar pradesh),1262,35
+Source,Prayagraj(Uttar Pradesh),84832,76481,Prayagraj(Uttar Pradesh),Basti,1184,36
+Source,Prayagraj(Uttar Pradesh),84832,736,Prayagraj(Uttar Pradesh),Ludhiana,1106,37
+Source,Prayagraj(Uttar Pradesh),84832,77718,Prayagraj(Uttar Pradesh),Mohali,1044,38
+Source,Prayagraj(Uttar Pradesh),84832,95032,Prayagraj(Uttar Pradesh),Sultanpur (Uttar Pradesh),1026,39
+Source,Prayagraj(Uttar Pradesh),84832,91608,Prayagraj(Uttar Pradesh),Raebareli,993,40
+Source,Prayagraj(Uttar Pradesh),84832,476,Prayagraj(Uttar Pradesh),A.S.Peta,960,41
+Source,Prayagraj(Uttar Pradesh),84832,217335,Prayagraj(Uttar Pradesh),Chitrakoot (Uttar Pradesh),954,42
+Source,Prayagraj(Uttar Pradesh),84832,777,Prayagraj(Uttar Pradesh),Dehradun,928,43
+Source,Prayagraj(Uttar Pradesh),84832,90189,Prayagraj(Uttar Pradesh),Mau,922,44
+Source,Prayagraj(Uttar Pradesh),84832,94990,Prayagraj(Uttar Pradesh),Pratapgarh(Uttar Pradesh),879,45
+Source,Prayagraj(Uttar Pradesh),84832,76451,Prayagraj(Uttar Pradesh),Jamshedpur,854,46
+Source,Prayagraj(Uttar Pradesh),84832,1437,Prayagraj(Uttar Pradesh),Bareilly (Uttar Pradesh),833,47
+Source,Prayagraj(Uttar Pradesh),84832,1369,Prayagraj(Uttar Pradesh),Jhansi(Uttar Pradesh),833,48
+Source,Prayagraj(Uttar Pradesh),84832,95234,Prayagraj(Uttar Pradesh),Banda(Uttar Pradesh),822,49
+Source,Prayagraj(Uttar Pradesh),84832,73533,Prayagraj(Uttar Pradesh),Maihar,753,50
+Source,Prayagraj(Uttar Pradesh),84832,205922,Prayagraj(Uttar Pradesh),Akbarpur (ambedkar Nagar),752,51
+Source,Prayagraj(Uttar Pradesh),84832,1443,Prayagraj(Uttar Pradesh),Kota(Rajasthan),751,52
+Source,Prayagraj(Uttar Pradesh),84832,473,Prayagraj(Uttar Pradesh),Surat,731,53
+Source,Prayagraj(Uttar Pradesh),84832,88443,Prayagraj(Uttar Pradesh),Satna,717,54
+Source,Prayagraj(Uttar Pradesh),84832,123,Prayagraj(Uttar Pradesh),Chennai,708,55
+Source,Prayagraj(Uttar Pradesh),84832,94782,Prayagraj(Uttar Pradesh),Vrindavan,708,56
+Source,Prayagraj(Uttar Pradesh),84832,79617,Prayagraj(Uttar Pradesh),Meerut,698,57
+Source,Prayagraj(Uttar Pradesh),84832,1169,Prayagraj(Uttar Pradesh),Jodhpur,695,58
+Source,Prayagraj(Uttar Pradesh),84832,94981,Prayagraj(Uttar Pradesh),Shahganj (uttar pradesh),688,59
+Source,Prayagraj(Uttar Pradesh),84832,95514,Prayagraj(Uttar Pradesh),Shahdol,677,60
+Source,Prayagraj(Uttar Pradesh),84832,808,Prayagraj(Uttar Pradesh),Ajmer,671,61
+Source,Prayagraj(Uttar Pradesh),84832,94838,Prayagraj(Uttar Pradesh),Bahraich,665,62
+Source,Prayagraj(Uttar Pradesh),84832,95483,Prayagraj(Uttar Pradesh),Sidhi (madhya pradesh),657,63
+Source,Prayagraj(Uttar Pradesh),84832,77167,Prayagraj(Uttar Pradesh),Gaya,657,64
+Source,Prayagraj(Uttar Pradesh),84832,74676,Prayagraj(Uttar Pradesh),Bhubaneswar,637,65
+Source,Prayagraj(Uttar Pradesh),84832,93947,Prayagraj(Uttar Pradesh),Ambikapur,635,66
+Source,Prayagraj(Uttar Pradesh),84832,802,Prayagraj(Uttar Pradesh),Haridwar,624,67
+Source,Prayagraj(Uttar Pradesh),84832,95026,Prayagraj(Uttar Pradesh),Ghazipur,615,68
+Source,Prayagraj(Uttar Pradesh),84832,219652,Prayagraj(Uttar Pradesh),Renukoot (uttar Pradesh),598,69
+Source,Prayagraj(Uttar Pradesh),84832,77705,Prayagraj(Uttar Pradesh),Mehandipur balaji mandir,541,70
+Source,Prayagraj(Uttar Pradesh),84832,94840,Prayagraj(Uttar Pradesh),Gonda,520,71
+Source,Prayagraj(Uttar Pradesh),84832,309,Prayagraj(Uttar Pradesh),Aurangabad (Maharashtra),512,72
+Source,Prayagraj(Uttar Pradesh),84832,69774,Prayagraj(Uttar Pradesh),Bharatpur,497,73
+Source,Prayagraj(Uttar Pradesh),84832,95015,Prayagraj(Uttar Pradesh),Deoria (Uttar Pradesh),495,74
+Source,Prayagraj(Uttar Pradesh),84832,76479,Prayagraj(Uttar Pradesh),Faizabad,489,75
+Source,Prayagraj(Uttar Pradesh),84832,771,Prayagraj(Uttar Pradesh),Nainital,487,76
+Source,Prayagraj(Uttar Pradesh),84832,1514,Prayagraj(Uttar Pradesh),Haldwani,478,77
+Source,Prayagraj(Uttar Pradesh),84832,829,Prayagraj(Uttar Pradesh),Fatehpur (Uttar Pradesh),465,78
+Source,Prayagraj(Uttar Pradesh),84832,95013,Prayagraj(Uttar Pradesh),Vindhyachal,461,79
+Source,Prayagraj(Uttar Pradesh),84832,74136,Prayagraj(Uttar Pradesh),Dewas,452,80
+Source,Prayagraj(Uttar Pradesh),84832,73532,Prayagraj(Uttar Pradesh),Katni,447,81
+Source,Prayagraj(Uttar Pradesh),84832,73529,Prayagraj(Uttar Pradesh),Durg,441,82
+Source,Prayagraj(Uttar Pradesh),84832,71958,Prayagraj(Uttar Pradesh),Gwalior,439,83
+Source,Prayagraj(Uttar Pradesh),84832,84828,Prayagraj(Uttar Pradesh),Seoni (madhya pradesh),435,84
+Source,Prayagraj(Uttar Pradesh),84832,90329,Prayagraj(Uttar Pradesh),Ballia (Uttar Pradesh),422,85
+Source,Prayagraj(Uttar Pradesh),84832,73723,Prayagraj(Uttar Pradesh),Chhatarpur (madhya pradesh),412,86
+Source,Prayagraj(Uttar Pradesh),84832,79613,Prayagraj(Uttar Pradesh),Aligarh (uttar pradesh),409,87
+Source,Prayagraj(Uttar Pradesh),84832,444,Prayagraj(Uttar Pradesh),Nashik,392,88
+Source,Prayagraj(Uttar Pradesh),84832,95029,Prayagraj(Uttar Pradesh),Amethi,391,89
+Source,Prayagraj(Uttar Pradesh),84832,470,Prayagraj(Uttar Pradesh),Udaipur,363,90
+Source,Prayagraj(Uttar Pradesh),84832,65850,Prayagraj(Uttar Pradesh),Ringas,349,91
+Source,Prayagraj(Uttar Pradesh),84832,1499,Prayagraj(Uttar Pradesh),Kalyan,345,92
+Source,Prayagraj(Uttar Pradesh),84832,74672,Prayagraj(Uttar Pradesh),Asansol (West Bengal),342,93
+Source,Prayagraj(Uttar Pradesh),84832,254069,Prayagraj(Uttar Pradesh),Robertsganj,329,94
+Source,Prayagraj(Uttar Pradesh),84832,94978,Prayagraj(Uttar Pradesh),Mahoba,328,95
+Source,Prayagraj(Uttar Pradesh),84832,80303,Prayagraj(Uttar Pradesh),Muzaffarpur (Bihar),320,96
+Source,Prayagraj(Uttar Pradesh),84832,1003,Prayagraj(Uttar Pradesh),Vadodara,316,97
+Source,Prayagraj(Uttar Pradesh),84832,205744,Prayagraj(Uttar Pradesh),Badlapur (uttar pradesh),314,98
+Source,Prayagraj(Uttar Pradesh),84832,76576,Prayagraj(Uttar Pradesh),Hazaribagh,313,99
+Source,Prayagraj(Uttar Pradesh),84832,74680,Prayagraj(Uttar Pradesh),Dhanbad (jharkhand),312,100

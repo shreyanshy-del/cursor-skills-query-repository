@@ -1,0 +1,8 @@
+-- Athena saved query (Product_B2C_Intl)
+-- ID: cd1a4158-0d68-4c72-8a0f-1213ab9bb7ed
+-- Name: avg_distinct_buses_clicked_before_txn - Syed
+-- Source: Syed Athena Saved Queries export
+-- Prefer dataplatform MCP / Iceberg for runs; adjust only date params.
+-- Default country: IND when applicable.
+
+SELECT txn_date, user_type, saleschannel, 'Overall' dbd, AVG(distinct_buses_per_txn) AS avg_distinct_buses_clicked_before_txn, COUNT(DISTINCT mri_session_id) AS session_count FROM ( SELECT DATE(t.__time) AS txn_date, t.mri_session_id, t.__time, UPPER(t.user_type) user_type, CASE WHEN t.channel = 'MOBILE_APP' THEN t.os ELSE t.channel END AS saleschannel, CASE WHEN DATE_DIFF('day', DATE(DATE_ADD('MINUTE', 330, t.__time)), t.doj) = 0 THEN '0. Same Day' WHEN DATE_DIFF('day', DATE(DATE_ADD('MINUTE', 330, t.__time)), t.doj) = 1 THEN '1. DBD 1' WHEN DATE_DIFF('day', DATE(DATE_ADD('MINUTE', 330, t.__time)), t.doj) = 2 THEN '2. DBD 2' WHEN DATE_DIFF('day', DATE(DATE_ADD('MINUTE', 330, t.__time)), t.doj) > 2 THEN '3. DBD 2+' END AS dbd, t.src_id, t.dest_id, COUNT(DISTINCT c.route_id) AS distinct_buses_per_txn FROM confirm_order_details t LEFT JOIN seat_layout_details c ON t.mri_session_id = c.mri_session_id AND t.src_id = c.src_id AND t.dest_id = c.dest_id AND CAST(c.doj AS DATE) = t.doj AND c.country = 'IND' -- AND c.__time < t.__time -- AND c.__time >= t.__time - INTERVAL '3' DAY AND c.__time >= TIMESTAMP '2026-03-29' AND c.__time < TIMESTAMP '2026-04-08' WHERE t.__time >= TIMESTAMP '2026-04-01' AND t.__time < TIMESTAMP '2026-04-08' AND t.channel IN ('MOBILE_APP', 'MOBILE_WEB', 'WEB_DIRECT') AND t.country = 'IND' AND t.tin IS NOT NULL GROUP BY 1, 2, 3, 4, 5, 6, 7, 8 ) x WHERE dbd IS NOT NULL GROUP BY 1, 2, 3, 4 ORDER BY 1, 2 DESC, 3
